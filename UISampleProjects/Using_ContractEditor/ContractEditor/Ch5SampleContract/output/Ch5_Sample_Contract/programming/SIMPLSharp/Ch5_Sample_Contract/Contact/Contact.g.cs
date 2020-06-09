@@ -68,9 +68,11 @@ namespace Ch5_Sample_Contract.Contact
     /// <summary>
     /// Information about an individual
     /// </summary>
-    public class Contact : IContact, IDisposable
+    internal class Contact : IContact, IDisposable
     {
         #region Standard CH5 Component members
+
+        private ComponentMediator ComponentMediator { get; set; }
 
         public object UserObject { get; set; }
 
@@ -83,15 +85,15 @@ namespace Ch5_Sample_Contract.Contact
 
         #region Joins
 
-        private class Joins
+        private static class Joins
         {
-            internal class Booleans
+            internal static class Booleans
             {
                 public const uint SetContactSelected = 1;
 
                 public const uint ContactIsSelected = 1;
             }
-            internal class Strings
+            internal static class Strings
             {
 
                 public const uint FullName = 1;
@@ -111,48 +113,32 @@ namespace Ch5_Sample_Contract.Contact
 
         #region Construction and Initialization
 
-        internal Contact(BasicTriListWithSmartObject[] devices, uint controlJoinId)
+        internal Contact(ComponentMediator componentMediator, uint controlJoinId)
         {
-            Initialize(devices, controlJoinId);
+            ComponentMediator = componentMediator;
+            Initialize(controlJoinId);
         }
 
-        internal Contact(BasicTriListWithSmartObject device, uint controlJoinId)
-            : this(new [] { device }, controlJoinId)
+        private void Initialize(uint controlJoinId)
         {
-        }
-
-        private void Initialize(BasicTriListWithSmartObject[] devices, uint controlJoinId)
-        {
-            if (_devices == null)
-            {
-                ControlJoinId = controlJoinId; 
+            ControlJoinId = controlJoinId; 
  
-                _devices = new List<BasicTriListWithSmartObject>(); 
+            _devices = new List<BasicTriListWithSmartObject>(); 
  
-                ComponentMediator.Instance.ConfigureBooleanEvent(controlJoinId, Joins.Booleans.SetContactSelected, onSetContactSelected);
-                
-                ConfigureSmartObjectHandler(devices); 
-            }
-        }
+            ComponentMediator.ConfigureBooleanEvent(controlJoinId, Joins.Booleans.SetContactSelected, onSetContactSelected);
 
-        private void ConfigureSmartObjectHandler(BasicTriListWithSmartObject[] devices)
-        {
-            for (int index = 0; index < devices.Length; index++)
-            {
-                AddDevice(devices[index]);
-            }
         }
 
         public void AddDevice(BasicTriListWithSmartObject device)
         {
             Devices.Add(device);
-            ComponentMediator.Instance.HookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
+            ComponentMediator.HookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
         }
 
         public void RemoveDevice(BasicTriListWithSmartObject device)
         {
             Devices.Remove(device);
-            ComponentMediator.Instance.UnHookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
+            ComponentMediator.UnHookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
         }
 
         #endregion

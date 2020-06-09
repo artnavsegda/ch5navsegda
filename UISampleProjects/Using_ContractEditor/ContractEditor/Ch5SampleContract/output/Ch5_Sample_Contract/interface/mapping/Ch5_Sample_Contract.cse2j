@@ -1,11 +1,127 @@
 {
 	"name": "Ch5_Sample_Contract",
-	"timestamp": "2020-03-04 17:38:22.665",
+	"timestamp": "2020-06-09 17:02:25.258",
 	"version": "1.0.0.0",
 	"schema_version": 1,
 	"extra_value": " An example of using compound CH5 contracts to produce one system contract",
 	"signals": {
 		"states": {
+			"boolean": {
+				"2": {
+					"1": "ContactList.Contact[0].ContactIsSelected"
+				},
+				"3": {
+					"1": "ContactList.Contact[1].ContactIsSelected"
+				},
+				"4": {
+					"1": "ContactList.Contact[2].ContactIsSelected"
+				},
+				"5": {
+					"1": "ContactList.Contact[3].ContactIsSelected"
+				},
+				"6": {
+					"1": "ContactList.Contact[4].ContactIsSelected"
+				},
+				"7": {
+					"1": "ContactList.Contact[5].ContactIsSelected"
+				},
+				"8": {
+					"1": "ContactList.Contact[6].ContactIsSelected"
+				},
+				"9": {
+					"1": "ContactList.Contact[7].ContactIsSelected"
+				},
+				"10": {
+					"1": "ContactList.Contact[8].ContactIsSelected"
+				},
+				"11": {
+					"1": "ContactList.Contact[9].ContactIsSelected"
+				},
+				"12": {
+					"1": "ContactList.Contact[10].ContactIsSelected"
+				},
+				"13": {
+					"1": "ContactList.Contact[11].ContactIsSelected"
+				},
+				"14": {
+					"1": "ContactList.Contact[12].ContactIsSelected"
+				},
+				"15": {
+					"1": "ContactList.Contact[13].ContactIsSelected"
+				},
+				"16": {
+					"1": "ContactList.Contact[14].ContactIsSelected"
+				},
+				"17": {
+					"1": "ContactList.Contact[15].ContactIsSelected"
+				},
+				"18": {
+					"1": "ContactList.Contact[16].ContactIsSelected"
+				},
+				"19": {
+					"1": "ContactList.Contact[17].ContactIsSelected"
+				},
+				"20": {
+					"1": "ContactList.Contact[18].ContactIsSelected"
+				},
+				"21": {
+					"1": "ContactList.Contact[19].ContactIsSelected"
+				},
+				"22": {
+					"1": "ContactList.Contact[20].ContactIsSelected"
+				},
+				"23": {
+					"1": "ContactList.Contact[21].ContactIsSelected"
+				},
+				"24": {
+					"1": "ContactList.Contact[22].ContactIsSelected"
+				},
+				"25": {
+					"1": "ContactList.Contact[23].ContactIsSelected"
+				},
+				"26": {
+					"1": "ContactList.Contact[24].ContactIsSelected"
+				},
+				"27": {
+					"1": "ContactList.Contact[25].ContactIsSelected"
+				},
+				"28": {
+					"1": "ContactList.Contact[26].ContactIsSelected"
+				},
+				"29": {
+					"1": "ContactList.Contact[27].ContactIsSelected"
+				},
+				"30": {
+					"1": "ContactList.Contact[28].ContactIsSelected"
+				},
+				"31": {
+					"1": "ContactList.Contact[29].ContactIsSelected"
+				},
+				"33": {
+					"1": "SourceList.Sources[0].SourceIsSelected"
+				},
+				"34": {
+					"1": "SourceList.Sources[1].SourceIsSelected"
+				},
+				"35": {
+					"1": "SourceList.Sources[2].SourceIsSelected"
+				},
+				"36": {
+					"1": "SourceList.Sources[3].SourceIsSelected"
+				},
+				"37": {
+					"1": "SourceList.Sources[4].SourceIsSelected"
+				},
+				"38": {
+					"1": "SourceList.Sources[5].SourceIsSelected"
+				},
+				"39": {
+					"1": "SourceList.Sources[6].SourceIsSelected"
+				},
+				"40": {
+					"1": "SourceList.Sources[7].SourceIsSelected"
+				}
+			},
 			"numeric": {
 				"1": {
 					"1": "ContactList.NumberOfContacts"
@@ -1030,122 +1146,6 @@
 					"7": "CameraList.Cameras[29].UserIdOfImage",
 					"8": "CameraList.Cameras[29].PasswordOfImage"
 				}
-			},
-			"boolean": {
-				"2": {
-					"1": "ContactList.Contact[0].ContactIsSelected"
-				},
-				"3": {
-					"1": "ContactList.Contact[1].ContactIsSelected"
-				},
-				"4": {
-					"1": "ContactList.Contact[2].ContactIsSelected"
-				},
-				"5": {
-					"1": "ContactList.Contact[3].ContactIsSelected"
-				},
-				"6": {
-					"1": "ContactList.Contact[4].ContactIsSelected"
-				},
-				"7": {
-					"1": "ContactList.Contact[5].ContactIsSelected"
-				},
-				"8": {
-					"1": "ContactList.Contact[6].ContactIsSelected"
-				},
-				"9": {
-					"1": "ContactList.Contact[7].ContactIsSelected"
-				},
-				"10": {
-					"1": "ContactList.Contact[8].ContactIsSelected"
-				},
-				"11": {
-					"1": "ContactList.Contact[9].ContactIsSelected"
-				},
-				"12": {
-					"1": "ContactList.Contact[10].ContactIsSelected"
-				},
-				"13": {
-					"1": "ContactList.Contact[11].ContactIsSelected"
-				},
-				"14": {
-					"1": "ContactList.Contact[12].ContactIsSelected"
-				},
-				"15": {
-					"1": "ContactList.Contact[13].ContactIsSelected"
-				},
-				"16": {
-					"1": "ContactList.Contact[14].ContactIsSelected"
-				},
-				"17": {
-					"1": "ContactList.Contact[15].ContactIsSelected"
-				},
-				"18": {
-					"1": "ContactList.Contact[16].ContactIsSelected"
-				},
-				"19": {
-					"1": "ContactList.Contact[17].ContactIsSelected"
-				},
-				"20": {
-					"1": "ContactList.Contact[18].ContactIsSelected"
-				},
-				"21": {
-					"1": "ContactList.Contact[19].ContactIsSelected"
-				},
-				"22": {
-					"1": "ContactList.Contact[20].ContactIsSelected"
-				},
-				"23": {
-					"1": "ContactList.Contact[21].ContactIsSelected"
-				},
-				"24": {
-					"1": "ContactList.Contact[22].ContactIsSelected"
-				},
-				"25": {
-					"1": "ContactList.Contact[23].ContactIsSelected"
-				},
-				"26": {
-					"1": "ContactList.Contact[24].ContactIsSelected"
-				},
-				"27": {
-					"1": "ContactList.Contact[25].ContactIsSelected"
-				},
-				"28": {
-					"1": "ContactList.Contact[26].ContactIsSelected"
-				},
-				"29": {
-					"1": "ContactList.Contact[27].ContactIsSelected"
-				},
-				"30": {
-					"1": "ContactList.Contact[28].ContactIsSelected"
-				},
-				"31": {
-					"1": "ContactList.Contact[29].ContactIsSelected"
-				},
-				"33": {
-					"1": "SourceList.Sources[0].SourceIsSelected"
-				},
-				"34": {
-					"1": "SourceList.Sources[1].SourceIsSelected"
-				},
-				"35": {
-					"1": "SourceList.Sources[2].SourceIsSelected"
-				},
-				"36": {
-					"1": "SourceList.Sources[3].SourceIsSelected"
-				},
-				"37": {
-					"1": "SourceList.Sources[4].SourceIsSelected"
-				},
-				"38": {
-					"1": "SourceList.Sources[5].SourceIsSelected"
-				},
-				"39": {
-					"1": "SourceList.Sources[6].SourceIsSelected"
-				},
-				"40": {
-					"1": "SourceList.Sources[7].SourceIsSelected"
-				}
 			}
 		},
 		"events": {
@@ -1584,6 +1584,26 @@
 				}
 			},
 			"numeric": {
+				"CameraList.SetSelectedCameraIndex": {
+					"joinId": 2,
+					"smartObjectId": 82
+				},
+				"CameraList.StateOfSelectedCamera": {
+					"joinId": 3,
+					"smartObjectId": 82
+				},
+				"CameraList.ErrorCodeOfSelectedCamera": {
+					"joinId": 4,
+					"smartObjectId": 82
+				},
+				"CameraList.RetryCountOfSelectedCamera": {
+					"joinId": 5,
+					"smartObjectId": 82
+				},
+				"CameraList.StatusOfSelectedCameraImage": {
+					"joinId": 6,
+					"smartObjectId": 82
+				},
 				"Room.DimmableLights[0].SetLightLevel": {
 					"joinId": 1,
 					"smartObjectId": 42
@@ -1703,26 +1723,6 @@
 				"Room.DimmableLights[29].SetLightLevel": {
 					"joinId": 1,
 					"smartObjectId": 71
-				},
-				"CameraList.SetSelectedCameraIndex": {
-					"joinId": 2,
-					"smartObjectId": 82
-				},
-				"CameraList.StateOfSelectedCamera": {
-					"joinId": 3,
-					"smartObjectId": 82
-				},
-				"CameraList.ErrorCodeOfSelectedCamera": {
-					"joinId": 4,
-					"smartObjectId": 82
-				},
-				"CameraList.RetryCountOfSelectedCamera": {
-					"joinId": 5,
-					"smartObjectId": 82
-				},
-				"CameraList.StatusOfSelectedCameraImage": {
-					"joinId": 6,
-					"smartObjectId": 82
 				}
 			},
 			"string": {

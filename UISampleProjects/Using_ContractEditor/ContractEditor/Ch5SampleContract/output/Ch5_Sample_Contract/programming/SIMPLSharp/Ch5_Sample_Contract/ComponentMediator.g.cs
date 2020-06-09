@@ -9,18 +9,6 @@ namespace Ch5_Sample_Contract
     {
         #region Members
 
-        private static ComponentMediator _instance;
-        public static ComponentMediator Instance
-        {
-            get
-            {
-                if (_instance == null)
-                    _instance = new ComponentMediator();
-
-                return _instance;
-            }
-        }
-
         private readonly IList<SmartObject> _smartObjects;
         private IList<SmartObject> SmartObjects { get { return _smartObjects; } }
 
@@ -63,7 +51,7 @@ namespace Ch5_Sample_Contract
 
         private string GetKey(uint smartObjectId, uint join)
         {
-            return smartObjectId.ToString(CultureInfo.InvariantCulture) + join.ToString(CultureInfo.InvariantCulture);
+            return smartObjectId.ToString(CultureInfo.InvariantCulture) + "." + join.ToString(CultureInfo.InvariantCulture);
         }
 
         internal void ConfigureBooleanEvent(uint controlJoinId, uint join, Action<SmartObjectEventArgs> action)
@@ -120,13 +108,6 @@ namespace Ch5_Sample_Contract
             }
             catch
             {
-                //**************************************************************
-                //**************************************************************
-                //
-                //what should we do if the user's logic throws an exception
-                //
-                //**************************************************************
-                //**************************************************************
             }
         }
 

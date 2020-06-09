@@ -62,9 +62,11 @@ namespace Ch5_Sample_Contract.Video
     /// <summary>
     /// selection of camera and status of camara selected
     /// </summary>
-    public class CameraList : ICameraList, IDisposable
+    internal class CameraList : ICameraList, IDisposable
     {
         #region Standard CH5 Component members
+
+        private ComponentMediator ComponentMediator { get; set; }
 
         public object UserObject { get; set; }
 
@@ -77,9 +79,9 @@ namespace Ch5_Sample_Contract.Video
 
         #region Joins
 
-        private class Joins
+        private static class Joins
         {
-            internal class Numerics
+            internal static class Numerics
             {
                 public const uint SetSelectedCameraIndex = 2;
                 public const uint StateOfSelectedCamera = 3;
@@ -90,7 +92,7 @@ namespace Ch5_Sample_Contract.Video
                 public const uint NumberOfCameras = 1;
                 public const uint IndexOfSelectedCamera = 2;
             }
-            internal class Strings
+            internal static class Strings
             {
                 public const uint ErrorMessageOfSelectedCamera = 1;
                 public const uint ResolutionOfSelectedCamera = 2;
@@ -107,62 +109,53 @@ namespace Ch5_Sample_Contract.Video
 
         #region Construction and Initialization
 
-        internal CameraList(BasicTriListWithSmartObject[] devices, uint controlJoinId)
+        internal CameraList(ComponentMediator componentMediator, uint controlJoinId)
         {
-            Initialize(devices, controlJoinId);
+            ComponentMediator = componentMediator;
+            Initialize(controlJoinId);
         }
 
-        internal CameraList(BasicTriListWithSmartObject device, uint controlJoinId)
-            : this(new [] { device }, controlJoinId)
+        private static readonly IDictionary<uint, List<uint>> CamerasSmartObjectIdMappings = new Dictionary<uint, List<uint>> {
+
+            { 82, new List<uint> { 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112 } }};
+
+        internal static void ClearDictionaries()
         {
+            CamerasSmartObjectIdMappings.Clear();
         }
 
-        private readonly IDictionary<uint, List<uint>> _camerasSmartObjectIdMappings = new Dictionary<uint, List<uint>> { { 82, new List<uint> { 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112 } } };
-
-        private void Initialize(BasicTriListWithSmartObject[] devices, uint controlJoinId)
+        private void Initialize(uint controlJoinId)
         {
-            if (_devices == null)
-            {
-                ControlJoinId = controlJoinId; 
+            ControlJoinId = controlJoinId; 
  
-                _devices = new List<BasicTriListWithSmartObject>(); 
+            _devices = new List<BasicTriListWithSmartObject>(); 
  
-                ComponentMediator.Instance.ConfigureNumericEvent(controlJoinId, Joins.Numerics.SetSelectedCameraIndex, onSetSelectedCameraIndex);
-                ComponentMediator.Instance.ConfigureNumericEvent(controlJoinId, Joins.Numerics.StateOfSelectedCamera, onStateOfSelectedCamera);
-                ComponentMediator.Instance.ConfigureNumericEvent(controlJoinId, Joins.Numerics.ErrorCodeOfSelectedCamera, onErrorCodeOfSelectedCamera);
-                ComponentMediator.Instance.ConfigureNumericEvent(controlJoinId, Joins.Numerics.RetryCountOfSelectedCamera, onRetryCountOfSelectedCamera);
-                ComponentMediator.Instance.ConfigureNumericEvent(controlJoinId, Joins.Numerics.StatusOfSelectedCameraImage, onStatusOfSelectedCameraImage);
-                ComponentMediator.Instance.ConfigureStringEvent(controlJoinId, Joins.Strings.ErrorMessageOfSelectedCamera, onErrorMessageOfSelectedCamera);
-                ComponentMediator.Instance.ConfigureStringEvent(controlJoinId, Joins.Strings.ResolutionOfSelectedCamera, onResolutionOfSelectedCamera);
-                ComponentMediator.Instance.ConfigureStringEvent(controlJoinId, Joins.Strings.LastUpdateTimeOfSelectedCameraImage, onLastUpdateTimeOfSelectedCameraImage);
-                ComponentMediator.Instance.ConfigureStringEvent(controlJoinId, Joins.Strings.URLOfVideo, onURLOfVideo);
-                ComponentMediator.Instance.ConfigureStringEvent(controlJoinId, Joins.Strings.SourceTypeOfSelectedCamara, onSourceTypeOfSelectedCamara);
-                ComponentMediator.Instance.ConfigureStringEvent(controlJoinId, Joins.Strings.ImageURLOfSelectedCamera, onImageURLOfSelectedCamera);
-                ComponentMediator.Instance.ConfigureStringEvent(controlJoinId, Joins.Strings.VideoURLOfSelectedCamera, onVideoURLOfSelectedCamera);
-                
-                List<uint> camerasList = _camerasSmartObjectIdMappings[controlJoinId];
-                Cameras = new Ch5_Sample_Contract.Video.ICamera[camerasList.Count];
-                for (int index = 0; index < camerasList.Count; index++)
-                {
-                    Cameras[index] = new Ch5_Sample_Contract.Video.Camera(devices, camerasList[index]); 
-                }
-                
-                ConfigureSmartObjectHandler(devices); 
-            }
-        }
+            ComponentMediator.ConfigureNumericEvent(controlJoinId, Joins.Numerics.SetSelectedCameraIndex, onSetSelectedCameraIndex);
+            ComponentMediator.ConfigureNumericEvent(controlJoinId, Joins.Numerics.StateOfSelectedCamera, onStateOfSelectedCamera);
+            ComponentMediator.ConfigureNumericEvent(controlJoinId, Joins.Numerics.ErrorCodeOfSelectedCamera, onErrorCodeOfSelectedCamera);
+            ComponentMediator.ConfigureNumericEvent(controlJoinId, Joins.Numerics.RetryCountOfSelectedCamera, onRetryCountOfSelectedCamera);
+            ComponentMediator.ConfigureNumericEvent(controlJoinId, Joins.Numerics.StatusOfSelectedCameraImage, onStatusOfSelectedCameraImage);
+            ComponentMediator.ConfigureStringEvent(controlJoinId, Joins.Strings.ErrorMessageOfSelectedCamera, onErrorMessageOfSelectedCamera);
+            ComponentMediator.ConfigureStringEvent(controlJoinId, Joins.Strings.ResolutionOfSelectedCamera, onResolutionOfSelectedCamera);
+            ComponentMediator.ConfigureStringEvent(controlJoinId, Joins.Strings.LastUpdateTimeOfSelectedCameraImage, onLastUpdateTimeOfSelectedCameraImage);
+            ComponentMediator.ConfigureStringEvent(controlJoinId, Joins.Strings.URLOfVideo, onURLOfVideo);
+            ComponentMediator.ConfigureStringEvent(controlJoinId, Joins.Strings.SourceTypeOfSelectedCamara, onSourceTypeOfSelectedCamara);
+            ComponentMediator.ConfigureStringEvent(controlJoinId, Joins.Strings.ImageURLOfSelectedCamera, onImageURLOfSelectedCamera);
+            ComponentMediator.ConfigureStringEvent(controlJoinId, Joins.Strings.VideoURLOfSelectedCamera, onVideoURLOfSelectedCamera);
 
-        private void ConfigureSmartObjectHandler(BasicTriListWithSmartObject[] devices)
-        {
-            for (int index = 0; index < devices.Length; index++)
+            List<uint> camerasList = CamerasSmartObjectIdMappings[controlJoinId];
+            Cameras = new Ch5_Sample_Contract.Video.ICamera[camerasList.Count];
+            for (int index = 0; index < camerasList.Count; index++)
             {
-                AddDevice(devices[index]);
+                Cameras[index] = new Ch5_Sample_Contract.Video.Camera(ComponentMediator, camerasList[index]); 
             }
+
         }
 
         public void AddDevice(BasicTriListWithSmartObject device)
         {
             Devices.Add(device);
-            ComponentMediator.Instance.HookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
+            ComponentMediator.HookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
             for (int index = 0; index < Cameras.Length; index++)
             {
                 ((Ch5_Sample_Contract.Video.Camera)Cameras[index]).AddDevice(device);
@@ -172,7 +165,7 @@ namespace Ch5_Sample_Contract.Video
         public void RemoveDevice(BasicTriListWithSmartObject device)
         {
             Devices.Remove(device);
-            ComponentMediator.Instance.UnHookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
+            ComponentMediator.UnHookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
             for (int index = 0; index < Cameras.Length; index++)
             {
                 ((Ch5_Sample_Contract.Video.Camera)Cameras[index]).RemoveDevice(device);

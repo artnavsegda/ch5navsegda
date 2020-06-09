@@ -31,9 +31,11 @@ namespace Ch5_Sample_Contract.Video
     /// <summary>
     /// Per video source
     /// </summary>
-    public class Camera : ICamera, IDisposable
+    internal class Camera : ICamera, IDisposable
     {
         #region Standard CH5 Component members
+
+        private ComponentMediator ComponentMediator { get; set; }
 
         public object UserObject { get; set; }
 
@@ -46,14 +48,14 @@ namespace Ch5_Sample_Contract.Video
 
         #region Joins
 
-        private class Joins
+        private static class Joins
         {
-            internal class Numerics
+            internal static class Numerics
             {
 
                 public const uint TimePeriodOfImage = 1;
             }
-            internal class Strings
+            internal static class Strings
             {
 
                 public const uint NameOfCamera = 1;
@@ -71,47 +73,30 @@ namespace Ch5_Sample_Contract.Video
 
         #region Construction and Initialization
 
-        internal Camera(BasicTriListWithSmartObject[] devices, uint controlJoinId)
+        internal Camera(ComponentMediator componentMediator, uint controlJoinId)
         {
-            Initialize(devices, controlJoinId);
+            ComponentMediator = componentMediator;
+            Initialize(controlJoinId);
         }
 
-        internal Camera(BasicTriListWithSmartObject device, uint controlJoinId)
-            : this(new [] { device }, controlJoinId)
+        private void Initialize(uint controlJoinId)
         {
-        }
-
-        private void Initialize(BasicTriListWithSmartObject[] devices, uint controlJoinId)
-        {
-            if (_devices == null)
-            {
-                ControlJoinId = controlJoinId; 
+            ControlJoinId = controlJoinId; 
  
-                _devices = new List<BasicTriListWithSmartObject>(); 
+            _devices = new List<BasicTriListWithSmartObject>(); 
  
-                
-                ConfigureSmartObjectHandler(devices); 
-            }
-        }
-
-        private void ConfigureSmartObjectHandler(BasicTriListWithSmartObject[] devices)
-        {
-            for (int index = 0; index < devices.Length; index++)
-            {
-                AddDevice(devices[index]);
-            }
         }
 
         public void AddDevice(BasicTriListWithSmartObject device)
         {
             Devices.Add(device);
-            ComponentMediator.Instance.HookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
+            ComponentMediator.HookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
         }
 
         public void RemoveDevice(BasicTriListWithSmartObject device)
         {
             Devices.Remove(device);
-            ComponentMediator.Instance.UnHookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
+            ComponentMediator.UnHookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
         }
 
         #endregion

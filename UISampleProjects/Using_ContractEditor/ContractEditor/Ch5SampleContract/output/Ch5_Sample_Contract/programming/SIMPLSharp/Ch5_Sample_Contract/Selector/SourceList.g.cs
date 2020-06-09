@@ -20,9 +20,11 @@ namespace Ch5_Sample_Contract.Selector
 
     public delegate void SourceListUShortInputSigDelegate(UShortInputSig uShortInputSig, ISourceList sourceList);
 
-    public class SourceList : ISourceList, IDisposable
+    internal class SourceList : ISourceList, IDisposable
     {
         #region Standard CH5 Component members
+
+        private ComponentMediator ComponentMediator { get; set; }
 
         public object UserObject { get; set; }
 
@@ -35,9 +37,9 @@ namespace Ch5_Sample_Contract.Selector
 
         #region Joins
 
-        private class Joins
+        private static class Joins
         {
-            internal class Numerics
+            internal static class Numerics
             {
 
                 public const uint NumberOfSources = 1;
@@ -48,50 +50,39 @@ namespace Ch5_Sample_Contract.Selector
 
         #region Construction and Initialization
 
-        internal SourceList(BasicTriListWithSmartObject[] devices, uint controlJoinId)
+        internal SourceList(ComponentMediator componentMediator, uint controlJoinId)
         {
-            Initialize(devices, controlJoinId);
+            ComponentMediator = componentMediator;
+            Initialize(controlJoinId);
         }
 
-        internal SourceList(BasicTriListWithSmartObject device, uint controlJoinId)
-            : this(new [] { device }, controlJoinId)
+        private static readonly IDictionary<uint, List<uint>> SourcesSmartObjectIdMappings = new Dictionary<uint, List<uint>> {
+            { 32, new List<uint> { 33, 34, 35, 36, 37, 38, 39, 40 } }};
+
+        internal static void ClearDictionaries()
         {
+            SourcesSmartObjectIdMappings.Clear();
         }
 
-        private readonly IDictionary<uint, List<uint>> _sourcesSmartObjectIdMappings = new Dictionary<uint, List<uint>> { { 32, new List<uint> { 33, 34, 35, 36, 37, 38, 39, 40 } } };
-
-        private void Initialize(BasicTriListWithSmartObject[] devices, uint controlJoinId)
+        private void Initialize(uint controlJoinId)
         {
-            if (_devices == null)
-            {
-                ControlJoinId = controlJoinId; 
+            ControlJoinId = controlJoinId; 
  
-                _devices = new List<BasicTriListWithSmartObject>(); 
+            _devices = new List<BasicTriListWithSmartObject>(); 
  
-                
-                List<uint> sourcesList = _sourcesSmartObjectIdMappings[controlJoinId];
-                Sources = new Ch5_Sample_Contract.Selector.ISource[sourcesList.Count];
-                for (int index = 0; index < sourcesList.Count; index++)
-                {
-                    Sources[index] = new Ch5_Sample_Contract.Selector.Source(devices, sourcesList[index]); 
-                }
-                
-                ConfigureSmartObjectHandler(devices); 
-            }
-        }
-
-        private void ConfigureSmartObjectHandler(BasicTriListWithSmartObject[] devices)
-        {
-            for (int index = 0; index < devices.Length; index++)
+            List<uint> sourcesList = SourcesSmartObjectIdMappings[controlJoinId];
+            Sources = new Ch5_Sample_Contract.Selector.ISource[sourcesList.Count];
+            for (int index = 0; index < sourcesList.Count; index++)
             {
-                AddDevice(devices[index]);
+                Sources[index] = new Ch5_Sample_Contract.Selector.Source(ComponentMediator, sourcesList[index]); 
             }
+
         }
 
         public void AddDevice(BasicTriListWithSmartObject device)
         {
             Devices.Add(device);
-            ComponentMediator.Instance.HookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
+            ComponentMediator.HookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
             for (int index = 0; index < Sources.Length; index++)
             {
                 ((Ch5_Sample_Contract.Selector.Source)Sources[index]).AddDevice(device);
@@ -101,7 +92,7 @@ namespace Ch5_Sample_Contract.Selector
         public void RemoveDevice(BasicTriListWithSmartObject device)
         {
             Devices.Remove(device);
-            ComponentMediator.Instance.UnHookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
+            ComponentMediator.UnHookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
             for (int index = 0; index < Sources.Length; index++)
             {
                 ((Ch5_Sample_Contract.Selector.Source)Sources[index]).RemoveDevice(device);

@@ -28,9 +28,11 @@ namespace Ch5_Sample_Contract.Lighting
     /// <summary>
     /// Scene can set multiple lights to distinct levels
     /// </summary>
-    public class Scene : IScene, IDisposable
+    internal class Scene : IScene, IDisposable
     {
         #region Standard CH5 Component members
+
+        private ComponentMediator ComponentMediator { get; set; }
 
         public object UserObject { get; set; }
 
@@ -43,14 +45,14 @@ namespace Ch5_Sample_Contract.Lighting
 
         #region Joins
 
-        private class Joins
+        private static class Joins
         {
-            internal class Booleans
+            internal static class Booleans
             {
                 public const uint TriggerSceneStart = 1;
 
             }
-            internal class Strings
+            internal static class Strings
             {
 
                 public const uint NameOfScene = 1;
@@ -61,48 +63,32 @@ namespace Ch5_Sample_Contract.Lighting
 
         #region Construction and Initialization
 
-        internal Scene(BasicTriListWithSmartObject[] devices, uint controlJoinId)
+        internal Scene(ComponentMediator componentMediator, uint controlJoinId)
         {
-            Initialize(devices, controlJoinId);
+            ComponentMediator = componentMediator;
+            Initialize(controlJoinId);
         }
 
-        internal Scene(BasicTriListWithSmartObject device, uint controlJoinId)
-            : this(new [] { device }, controlJoinId)
+        private void Initialize(uint controlJoinId)
         {
-        }
-
-        private void Initialize(BasicTriListWithSmartObject[] devices, uint controlJoinId)
-        {
-            if (_devices == null)
-            {
-                ControlJoinId = controlJoinId; 
+            ControlJoinId = controlJoinId; 
  
-                _devices = new List<BasicTriListWithSmartObject>(); 
+            _devices = new List<BasicTriListWithSmartObject>(); 
  
-                ComponentMediator.Instance.ConfigureBooleanEvent(controlJoinId, Joins.Booleans.TriggerSceneStart, onTriggerSceneStart);
-                
-                ConfigureSmartObjectHandler(devices); 
-            }
-        }
+            ComponentMediator.ConfigureBooleanEvent(controlJoinId, Joins.Booleans.TriggerSceneStart, onTriggerSceneStart);
 
-        private void ConfigureSmartObjectHandler(BasicTriListWithSmartObject[] devices)
-        {
-            for (int index = 0; index < devices.Length; index++)
-            {
-                AddDevice(devices[index]);
-            }
         }
 
         public void AddDevice(BasicTriListWithSmartObject device)
         {
             Devices.Add(device);
-            ComponentMediator.Instance.HookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
+            ComponentMediator.HookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
         }
 
         public void RemoveDevice(BasicTriListWithSmartObject device)
         {
             Devices.Remove(device);
-            ComponentMediator.Instance.UnHookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
+            ComponentMediator.UnHookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
         }
 
         #endregion

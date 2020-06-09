@@ -31,9 +31,11 @@ namespace Ch5_Sample_Contract.Contact
     public delegate void ContactListUShortInputSigDelegate(UShortInputSig uShortInputSig, IContactList contactList);
     public delegate void ContactListStringInputSigDelegate(StringInputSig stringInputSig, IContactList contactList);
 
-    public class ContactList : IContactList, IDisposable
+    internal class ContactList : IContactList, IDisposable
     {
         #region Standard CH5 Component members
+
+        private ComponentMediator ComponentMediator { get; set; }
 
         public object UserObject { get; set; }
 
@@ -46,14 +48,14 @@ namespace Ch5_Sample_Contract.Contact
 
         #region Joins
 
-        private class Joins
+        private static class Joins
         {
-            internal class Numerics
+            internal static class Numerics
             {
 
                 public const uint NumberOfContacts = 1;
             }
-            internal class Strings
+            internal static class Strings
             {
 
                 public const uint SelectedName = 1;
@@ -73,50 +75,39 @@ namespace Ch5_Sample_Contract.Contact
 
         #region Construction and Initialization
 
-        internal ContactList(BasicTriListWithSmartObject[] devices, uint controlJoinId)
+        internal ContactList(ComponentMediator componentMediator, uint controlJoinId)
         {
-            Initialize(devices, controlJoinId);
+            ComponentMediator = componentMediator;
+            Initialize(controlJoinId);
         }
 
-        internal ContactList(BasicTriListWithSmartObject device, uint controlJoinId)
-            : this(new [] { device }, controlJoinId)
+        private static readonly IDictionary<uint, List<uint>> ContactSmartObjectIdMappings = new Dictionary<uint, List<uint>> {
+            { 1, new List<uint> { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 } }};
+
+        internal static void ClearDictionaries()
         {
+            ContactSmartObjectIdMappings.Clear();
         }
 
-        private readonly IDictionary<uint, List<uint>> _contactSmartObjectIdMappings = new Dictionary<uint, List<uint>> { { 1, new List<uint> { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 } } };
-
-        private void Initialize(BasicTriListWithSmartObject[] devices, uint controlJoinId)
+        private void Initialize(uint controlJoinId)
         {
-            if (_devices == null)
-            {
-                ControlJoinId = controlJoinId; 
+            ControlJoinId = controlJoinId; 
  
-                _devices = new List<BasicTriListWithSmartObject>(); 
+            _devices = new List<BasicTriListWithSmartObject>(); 
  
-                
-                List<uint> contactList = _contactSmartObjectIdMappings[controlJoinId];
-                Contact = new Ch5_Sample_Contract.Contact.IContact[contactList.Count];
-                for (int index = 0; index < contactList.Count; index++)
-                {
-                    Contact[index] = new Ch5_Sample_Contract.Contact.Contact(devices, contactList[index]); 
-                }
-                
-                ConfigureSmartObjectHandler(devices); 
-            }
-        }
-
-        private void ConfigureSmartObjectHandler(BasicTriListWithSmartObject[] devices)
-        {
-            for (int index = 0; index < devices.Length; index++)
+            List<uint> contactList = ContactSmartObjectIdMappings[controlJoinId];
+            Contact = new Ch5_Sample_Contract.Contact.IContact[contactList.Count];
+            for (int index = 0; index < contactList.Count; index++)
             {
-                AddDevice(devices[index]);
+                Contact[index] = new Ch5_Sample_Contract.Contact.Contact(ComponentMediator, contactList[index]); 
             }
+
         }
 
         public void AddDevice(BasicTriListWithSmartObject device)
         {
             Devices.Add(device);
-            ComponentMediator.Instance.HookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
+            ComponentMediator.HookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
             for (int index = 0; index < Contact.Length; index++)
             {
                 ((Ch5_Sample_Contract.Contact.Contact)Contact[index]).AddDevice(device);
@@ -126,7 +117,7 @@ namespace Ch5_Sample_Contract.Contact
         public void RemoveDevice(BasicTriListWithSmartObject device)
         {
             Devices.Remove(device);
-            ComponentMediator.Instance.UnHookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
+            ComponentMediator.UnHookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
             for (int index = 0; index < Contact.Length; index++)
             {
                 ((Ch5_Sample_Contract.Contact.Contact)Contact[index]).RemoveDevice(device);

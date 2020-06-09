@@ -33,9 +33,11 @@ namespace Ch5_Sample_Contract.Lighting
     /// <summary>
     /// Room contains lights and scenes
     /// </summary>
-    public class Room : IRoom, IDisposable
+    internal class Room : IRoom, IDisposable
     {
         #region Standard CH5 Component members
+
+        private ComponentMediator ComponentMediator { get; set; }
 
         public object UserObject { get; set; }
 
@@ -48,15 +50,15 @@ namespace Ch5_Sample_Contract.Lighting
 
         #region Joins
 
-        private class Joins
+        private static class Joins
         {
-            internal class Numerics
+            internal static class Numerics
             {
 
                 public const uint NumberOfLights = 1;
                 public const uint NumberOfScenes = 2;
             }
-            internal class Strings
+            internal static class Strings
             {
                 public const uint NameOfRoom = 1;
             }
@@ -66,58 +68,50 @@ namespace Ch5_Sample_Contract.Lighting
 
         #region Construction and Initialization
 
-        internal Room(BasicTriListWithSmartObject[] devices, uint controlJoinId)
+        internal Room(ComponentMediator componentMediator, uint controlJoinId)
         {
-            Initialize(devices, controlJoinId);
+            ComponentMediator = componentMediator;
+            Initialize(controlJoinId);
         }
 
-        internal Room(BasicTriListWithSmartObject device, uint controlJoinId)
-            : this(new [] { device }, controlJoinId)
+        private static readonly IDictionary<uint, List<uint>> DimmableLightsSmartObjectIdMappings = new Dictionary<uint, List<uint>> {
+
+            { 41, new List<uint> { 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71 } }};
+        private static readonly IDictionary<uint, List<uint>> ScenesSmartObjectIdMappings = new Dictionary<uint, List<uint>> {
+            { 41, new List<uint> { 72, 73, 74, 75, 76, 77, 78, 79, 80, 81 } }};
+
+        internal static void ClearDictionaries()
         {
+            DimmableLightsSmartObjectIdMappings.Clear();
+            ScenesSmartObjectIdMappings.Clear();
         }
 
-        private readonly IDictionary<uint, List<uint>> _dimmableLightsSmartObjectIdMappings = new Dictionary<uint, List<uint>> { { 41, new List<uint> { 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71 } } };
-        private readonly IDictionary<uint, List<uint>> _scenesSmartObjectIdMappings = new Dictionary<uint, List<uint>> { { 41, new List<uint> { 72, 73, 74, 75, 76, 77, 78, 79, 80, 81 } } };
-
-        private void Initialize(BasicTriListWithSmartObject[] devices, uint controlJoinId)
+        private void Initialize(uint controlJoinId)
         {
-            if (_devices == null)
-            {
-                ControlJoinId = controlJoinId; 
+            ControlJoinId = controlJoinId; 
  
-                _devices = new List<BasicTriListWithSmartObject>(); 
+            _devices = new List<BasicTriListWithSmartObject>(); 
  
-                
-                List<uint> dimmableLightsList = _dimmableLightsSmartObjectIdMappings[controlJoinId];
-                DimmableLights = new Ch5_Sample_Contract.Lighting.IDimmableLight[dimmableLightsList.Count];
-                for (int index = 0; index < dimmableLightsList.Count; index++)
-                {
-                    DimmableLights[index] = new Ch5_Sample_Contract.Lighting.DimmableLight(devices, dimmableLightsList[index]); 
-                }
-                
-                List<uint> scenesList = _scenesSmartObjectIdMappings[controlJoinId];
-                Scenes = new Ch5_Sample_Contract.Lighting.IScene[scenesList.Count];
-                for (int index = 0; index < scenesList.Count; index++)
-                {
-                    Scenes[index] = new Ch5_Sample_Contract.Lighting.Scene(devices, scenesList[index]); 
-                }
-                
-                ConfigureSmartObjectHandler(devices); 
-            }
-        }
-
-        private void ConfigureSmartObjectHandler(BasicTriListWithSmartObject[] devices)
-        {
-            for (int index = 0; index < devices.Length; index++)
+            List<uint> dimmableLightsList = DimmableLightsSmartObjectIdMappings[controlJoinId];
+            DimmableLights = new Ch5_Sample_Contract.Lighting.IDimmableLight[dimmableLightsList.Count];
+            for (int index = 0; index < dimmableLightsList.Count; index++)
             {
-                AddDevice(devices[index]);
+                DimmableLights[index] = new Ch5_Sample_Contract.Lighting.DimmableLight(ComponentMediator, dimmableLightsList[index]); 
             }
+
+            List<uint> scenesList = ScenesSmartObjectIdMappings[controlJoinId];
+            Scenes = new Ch5_Sample_Contract.Lighting.IScene[scenesList.Count];
+            for (int index = 0; index < scenesList.Count; index++)
+            {
+                Scenes[index] = new Ch5_Sample_Contract.Lighting.Scene(ComponentMediator, scenesList[index]); 
+            }
+
         }
 
         public void AddDevice(BasicTriListWithSmartObject device)
         {
             Devices.Add(device);
-            ComponentMediator.Instance.HookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
+            ComponentMediator.HookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
             for (int index = 0; index < DimmableLights.Length; index++)
             {
                 ((Ch5_Sample_Contract.Lighting.DimmableLight)DimmableLights[index]).AddDevice(device);
@@ -131,7 +125,7 @@ namespace Ch5_Sample_Contract.Lighting
         public void RemoveDevice(BasicTriListWithSmartObject device)
         {
             Devices.Remove(device);
-            ComponentMediator.Instance.UnHookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
+            ComponentMediator.UnHookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
             for (int index = 0; index < DimmableLights.Length; index++)
             {
                 ((Ch5_Sample_Contract.Lighting.DimmableLight)DimmableLights[index]).RemoveDevice(device);

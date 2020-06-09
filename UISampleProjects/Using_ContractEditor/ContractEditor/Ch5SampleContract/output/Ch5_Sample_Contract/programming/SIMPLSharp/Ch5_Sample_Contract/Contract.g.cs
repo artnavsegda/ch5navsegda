@@ -23,6 +23,8 @@ namespace Ch5_Sample_Contract
     {
         #region Components
 
+        private ComponentMediator ComponentMediator { get; set; }
+
         public Ch5_Sample_Contract.Contact.IContactList ContactList { get { return (Ch5_Sample_Contract.Contact.IContactList)InternalContactList; } }
         private Ch5_Sample_Contract.Contact.ContactList InternalContactList { get; set; }
 
@@ -54,10 +56,17 @@ namespace Ch5_Sample_Contract
             if (devices == null)
                 throw new ArgumentNullException("Devices is null");
 
-            InternalContactList = new Ch5_Sample_Contract.Contact.ContactList(devices, 1);
-            InternalSourceList = new Ch5_Sample_Contract.Selector.SourceList(devices, 32);
-            InternalRoom = new Ch5_Sample_Contract.Lighting.Room(devices, 41);
-            InternalCameraList = new Ch5_Sample_Contract.Video.CameraList(devices, 82);
+            ComponentMediator = new ComponentMediator();
+
+            InternalContactList = new Ch5_Sample_Contract.Contact.ContactList(ComponentMediator, 1);
+            InternalSourceList = new Ch5_Sample_Contract.Selector.SourceList(ComponentMediator, 32);
+            InternalRoom = new Ch5_Sample_Contract.Lighting.Room(ComponentMediator, 41);
+            InternalCameraList = new Ch5_Sample_Contract.Video.CameraList(ComponentMediator, 82);
+
+            for (int index = 0; index < devices.Length; index++)
+            {
+                AddDevice(devices[index]);
+            }
         }
 
         #endregion
@@ -99,7 +108,7 @@ namespace Ch5_Sample_Contract
             InternalSourceList.Dispose();
             InternalRoom.Dispose();
             InternalCameraList.Dispose();
-            ComponentMediator.Instance.Dispose(); 
+            ComponentMediator.Dispose(); 
         }
 
         #endregion

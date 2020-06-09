@@ -1,28 +1,30 @@
-<template id="Ch5 Sample Contract.SourceList.SourceList">
+<template id="Ch5_Sample_Contract.SourceList.SourceList">
 	<div id="SourceList.SourceList">
 	 	<!--
- 	State: The number of active sources in a list 
--->
-<ch5-slider receiveStateValue="SourceList.NumberOfSources" nohandle>
-        </ch5-slider>
-	 </div>
-	<ch5-list id="SourceList.Source.Sources" receiveStateSize="8">
- 	 <template>
+ 	 	 State: The number of active sources in a list 
+ 	 	-->
+ 			<ch5-slider receiveStateValue="SourceList.NumberOfSources" nohandle>
+        	</ch5-slider>
+	 	<ch5-list id="SourceList.Source.Sources" indexId="idx2" size="8" orientation="horizontal">
+ 	 	 <template>
+ 	 	 <div class="horizontal-list-item">
 	 	<!--
- 	State: Name of the source 
--->
-<span data-ch5-textcontent="SourceList.Sources[{{idx}}].NameOfSource">Label</span>
+ 	 	 State: Name of the source 
+ 	 	-->
+ 		<span data-ch5-textcontent="SourceList.Sources[{{idx2}}].NameOfSource">Label</span>
 	 	<!--
- 	State: Class names assoicated with source 
--->
-<span data-ch5-textcontent="SourceList.Sources[{{idx}}].IconClassOfSource">Label</span>
+ 	 	 State: Class names assoicated with source 
+ 	 	-->
+ 		<span data-ch5-textcontent="SourceList.Sources[{{idx2}}].IconClassOfSource">Label</span>
 	 	<!-- 
- 	 State: Is input source routed 
- 	 Event: request change of source 
--->
-	<ch5-button sendEventOnClick="SourceList.Sources[{{idx}}].SetSourceSelected" receiveStateSelected="SourceList.Sources[{{idx}}].SourceIsSelected">
+ 	 	 State: Is input source routed 
+ 	 	 Event: request change of source 
+ 	 	-->
+	<ch5-button sendEventOnClick="SourceList.Sources[{{idx2}}].SetSourceSelected" receiveStateSelected="SourceList.Sources[{{idx2}}].SourceIsSelected">
         	</ch5-button>
-		</template>
+	 	 </div> 
+ 	 	</template>
  	</ch5-list>
 
+	 </div>
 </template>

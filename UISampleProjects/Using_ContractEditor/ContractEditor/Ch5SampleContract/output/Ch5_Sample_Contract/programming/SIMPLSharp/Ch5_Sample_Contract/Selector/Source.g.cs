@@ -33,9 +33,11 @@ namespace Ch5_Sample_Contract.Selector
     public delegate void SourceBoolInputSigDelegate(BoolInputSig boolInputSig, ISource source);
     public delegate void SourceStringInputSigDelegate(StringInputSig stringInputSig, ISource source);
 
-    public class Source : ISource, IDisposable
+    internal class Source : ISource, IDisposable
     {
         #region Standard CH5 Component members
+
+        private ComponentMediator ComponentMediator { get; set; }
 
         public object UserObject { get; set; }
 
@@ -48,15 +50,15 @@ namespace Ch5_Sample_Contract.Selector
 
         #region Joins
 
-        private class Joins
+        private static class Joins
         {
-            internal class Booleans
+            internal static class Booleans
             {
                 public const uint SetSourceSelected = 1;
 
                 public const uint SourceIsSelected = 1;
             }
-            internal class Strings
+            internal static class Strings
             {
 
                 public const uint NameOfSource = 1;
@@ -68,48 +70,32 @@ namespace Ch5_Sample_Contract.Selector
 
         #region Construction and Initialization
 
-        internal Source(BasicTriListWithSmartObject[] devices, uint controlJoinId)
+        internal Source(ComponentMediator componentMediator, uint controlJoinId)
         {
-            Initialize(devices, controlJoinId);
+            ComponentMediator = componentMediator;
+            Initialize(controlJoinId);
         }
 
-        internal Source(BasicTriListWithSmartObject device, uint controlJoinId)
-            : this(new [] { device }, controlJoinId)
+        private void Initialize(uint controlJoinId)
         {
-        }
-
-        private void Initialize(BasicTriListWithSmartObject[] devices, uint controlJoinId)
-        {
-            if (_devices == null)
-            {
-                ControlJoinId = controlJoinId; 
+            ControlJoinId = controlJoinId; 
  
-                _devices = new List<BasicTriListWithSmartObject>(); 
+            _devices = new List<BasicTriListWithSmartObject>(); 
  
-                ComponentMediator.Instance.ConfigureBooleanEvent(controlJoinId, Joins.Booleans.SetSourceSelected, onSetSourceSelected);
-                
-                ConfigureSmartObjectHandler(devices); 
-            }
-        }
+            ComponentMediator.ConfigureBooleanEvent(controlJoinId, Joins.Booleans.SetSourceSelected, onSetSourceSelected);
 
-        private void ConfigureSmartObjectHandler(BasicTriListWithSmartObject[] devices)
-        {
-            for (int index = 0; index < devices.Length; index++)
-            {
-                AddDevice(devices[index]);
-            }
         }
 
         public void AddDevice(BasicTriListWithSmartObject device)
         {
             Devices.Add(device);
-            ComponentMediator.Instance.HookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
+            ComponentMediator.HookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
         }
 
         public void RemoveDevice(BasicTriListWithSmartObject device)
         {
             Devices.Remove(device);
-            ComponentMediator.Instance.UnHookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
+            ComponentMediator.UnHookSmartObjectEvents(device.SmartObjects[ControlJoinId]);
         }
 
         #endregion

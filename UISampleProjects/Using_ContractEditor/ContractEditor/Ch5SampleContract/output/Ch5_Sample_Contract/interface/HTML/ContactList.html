@@ -1,10 +1,10 @@
-<template id="Ch5 Sample Contract.ContactList.ContactList">
+<template id="Ch5_Sample_Contract.ContactList.ContactList">
 	<div id="ContactList.ContactList">
 	 	<!--
- 	State: The number of active contacts 
--->
-<ch5-slider receiveStateValue="ContactList.NumberOfContacts" nohandle>
-        </ch5-slider>
+ 	 	 State: The number of active contacts 
+ 	 	-->
+ 			<ch5-slider receiveStateValue="ContactList.NumberOfContacts" nohandle>
+        	</ch5-slider>
 	 	<span data-ch5-textcontent="ContactList.SelectedName">Label</span>
 	 	<span data-ch5-textcontent="ContactList.SelectedCompany">Label</span>
 	 	<span data-ch5-textcontent="ContactList.SelectedTitle">Label</span>
@@ -15,56 +15,58 @@
 	 	<span data-ch5-textcontent="ContactList.SelectedHomePhone">Label</span>
 	 	<span data-ch5-textcontent="ContactList.SelectedImage">Label</span>
 	 	<span data-ch5-textcontent="ContactList.SelectedNickName">Label</span>
-	 </div>
-	<ch5-list id="ContactList.Contact.Contact" receiveStateSize="30">
- 	 <template>
+	 	<ch5-list id="ContactList.Contact.Contact" indexId="idx2" size="30" orientation="horizontal">
+ 	 	 <template>
+ 	 	 <div class="horizontal-list-item">
 	 	<!--
- 	State: Name of the contact 
--->
-<span data-ch5-textcontent="ContactList.Contact[{{idx}}].FullName">Label</span>
+ 	 	 State: Name of the contact 
+ 	 	-->
+ 		<span data-ch5-textcontent="ContactList.Contact[{{idx2}}].FullName">Label</span>
 	 	<!--
- 	State: Name of contact's company 
--->
-<span data-ch5-textcontent="ContactList.Contact[{{idx}}].Company">Label</span>
+ 	 	 State: Name of contact's company 
+ 	 	-->
+ 		<span data-ch5-textcontent="ContactList.Contact[{{idx2}}].Company">Label</span>
 	 	<!--
- 	State: Title of the contact 
--->
-<span data-ch5-textcontent="ContactList.Contact[{{idx}}].Title">Label</span>
+ 	 	 State: Title of the contact 
+ 	 	-->
+ 		<span data-ch5-textcontent="ContactList.Contact[{{idx2}}].Title">Label</span>
 	 	<!--
- 	State: Email address of the contact 
--->
-<span data-ch5-textcontent="ContactList.Contact[{{idx}}].Email">Label</span>
+ 	 	 State: Email address of the contact 
+ 	 	-->
+ 		<span data-ch5-textcontent="ContactList.Contact[{{idx2}}].Email">Label</span>
 	 	<!--
- 	State: Work phone number of the contact 
--->
-<span data-ch5-textcontent="ContactList.Contact[{{idx}}].WorkNumber">Label</span>
+ 	 	 State: Work phone number of the contact 
+ 	 	-->
+ 		<span data-ch5-textcontent="ContactList.Contact[{{idx2}}].WorkNumber">Label</span>
 	 	<!--
- 	State: Extension of the work number 
--->
-<span data-ch5-textcontent="ContactList.Contact[{{idx}}].WorkNumberExtension">Label</span>
+ 	 	 State: Extension of the work number 
+ 	 	-->
+ 		<span data-ch5-textcontent="ContactList.Contact[{{idx2}}].WorkNumberExtension">Label</span>
 	 	<!--
- 	State: Mobile number of contact 
--->
-<span data-ch5-textcontent="ContactList.Contact[{{idx}}].MobileNumber">Label</span>
+ 	 	 State: Mobile number of contact 
+ 	 	-->
+ 		<span data-ch5-textcontent="ContactList.Contact[{{idx2}}].MobileNumber">Label</span>
 	 	<!--
- 	State: Home number of the contact 
--->
-<span data-ch5-textcontent="ContactList.Contact[{{idx}}].HomeNumber">Label</span>
+ 	 	 State: Home number of the contact 
+ 	 	-->
+ 		<span data-ch5-textcontent="ContactList.Contact[{{idx2}}].HomeNumber">Label</span>
 	 	<!--
- 	State: Image of contact 
--->
-<span data-ch5-textcontent="ContactList.Contact[{{idx}}].Image">Label</span>
+ 	 	 State: Image of contact 
+ 	 	-->
+ 		<span data-ch5-textcontent="ContactList.Contact[{{idx2}}].Image">Label</span>
 	 	<!--
- 	State: Display name of contact 
--->
-<span data-ch5-textcontent="ContactList.Contact[{{idx}}].Nickname">Label</span>
+ 	 	 State: Display name of contact 
+ 	 	-->
+ 		<span data-ch5-textcontent="ContactList.Contact[{{idx2}}].Nickname">Label</span>
 	 	<!-- 
- 	 State: Current contact 
- 	 Event:  Select this contact 
--->
-	<ch5-button sendEventOnClick="ContactList.Contact[{{idx}}].SetContactSelected" receiveStateSelected="ContactList.Contact[{{idx}}].ContactIsSelected">
+ 	 	 State: Current contact 
+ 	 	 Event:  Select this contact 
+ 	 	-->
+	<ch5-button sendEventOnClick="ContactList.Contact[{{idx2}}].SetContactSelected" receiveStateSelected="ContactList.Contact[{{idx2}}].ContactIsSelected">
         	</ch5-button>
-		</template>
+	 	 </div> 
+ 	 	</template>
  	</ch5-list>
 
+	 </div>
 </template>
