@@ -1,0 +1,41 @@
+.sidebar {
+  box-shadow: 0 0 1px $gray-900;
+  overflow: auto;
+
+  .action-group {
+    &+.action-group {
+      margin-top: 10px;
+    }
+
+    .title {
+      padding: 1rem;
+      text-transform: uppercase;
+      color: $white;
+    }
+
+    .ch5-button {
+      .ch5-button--label {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .ch5-select__panel__items {
+    background-color: inherit;
+    box-shadow: none;
+
+    .ch5-select__panel__item {
+      color: inherit;
+      border-top: 1px solid #000;
+
+      &:hover {
+        color: inherit;
+      }
+    }
+  }
+
+  &.ch5-custom-select {
+    border: 0;
+  }
+}

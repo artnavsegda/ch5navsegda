@@ -1,0 +1,490 @@
+{
+	"Errors": [],
+	"id": "_kt5f536xk",
+	"name": "Video",
+	"description": "",
+	"company": "",
+	"client": "",
+	"author": "",
+	"version": "1.0.0.0",
+	"schemaVersion": 1,
+	"subContractLinks": [],
+	"subContracts": [],
+	"specifications": [],
+	"components": [
+		{
+			"Errors": [],
+			"parentId": "_kt5f536xk",
+			"id": "_7ikc0hv2m",
+			"name": "Camera",
+			"description": "Per video source ",
+			"commands": [
+				{
+					"Errors": [],
+					"name": "NameOfCamera",
+					"siblingId": "_9iyadg99w",
+					"dataType": 3,
+					"notes": "",
+					"id": "_wdhc2fcx6",
+					"parentId": "_7ikc0hv2m",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "VideoURLOfCamera",
+					"siblingId": "_jm6qjngqk",
+					"dataType": 3,
+					"notes": "",
+					"id": "_xkpgnmhet",
+					"parentId": "_7ikc0hv2m",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "ImageURLOfCamera",
+					"siblingId": "_ctl9cnpal",
+					"dataType": 3,
+					"notes": "",
+					"id": "_a7a5bf2my",
+					"parentId": "_7ikc0hv2m",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "SourceTypeOfCamera",
+					"siblingId": "_9lmtq4fcr",
+					"dataType": 3,
+					"notes": "the source type of video URL (e.g. \"Network\")",
+					"id": "_10x38wba6",
+					"parentId": "_7ikc0hv2m",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "TimePeriodOfImage",
+					"siblingId": "_6ni4jgyyl",
+					"dataType": 2,
+					"notes": "",
+					"id": "_8zdy01s1w",
+					"parentId": "_7ikc0hv2m",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "UserIdOfVideo",
+					"siblingId": "_8i9udai85",
+					"dataType": 3,
+					"notes": "",
+					"id": "_2d7j2wzg2",
+					"parentId": "_7ikc0hv2m",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "PasswordOfVideo",
+					"siblingId": "_cecfa62dn",
+					"dataType": 3,
+					"notes": "",
+					"id": "_83887nkpr",
+					"parentId": "_7ikc0hv2m",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "UserIdOfImage",
+					"siblingId": "_1lwilpbrp",
+					"dataType": 3,
+					"notes": "",
+					"id": "_ib0os2qxo",
+					"parentId": "_7ikc0hv2m",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "PasswordOfImage",
+					"siblingId": "_4zpidfbpv",
+					"dataType": 3,
+					"notes": "",
+					"id": "_63pxslv3h",
+					"parentId": "_7ikc0hv2m",
+					"attributeType": 0
+				}
+			],
+			"feedbacks": [
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_wdhc2fcx6",
+					"dataType": 3,
+					"notes": "",
+					"id": "_9iyadg99w",
+					"parentId": "_7ikc0hv2m",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_xkpgnmhet",
+					"dataType": 3,
+					"notes": "",
+					"id": "_jm6qjngqk",
+					"parentId": "_7ikc0hv2m",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_a7a5bf2my",
+					"dataType": 3,
+					"notes": "",
+					"id": "_ctl9cnpal",
+					"parentId": "_7ikc0hv2m",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_10x38wba6",
+					"dataType": 3,
+					"notes": "",
+					"id": "_9lmtq4fcr",
+					"parentId": "_7ikc0hv2m",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_8zdy01s1w",
+					"dataType": 2,
+					"notes": "",
+					"id": "_6ni4jgyyl",
+					"parentId": "_7ikc0hv2m",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_2d7j2wzg2",
+					"dataType": 3,
+					"notes": "",
+					"id": "_8i9udai85",
+					"parentId": "_7ikc0hv2m",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_83887nkpr",
+					"dataType": 3,
+					"notes": "",
+					"id": "_cecfa62dn",
+					"parentId": "_7ikc0hv2m",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_ib0os2qxo",
+					"dataType": 3,
+					"notes": "",
+					"id": "_1lwilpbrp",
+					"parentId": "_7ikc0hv2m",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_63pxslv3h",
+					"dataType": 3,
+					"notes": "",
+					"id": "_4zpidfbpv",
+					"parentId": "_7ikc0hv2m",
+					"attributeType": 1
+				}
+			],
+			"specifications": []
+		},
+		{
+			"Errors": [],
+			"parentId": "_kt5f536xk",
+			"id": "_nqmq4mnn3",
+			"name": "CameraList",
+			"description": "selection of camera and status of camara selected",
+			"commands": [
+				{
+					"Errors": [],
+					"name": "NumberOfCameras",
+					"siblingId": "_po01aciql",
+					"dataType": 2,
+					"notes": "",
+					"id": "_mcpop04i2",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "IndexOfSelectedCamera",
+					"siblingId": "_8nd5iv2bu",
+					"dataType": 2,
+					"notes": "the selected camera to be displayed on touchscreen",
+					"id": "_sut4n3ssx",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_n0ptjxqn9",
+					"dataType": 2,
+					"notes": "",
+					"id": "_cd7z46b4j",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_m4karr7c0",
+					"dataType": 2,
+					"notes": "",
+					"id": "_muv6ixlzr",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_k4u9s0jud",
+					"dataType": 2,
+					"notes": "",
+					"id": "_m1dssg79m",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_1djdlpnmn",
+					"dataType": 3,
+					"notes": "",
+					"id": "_tlxjhdv13",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_gs6sdmk9x",
+					"dataType": 3,
+					"notes": "",
+					"id": "_5097guyqk",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_kfz50s6a9",
+					"dataType": 2,
+					"notes": "",
+					"id": "_y2hjpnm5k",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_m47fxhljh",
+					"dataType": 3,
+					"notes": "",
+					"id": "_qyym9g4d7",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_hlejiupgj",
+					"dataType": 3,
+					"notes": "",
+					"id": "_5syxzfm47",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_36l4g33xu",
+					"dataType": 3,
+					"notes": "",
+					"id": "_b51r94rt7",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_6ce4ach2x",
+					"dataType": 3,
+					"notes": "",
+					"id": "_xtbov4fba",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_hf3z3wtcs",
+					"dataType": 3,
+					"notes": "",
+					"id": "_dli1d8uja",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 0
+				}
+			],
+			"feedbacks": [
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_mcpop04i2",
+					"dataType": 2,
+					"notes": "",
+					"id": "_po01aciql",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "SetSelectedCameraIndex",
+					"siblingId": "_sut4n3ssx",
+					"dataType": 2,
+					"notes": "request IndexOfSelectedCamera to change",
+					"id": "_8nd5iv2bu",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "StateOfSelectedCamera",
+					"siblingId": "_cd7z46b4j",
+					"dataType": 2,
+					"notes": "0-no src, 1 - stopped, 2 - playing, 3 - stop req, 4/5/6 – play req, 7 - error",
+					"id": "_n0ptjxqn9",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "ErrorCodeOfSelectedCamera",
+					"siblingId": "_muv6ixlzr",
+					"dataType": 2,
+					"notes": "0 - no error, transient issues > 0, setup and system issues < 0",
+					"id": "_m4karr7c0",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "RetryCountOfSelectedCamera",
+					"siblingId": "_m1dssg79m",
+					"dataType": 2,
+					"notes": "number of times video engin has tried to render video",
+					"id": "_k4u9s0jud",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "ErrorMessageOfSelectedCamera",
+					"siblingId": "_tlxjhdv13",
+					"dataType": 3,
+					"notes": "diagnostic information on errors, not intended for end user to see",
+					"id": "_1djdlpnmn",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "ResolutionOfSelectedCamera",
+					"siblingId": "_5097guyqk",
+					"dataType": 3,
+					"notes": "Video stream resolution",
+					"id": "_gs6sdmk9x",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "StatusOfSelectedCameraImage",
+					"siblingId": "_y2hjpnm5k",
+					"dataType": 2,
+					"notes": "0 not shown, 1 - currently shown, 2- in error",
+					"id": "_kfz50s6a9",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "LastUpdateTimeOfSelectedCameraImage",
+					"siblingId": "_qyym9g4d7",
+					"dataType": 3,
+					"notes": "time in RFC 3339 format",
+					"id": "_m47fxhljh",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "URLOfVideo",
+					"siblingId": "_5syxzfm47",
+					"dataType": 3,
+					"notes": "",
+					"id": "_hlejiupgj",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "SourceTypeOfSelectedCamara",
+					"siblingId": "_b51r94rt7",
+					"dataType": 3,
+					"notes": "",
+					"id": "_36l4g33xu",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "ImageURLOfSelectedCamera",
+					"siblingId": "_xtbov4fba",
+					"dataType": 3,
+					"notes": "",
+					"id": "_6ce4ach2x",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "VideoURLOfSelectedCamera",
+					"siblingId": "_dli1d8uja",
+					"dataType": 3,
+					"notes": "",
+					"id": "_hf3z3wtcs",
+					"parentId": "_nqmq4mnn3",
+					"attributeType": 1
+				}
+			],
+			"specifications": [
+				{
+					"Errors": [],
+					"parentId": "_kt5f536xk",
+					"id": "_pcq0tlrfn",
+					"componentId": "_7ikc0hv2m",
+					"instanceName": "Cameras",
+					"numberOfInstances": 30
+				}
+			]
+		}
+	],
+	"allComponentsForAllContracts": []
+}

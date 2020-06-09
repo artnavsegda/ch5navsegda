@@ -1,0 +1,177 @@
+// Base class
+//
+// Kickstart any navigation component with a set of style resets. Works with
+// `<nav>`s or `<ul>`s.
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: $nav-link-padding-y $nav-link-padding-x;
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  // Disabled state lightens text
+  &.disabled {
+    color: $nav-link-disabled-color;
+  }
+}
+
+//
+// Tabs
+//
+
+.nav-tabs {
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+
+  .nav-item {
+    margin-bottom: -$nav-tabs-border-width;
+  }
+
+  .nav-link {
+    border: $nav-tabs-border-width solid transparent;
+    @include border-top-radius($nav-tabs-border-radius);
+
+    @include hover-focus {
+      border-color: $nav-tabs-link-hover-border-color;
+    }
+
+    &.disabled {
+      color: $nav-link-disabled-color;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $nav-tabs-link-active-color;
+    background-color: $nav-tabs-link-active-bg;
+    border-color: $nav-tabs-link-active-border-color;
+  }
+
+  .dropdown-menu {
+    // Make dropdown border overlap tab border
+    margin-top: -$nav-tabs-border-width;
+    // Remove the top rounded corners here since there is a hard edge above the menu
+    @include border-top-radius(0);
+  }
+}
+
+
+//
+// Pills
+//
+
+.nav-pills {
+  .nav-link {
+    @include border-radius($nav-pills-border-radius);
+  }
+
+  .nav-link.active,
+  .show>.nav-link {
+    color: $nav-pills-link-active-color;
+    background-color: $nav-pills-link-active-bg;
+  }
+}
+
+
+//
+// Justified variants
+//
+
+.nav-fill {
+  .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.nav-justified {
+  .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  >.tab-pane {
+    display: none;
+  }
+
+  >.active {
+    display: block;
+  }
+}
+
+// Ch5 version information
+.version-info {
+  margin-left: 1rem;
+
+  .ch5-button {
+    display: flex;
+    vertical-align: top;
+    min-width: auto;
+
+    .cb-btn {
+      @include size(100%);
+    }
+
+    i.fa-info {
+      font-size: 12px;
+      padding: 0;
+      @include size(12px);
+    }
+  }
+
+  div.ch5-modal-dialog {
+    border: $version-modal-dialog-border-width $border-type $black;
+
+    .ch5-modal-dialog-contents {
+      padding: 0;
+
+      &>p:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .ch5-modal-dialog-close-icon-btn {
+      padding: 0;
+      margin: 0;
+      @include size(auto);
+
+      span.ch5-modal-dialog-close-icon {
+        display: block;
+        font-size: rem-calc(24px);
+      }
+    }
+
+    p {
+      color: $version-modal-dialog-content-color;
+      font-size: rem-calc(20px);
+    }
+
+    p.version-error {
+      color: $red;
+    }
+
+    h4 {
+      color: $black;
+      font-size: rem-calc(32px);
+    }
+  }
+}

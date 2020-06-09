@@ -1,0 +1,88 @@
+<section class="details-container">
+  <h1 class="text-uppercase" data-ch5-i18n="-+lists.title+-">LISTS</h1>
+  <p class="lead desc-title" data-ch5-i18n="-+lists.description+-">Use Crestron CH5 to build smooth-scrolling lists of
+    any size with any content.</p>
+  <hr />
+  <h3 data-ch5-i18n="-+lists.header+-">Contact List</h3>
+  <div class="row">
+    <div class="col-sm-7 order-sm-last" id="contactDetail">
+      <div class="card contact-detail">
+        <div class="d-flex primary-detail">
+          <figure class="figure mr-3">
+            <ch5-image class="img-fluid rounded-circle border" alt="user" receivestateurl="ContactList.SelectedImage">
+            </ch5-image>
+          </figure>
+          <aside>
+            <h5 class="mb-1" data-ch5-textcontent="ContactList.SelectedName"></h5>
+            <ul class="list-group">
+              <li class="d-flex">
+                <span class="text-muted" data-ch5-i18n="-+lists.labels.nickname+-">Nickname</span>
+                <span data-ch5-textcontent="ContactList.SelectedNickName"></span>
+              </li>
+              <li class="d-flex">
+                <span class="text-muted" data-ch5-i18n="-+lists.labels.organization+-">Organization</span>
+                <span data-ch5-textcontent="ContactList.SelectedCompany"></span>
+              </li>
+              <li class="d-flex">
+                <span class="text-muted" data-ch5-i18n="-+lists.labels.title+-">Title</span>
+                <span data-ch5-textcontent="ContactList.SelectedTitle"></span>
+              </li>
+            </ul>
+          </aside>
+        </div>
+        <div class="secondary-detail">
+          <hr />
+          <ul class="list-group">
+            <li class="d-flex">
+              <span class="text-muted" data-ch5-i18n="-+lists.labels.email+-">Email</span>
+              <span data-ch5-textcontent="ContactList.SelectedEmail"></span>
+              <i class="far fa-envelope ml-2 text-primary"></i>
+            </li>
+            <li class="d-flex">
+              <span class="text-muted" data-ch5-i18n="-+lists.labels.work+-">Work</span>
+              <span data-ch5-textcontent="ContactList.SelectedWorkPhone"></span>
+              <i class="fa fa-phone ml-2 text-success"></i>
+            </li>
+            <li class="d-flex">
+              <span class="text-muted" data-ch5-i18n="-+lists.labels.extension+-">Extension</span>
+              <span data-ch5-textcontent="ContactList.SelectedExtension"></span>
+              <i class="fa fa-puzzle-piece ml-2 text-primary"></i>
+            </li>
+            <li class="d-flex">
+              <span class="text-muted" data-ch5-i18n="-+lists.labels.mobile+-">Mobile</span>
+              <span data-ch5-textcontent="ContactList.SelectedMobilePhone"></span>
+              <i class="fa fa-mobile-alt ml-2 text-warning"></i>
+            </li>
+            <li class="d-flex">
+              <span class="text-muted" data-ch5-i18n="-+lists.labels.home+-">Home</span>
+              <span data-ch5-textcontent="ContactList.SelectedHomePhone"></span>
+              <i class="fa fa-home ml-2 text-purple"></i>
+            </li>
+          </ul>
+        </div>
+        <a class="toggle-detail d-block d-sm-none" onclick="listsModule.toggleContact()"><i
+            class="fas fa-caret-square-down"></i></a>
+      </div>
+    </div>
+    <div class="col-sm-5 order-sm-first">
+      <div class="card custom-list-group" id="listScrollerPanel">
+        <ch5-list class="list-scroller iphone6-list" itemWidth="auto" itemheight="auto" orientation="vertical"
+          indexId="idx" receiveStateSize="ContactList.NumberOfContacts" scrollbar="true">
+          <template>
+            <div id="contact-list-item-{{idx}}" class="list-group-item list-group-item-action d-flex">
+              <figure class="figure mr-2 mb-0">
+                <ch5-image receivestateurl="ContactList.Contact[{{idx}}].Image" height="36px" width="36px" alt="user"
+                  class="img-fluid rounded-circle border">
+                </ch5-image>
+              </figure>
+              <aside>
+                <h5 class="mb-1" data-ch5-textcontent="ContactList.Contact[{{idx}}].FullName">Not Populated h5</h5>
+                <span data-ch5-textcontent="ContactList.Contact[{{idx}}].WorkNumber">Not Populated span</span>
+              </aside>
+            </div>
+          </template>
+        </ch5-list>
+      </div>
+    </div>
+  </div>
+</section>

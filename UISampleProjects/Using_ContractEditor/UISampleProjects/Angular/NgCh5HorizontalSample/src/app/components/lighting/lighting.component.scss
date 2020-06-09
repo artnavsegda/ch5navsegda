@@ -1,0 +1,114 @@
+@import 'src/assets/scss/functions';
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+
+.examples-container {
+  &>.row {
+    height: calc(100% - 70.4px);
+  }
+
+  @include media-breakpoint-down(sm) {
+    &>.row {
+      height: calc(100% - 38.8px);
+    }
+
+    .lighting-sidebar {
+      width: 200px;
+      margin-right: -200px;
+      transition: transform 300ms ease-out;
+      transform: none;
+      position: relative;
+      z-index: 10;
+
+      &.open {
+        transition: transform 300ms ease-out;
+        transform: translateX(-100%);
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    &>.row {
+      height: calc(100% - 33.6px);
+    }
+  }
+}
+
+.navbar {
+  color: $white;
+  padding-top: 0;
+  padding-bottom: 0;
+  flex-wrap: nowrap;
+
+  .navbar-text {
+    line-height: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 10px;
+
+    h2 {
+      color: $white;
+      @include text-truncate;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .room-info {
+      display: flex;
+      align-items: center;
+
+      h2 {
+        margin-left: $mobile-gutter-space;
+      }
+    }
+
+    .navbar-action {
+      display: flex;
+      white-space: nowrap;
+
+      .navbar-toggler {
+        padding: 0 $navbar-toggler-padding-y;
+        margin-left: 0.5rem;
+
+        .navbar-toggler-icon {
+          @include size(22px);
+        }
+      }
+    }
+  }
+}
+
+.lighting-slider {
+  text-align: center;
+}
+
+.pulse-button-lighting {
+  animation: shadow-pulse-lighting 2s infinite 3s;
+  border-radius: 100%;
+}
+
+.pulse-once-lighting {
+  animation: shadow-pulse-lighting-big 0.5s;
+  border-radius: 100%;
+}
+
+@keyframes shadow-pulse-lighting {
+  0% {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
+  }
+
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes shadow-pulse-lighting-big {
+  0% {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
+  }
+
+  100% {
+    box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);
+  }
+}

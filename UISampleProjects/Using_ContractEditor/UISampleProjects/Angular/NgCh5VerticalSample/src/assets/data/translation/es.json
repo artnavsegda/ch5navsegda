@@ -1,0 +1,130 @@
+{
+  "app":{
+    "title": "Presentación de desarrollo de IU HTML 5 || CH5 de Crestron",
+    "ch5modal": {
+      "name":"Versión CH5"
+    }
+  },
+  "buttons": {
+    "title": "BOTONES",
+    "descripton": "Botones totalmente personalizables con Crestron CH5. Toque un botón para ver animaciones de botón.",
+    "icon": {
+      "title": "BOTONES DE ICONO"
+    },
+    "standard": {
+      "title": "BOTONES ESTÁNDAR",
+      "btn": {
+        "primary": "PRINCIPAL",
+        "default": "PREDETERMINADO",
+        "secondary": "SECUNDARIO",
+        "succes": "CORRECTO",
+        "info": "INFO",
+        "warning": "ADVERTENCIA",
+        "danger": "PELIGRO"
+      }
+    },
+    "gradient": {
+      "title": "BOTONES DE GRADIENTE",
+      "btn": {
+        "peach": "MELOCOTÓN",
+        "purple": "PÚRPURA",
+        "blue": "AZUL",
+        "aqua": "AQUA"
+      }
+    },
+    "outlined": {
+      "title": "BOTONES PERFILADOS",
+      "btn": {
+        "primary": "PRINCIPAL",
+        "default": "PREDETERMINADO",
+        "secondary": "SECUNDARIO",
+        "succes": "CORRECTO",
+        "info": "INFO",
+        "warning": "ADVERTENCIA",
+        "danger": "PELIGRO"
+      }
+    },
+    "orientation": {
+      "title": "BOTONES DE ORIENTACIÓN",
+      "btn": {
+        "horizontal": "Etiqueta horizontal",
+        "vertical": "Etiqueta vertical"
+      }
+    }
+  },
+  "lists": {
+    "title": "LISTAS",
+    "description": "Utilice Crestron CH5 para crear listas de cualquier tamaño, con desplazamiento suave y para cualquier contenido.",
+    "header": "Lista de contactos",
+    "labels": {
+      "nickname": "Alias",
+      "organization": "Organización",
+      "title": "Cargo",
+      "email": "Correo electrónico",
+      "work": "Trabajo",
+      "extension": "Extensión",
+      "mobile": "Móvil",
+      "home": "En casa"
+    }
+  },
+  "source": {
+    "title": "Presente una fuente",
+    "description": "Seleccione una fuente para conectarse.",
+    "sources": [
+      { "title": "HDMI", "icon": "fas fa-tv" },
+      { "title": "Airboard", "icon": "fas fa-chalkboard" },
+      { "title": "Portátil", "icon": "fas fa-laptop" },
+      { "title": "AirMedia", "icon": "fas fa-wifi" }
+    ]
+  },
+  "lighting": {
+    "title": "ILUMINACIÓN",
+    "heading": "HABITACIÓN GENIAL",
+    "alllights": "TODAS LAS LUCES",
+    "lightName": [
+      "Lámpara",
+      "Apliques",
+      "Luces Downlights",
+      "Muro multimedia",
+      "Pistas",
+      "Luces colgantes"
+    ],
+    "sceneTitle": "Escenas",
+    "scenes": [
+      { "name": "TODO ENCENDIDO" },
+      { "name": "TODO APAGADO" },
+      { "name": "ALTO" },
+      { "name": "MEDIO" },
+      { "name": "BAJO" }
+    ]
+  },
+  "video": {
+    "title": "Vídeo",
+    "description": "Ver vídeo en streaming",
+    "camera": [
+      { "name": "Cámara 1" },
+      { "name": "Cámara 2" },
+      { "name": "Cámara 3" },
+      { "name": "Cámara 4" }
+    ]
+  },
+  "swiperSlides": [
+    {
+      "thumbTitle": "Botones"
+    },
+    {
+      "thumbTitle": "Listas"
+    },
+    {
+      "thumbTitle": "Fuente"
+    },
+    {
+      "thumbTitle": "Iluminación"
+    },
+    {
+      "thumbTitle": "Vídeo"
+    }
+  ],
+
+  "lang": "Español"
+}

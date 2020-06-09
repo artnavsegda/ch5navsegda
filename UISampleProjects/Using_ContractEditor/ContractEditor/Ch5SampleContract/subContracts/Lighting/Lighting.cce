@@ -1,0 +1,249 @@
+{
+	"Errors": [],
+	"id": "_ommry3hpx",
+	"name": "Lighting",
+	"description": " Lighting system example",
+	"company": " Crestron Electronics, Inc.",
+	"client": " Developers",
+	"author": "  Rene Colmenares",
+	"version": "1.0.0.0",
+	"schemaVersion": 1,
+	"subContractLinks": [],
+	"subContracts": [],
+	"specifications": [],
+	"components": [
+		{
+			"Errors": [],
+			"parentId": "_ommry3hpx",
+			"id": "_f1hie1us2",
+			"name": "DimmableLight",
+			"commands": [
+				{
+					"Errors": [],
+					"name": "NameOfLight",
+					"siblingId": "_6sl831jt0",
+					"dataType": 3,
+					"notes": "Lighting load name",
+					"id": "_svmzf1scr",
+					"parentId": "_f1hie1us2",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "LightIsAtLevel",
+					"siblingId": "_d16cnzx36",
+					"dataType": 2,
+					"notes": "light level",
+					"id": "_nlqfbsrns",
+					"parentId": "_f1hie1us2",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_hf4nqye7n",
+					"dataType": 1,
+					"notes": "",
+					"id": "_91f47gnp9",
+					"parentId": "_f1hie1us2",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_153pwoi3l",
+					"dataType": 1,
+					"notes": "",
+					"id": "_55dohdgfp",
+					"parentId": "_f1hie1us2",
+					"attributeType": 0
+				}
+			],
+			"feedbacks": [
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_svmzf1scr",
+					"dataType": 3,
+					"notes": "",
+					"id": "_6sl831jt0",
+					"parentId": "_f1hie1us2",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "SetLightLevel",
+					"siblingId": "_nlqfbsrns",
+					"dataType": 2,
+					"notes": "request change to new level",
+					"id": "_d16cnzx36",
+					"parentId": "_f1hie1us2",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "TurnLightOn",
+					"siblingId": "_91f47gnp9",
+					"dataType": 1,
+					"notes": "Light On",
+					"id": "_hf4nqye7n",
+					"parentId": "_f1hie1us2",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "TurnLightOff",
+					"siblingId": "_55dohdgfp",
+					"dataType": 1,
+					"notes": "Light Off",
+					"id": "_153pwoi3l",
+					"parentId": "_f1hie1us2",
+					"attributeType": 1
+				}
+			],
+			"specifications": []
+		},
+		{
+			"Errors": [],
+			"parentId": "_ommry3hpx",
+			"id": "_apus0wqfu",
+			"name": "Room",
+			"description": "Room contains lights and scenes",
+			"commands": [
+				{
+					"Errors": [],
+					"name": "NumberOfLights",
+					"siblingId": "_2393wz79a",
+					"dataType": 2,
+					"notes": "number of active dimmers",
+					"id": "_20vye3kpi",
+					"parentId": "_apus0wqfu",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "NumberOfScenes",
+					"siblingId": "_5wkudia4b",
+					"dataType": 2,
+					"notes": "number of scenes available in this room",
+					"id": "_b0ap4hqsn",
+					"parentId": "_apus0wqfu",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "NameOfRoom",
+					"siblingId": "_8odfgeaoc",
+					"dataType": 3,
+					"notes": "the name of this room as seen by user",
+					"id": "_wsj00riz0",
+					"parentId": "_apus0wqfu",
+					"attributeType": 0
+				}
+			],
+			"feedbacks": [
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_20vye3kpi",
+					"dataType": 2,
+					"notes": "",
+					"id": "_2393wz79a",
+					"parentId": "_apus0wqfu",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_b0ap4hqsn",
+					"dataType": 2,
+					"notes": "",
+					"id": "_5wkudia4b",
+					"parentId": "_apus0wqfu",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_wsj00riz0",
+					"dataType": 0,
+					"notes": "",
+					"id": "_8odfgeaoc",
+					"parentId": "_apus0wqfu",
+					"attributeType": 1
+				}
+			],
+			"specifications": [
+				{
+					"Errors": [],
+					"parentId": "_ommry3hpx",
+					"id": "_9ftn57xct",
+					"componentId": "_f1hie1us2",
+					"instanceName": "DimmableLights",
+					"numberOfInstances": 30
+				},
+				{
+					"Errors": [],
+					"parentId": "_ommry3hpx",
+					"id": "_mndllh9vh",
+					"componentId": "_8t5sd9l9c",
+					"instanceName": "Scenes",
+					"numberOfInstances": 10
+				}
+			]
+		},
+		{
+			"Errors": [],
+			"parentId": "_ommry3hpx",
+			"id": "_8t5sd9l9c",
+			"name": "Scene",
+			"description": "Scene can set multiple lights to distinct levels ",
+			"commands": [
+				{
+					"Errors": [],
+					"name": "NameOfScene",
+					"siblingId": "_31q34j07r",
+					"dataType": 3,
+					"notes": "how the scene will displayed to user",
+					"id": "_n2spm8d8o",
+					"parentId": "_8t5sd9l9c",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_39va5mwgc",
+					"dataType": 1,
+					"notes": "",
+					"id": "_ygezz8dme",
+					"parentId": "_8t5sd9l9c",
+					"attributeType": 0
+				}
+			],
+			"feedbacks": [
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_n2spm8d8o",
+					"dataType": 3,
+					"notes": "",
+					"id": "_31q34j07r",
+					"parentId": "_8t5sd9l9c",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "TriggerSceneStart",
+					"siblingId": "_ygezz8dme",
+					"dataType": 1,
+					"notes": "Request scene be started",
+					"id": "_39va5mwgc",
+					"parentId": "_8t5sd9l9c",
+					"attributeType": 1
+				}
+			],
+			"specifications": []
+		}
+	],
+	"allComponentsForAllContracts": []
+}

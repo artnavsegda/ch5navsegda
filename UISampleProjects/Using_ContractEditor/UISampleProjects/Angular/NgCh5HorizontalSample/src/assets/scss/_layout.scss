@@ -1,0 +1,47 @@
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+  padding-top: $header-height;
+
+  .details-container {
+    padding: 2rem;
+    min-height: 100%;
+
+    @media all and (orientation:landscape) {
+      padding: $mobile-gutter-space-lg;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: $header-height-sm;
+
+    .details-container {
+      padding: $mobile-gutter-space-lg;
+    }
+  }
+}
+
+// for router animation
+router-outlet~*:not(swiper) {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+// examples theme
+.examples-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+
+  &>.row {
+    flex-wrap: nowrap;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    flex: auto;
+  }
+}

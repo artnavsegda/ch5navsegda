@@ -1,0 +1,130 @@
+{
+  "app":{
+    "title": "Crestron CH5 || Présentation de développement HTML 5 UI",
+    "ch5modal": {
+      "name":"Version CH5"
+    }
+  },
+  "buttons": {
+    "title": "BOUTONS",
+    "descripton": "Boutons entièrement personnalisables avec Crestron CH5. Appuyer sur un bouton pour afficher les animations des boutons.",
+    "icon": {
+      "title": "BOUTONS ICÔNE"
+    },
+    "standard": {
+      "title": "BOUTONS STANDARD",
+      "btn": {
+        "primary": "PRIMAIRE",
+        "default": "PAR DÉFAUT",
+        "secondary": "SECONDAIRE",
+        "succes": "SUCCÈS",
+        "info": "INFO",
+        "warning": "AVERTISSEMENT",
+        "danger": "DANGER"
+      }
+    },
+    "gradient": {
+      "title": "BOUTONS DE DÉGRADÉ",
+      "btn": {
+        "peach": "PÊCHE",
+        "purple": "VIOLET",
+        "blue": "BLEU",
+        "aqua": "AQUA"
+      }
+    },
+    "outlined": {
+      "title": "BOUTONS SOULIGNÉS",
+      "btn": {
+        "primary": "PRIMAIRE",
+        "default": "PAR DÉFAUT",
+        "secondary": "SECONDAIRE",
+        "succes": "SUCCÈS",
+        "info": "INFO",
+        "warning": "AVERTISSEMENT",
+        "danger": "DANGER"
+      }
+    },
+    "orientation": {
+      "title": "BOUTONS D’ORIENTATION",
+      "btn": {
+        "horizontal": "Étiquette horizontale",
+        "vertical": "Étiquette verticale"
+      }
+    }
+  },
+  "lists": {
+    "title": "LISTES",
+    "description": "Utilisez Crestron CH5 pour créer des listes de défilement de toutes tailles avec n’importe quel contenu.",
+    "header": "Liste de contacts",
+    "labels": {
+      "nickname": "Surnom",
+      "organization": "Organisation",
+      "title": "Titre",
+      "email": "Courriel",
+      "work": "Travail",
+      "extension": "Poste",
+      "mobile": "Mobile",
+      "home": "Habitation"
+    }
+  },
+  "source": {
+    "title": "Sélectionnez une source pour présenter",
+    "description": "Sélectionnez une source à connecter.",
+    "sources": [
+      { "title": "HDMI", "icon": "fas fa-tv" },
+      { "title": "Aérien", "icon": "fas fa-chalkboard" },
+      { "title": "Ordinateur portable", "icon": "fas fa-laptop" },
+      { "title": "AirMedia", "icon": "fas fa-wifi" }
+    ]
+  },
+  "lighting": {
+    "title": "ÉCLAIRAGE",
+    "heading": "GRANDE SALLE",
+    "alllights": "TOUTES LES LUMIÈRES",
+    "lightName": [
+      "Lampe",
+      "Conces",
+      "Plafonniers",
+      "Mur multimédia",
+      "Titres",
+      "Pendentifs"
+    ],
+    "sceneTitle": "Scénarios",
+    "scenes": [
+      { "name": "TOUT EN MARCHE" },
+      { "name": "TOUT ÉTEINT" },
+      { "name": "ÉLEVÉ" },
+      { "name": "MOYEN" },
+      { "name": "BAS" }
+    ]
+  },
+  "video": {
+    "title": "Vidéo",
+    "description": "Afficher la vidéo en continu",
+    "camera": [
+      { "name": "Caméra 1" },
+      { "name": "Caméra 2" },
+      { "name": "Caméra 3" },
+      { "name": "Caméra 4" }
+    ]
+  },
+  "swiperSlides": [
+    {
+      "thumbTitle": "Boutons"
+    },
+    {
+      "thumbTitle": "Listes"
+    },
+    {
+      "thumbTitle": "Source"
+    },
+    {
+      "thumbTitle": "Éclairage"
+    },
+    {
+      "thumbTitle": "Vidéo"
+    }
+  ],
+
+  "lang": "Français"
+}

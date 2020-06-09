@@ -1,0 +1,130 @@
+{
+  "app":{
+    "title": "Crestron CH5 || HTML 5 UI Development Showcase",
+    "ch5modal": {
+      "name":"CH5 Version"
+    }
+  },
+  "buttons": {
+    "title": "BUTTONS",
+    "descripton": "Fully customizable buttons with Crestron CH5. Touch a button to view button animations.",
+    "icon": {
+      "title": "ICON BUTTONS"
+    },
+    "standard": {
+      "title": "STANDARD BUTTONS",
+      "btn": {
+        "primary": "PRIMARY",
+        "default": "DEFAULT",
+        "secondary": "SECONDARY",
+        "succes": "SUCCESS",
+        "info": "INFO",
+        "warning": "WARNING",
+        "danger": "DANGER"
+      }
+    },
+    "gradient": {
+      "title": "GRADIENT BUTTONS",
+      "btn": {
+        "peach": "PEACH",
+        "purple": "PURPLE",
+        "blue": "BLUE",
+        "aqua": "AQUA"
+      }
+    },
+    "outlined": {
+      "title": "OUTLINED BUTTONS",
+      "btn": {
+        "primary": "PRIMARY",
+        "default": "DEFAULT",
+        "secondary": "SECONDARY",
+        "succes": "SUCCESS",
+        "info": "INFO",
+        "warning": "WARNING",
+        "danger": "DANGER"
+      }
+    },
+    "orientation": {
+      "title": "ORIENTATION BUTTONS",
+      "btn": {
+        "horizontal": "Horizontal label",
+        "vertical": "Vertical label"
+      }
+    }
+  },
+  "lists": {
+    "title": "LISTS",
+    "description": "Use Crestron CH5 to build smooth-scrolling lists of any size with any content.",
+    "header": "Contact List",
+    "labels": {
+      "nickname": "Nickname",
+      "organization": "Organization",
+      "title": "Title",
+      "email": "Email",
+      "work": "Work",
+      "extension": "Extension",
+      "mobile": "Mobile",
+      "home": "Home"
+    }
+  },
+  "source": {
+    "title": "Present a Source",
+    "description": "Select a source to connect.",
+    "sources": [
+      { "title": "HDMI", "icon": "fas fa-tv" },
+      { "title": "Airboard", "icon": "fas fa-chalkboard" },
+      { "title": "Laptop", "icon": "fas fa-laptop" },
+      { "title": "AirMedia", "icon": "fas fa-wifi" }
+    ]
+  },
+  "lighting": {
+    "title": "LIGHTING",
+    "heading": "GREAT ROOM",
+    "alllights": "ALL LIGHTS",
+    "lightName": [
+      "Lamp",
+      "Sconces",
+      "Downlights",
+      "Media Wall",
+      "Tracks",
+      "Pendants"
+    ],
+    "sceneTitle": "Scenes",
+    "scenes": [
+      { "name": "ALL ON" },
+      { "name": "ALL OFF" },
+      { "name": "HIGH" },
+      { "name": "MEDIUM" },
+      { "name": "LOW" }
+    ]
+  },
+  "video": {
+    "title": "Video",
+    "description": "Display streaming video",
+    "camera": [
+      { "name": "Camera 1" },
+      { "name": "Camera 2" },
+      { "name": "Camera 3" },
+      { "name": "Camera 4" }
+    ]
+  },
+  "swiperSlides": [
+    {
+      "thumbTitle": "Buttons"
+    },
+    {
+      "thumbTitle": "Lists"
+    },
+    {
+      "thumbTitle": "Source"
+    },
+    {
+      "thumbTitle": "Lighting"
+    },
+    {
+      "thumbTitle": "Video"
+    }
+  ],
+
+  "lang": "English"
+}

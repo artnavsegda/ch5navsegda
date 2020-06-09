@@ -1,0 +1,146 @@
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100vh;
+  padding-top: $header-height;
+
+  &>.row.no-gutters {
+    position: relative;
+    flex-wrap: nowrap;
+    flex: auto;
+  }
+
+  .details-container {
+    padding: 2rem;
+    min-height: 100%;
+
+    @media all and (orientation:landscape) {
+      padding: $mobile-gutter-space-lg;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: $header-height-sm;
+
+    .details-container {
+      padding: $mobile-gutter-space-lg;
+    }
+  }
+}
+
+// for router animation
+router-outlet~*:not(swiper) {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+// examples theme
+.examples-container {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+
+  &>.row,
+  &>.flex-column {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    height: 100%;
+  }
+
+  &>.row {
+    flex-wrap: nowrap;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    @include size(100%);
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+    z-index: -1;
+  }
+
+  .temperature {
+    display: flex;
+    color: $white;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateY(-75px);
+    width: 300px;
+
+    .ch5-button {
+      display: block;
+      @include size(64px);
+      border: 0;
+
+      .fa {
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+    }
+
+    .temperature-label {
+      margin: 0 0rem;
+      line-height: 1;
+      font-size: 3rem;
+
+      label {
+        position: relative;
+        line-height: 1;
+        margin: 0;
+
+        &:after {
+          content: attr(placeholder);
+          position: absolute;
+          top: 0;
+          left: 100%;
+          margin-left: 2px;
+          font-size: 80%;
+        }
+      }
+
+      small {
+        color: darkgray;
+        font-size: 50%;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      transform: translateY(-55px);
+      width: 260px;
+
+      .ch5-button {
+        @include size(52px);
+
+        .fa {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    @include media-breakpoint-maxheight(460px) {
+      transform: translateY(0);
+      width: 230px;
+    }
+  }
+}
+
+
+@keyframes bounce {
+  50% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

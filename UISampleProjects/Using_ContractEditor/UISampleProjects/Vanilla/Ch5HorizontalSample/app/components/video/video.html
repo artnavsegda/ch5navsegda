@@ -1,0 +1,50 @@
+<section class="details-container">
+  <div class="row no-gutters">
+    <div class="col">
+      <header>
+        <h1 class="text-uppercase" data-ch5-i18n="-+video.title+-"></h1>
+        <p class="lead desc-title" data-ch5-i18n="-+video.description+-"></p>
+        <hr />
+        <button class="navbar-toggler d-sm-none" type="button" onclick="videoModule.videoNavbarOpen()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </header>
+      <div class="video-container">
+        <ch5-video aspectratio="16:9" indexid="idx" zindex="0" stretch="true" size="x-small" controls="true"
+        receivestatevideocount="CameraList.NumberOfCameras"
+        receivestateselect="CameraList.IndexOfSelectedCamera"
+        receivestateurl="CameraList.Cameras[{{idx}}].VideoURLOfCamera"
+        receivestatesnapshoturl="CameraList.Cameras[{{idx}}].ImageURLOfCamera"
+        receivestatesourcetype="CameraList.Cameras[{{idx}}].SourceTypeOfCamera"
+        receivestateuserid="CameraList.Cameras[{{idx}}].UserIdOfVideo"
+        receivestatepassword="CameraList.Cameras[{{idx}}].PasswordOfVideo"
+        receivestatesnapshotuserid="CameraList.Cameras[{{idx}}].UserIdOfImage"
+        receivestatesnapshotpassword="CameraList.Cameras[{{idx}}].PasswordOfImage"
+        receivestatesnapshotrefreshrate="CameraList.Cameras[{{idx}}].TimePeriodOfImage"
+        sendeventstate="CameraList.StateOfSelectedCamera"
+        sendeventselectionurl="CameraList.VideoURLOfSelectedCamera"
+        sendeventerrorcode="CameraList.ErrorCodeOfSelectedCamera"
+        sendeventerrormessage="CameraList.ErrorMessageOfSelectedCamera"
+        sendeventsnapshoturl="CameraList.ImageURLOfSelectedCamera"
+        sendeventselectionsourcetype="CameraList.SourceTypeOfSelectedCamara"
+        sendeventretrycount="CameraList.RetryCountOfSelectedCamera"
+        sendeventsnapshotlastupdatetime="CameraList.LastUpdateTimeOfSelectedCameraImage"
+        sendeventresolution="CameraList.ResolutionOfSelectedCamera"
+        sendeventsnapshotstatus="CameraList.StatusOfSelectedCameraImage"
+        debug></ch5-video>
+      </div>
+    </div>
+    <div class="video-navbar" id="videoNavbar">
+      <div class="card custom-list-group" id="videoScrollerPanel">
+        <ch5-list class="video-list" itemWidth="auto" itemheight="auto" orientation="vertical" indexId="idx" receiveStateSize="CameraList.NumberOfCameras"
+          scrollbar="false">
+          <template>
+            <div id="video-list-item-{{idx}}" class="list-group-item list-group-item-action d-flex">
+              <h5 class="mb-0" data-ch5-textcontent="CameraList.Cameras[{{idx}}].NameOfCamera">Not Populated</h5>
+            </div>
+          </template>
+        </ch5-list>
+      </div>
+    </div>
+  </div>
+</section>

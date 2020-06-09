@@ -1,0 +1,128 @@
+{
+	"Errors": [],
+	"id": "_d0en9k3yt",
+	"name": "Selector",
+	"description": "  This contract represents a generic selector ",
+	"company": " Crestron Electronics, Inc.",
+	"client": "  Developers",
+	"author": "  Rene Colmenares",
+	"version": "1.0.0.0",
+	"schemaVersion": 1,
+	"subContractLinks": [],
+	"subContracts": [],
+	"specifications": [],
+	"components": [
+		{
+			"Errors": [],
+			"parentId": "_d0en9k3yt",
+			"id": "_36yppyyag",
+			"name": "Source",
+			"commands": [
+				{
+					"Errors": [],
+					"name": "NameOfSource",
+					"siblingId": "_f4p6o5ebg",
+					"dataType": 3,
+					"notes": "Name of the source",
+					"id": "_ae7ftmxzl",
+					"parentId": "_36yppyyag",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "IconClassOfSource",
+					"siblingId": "_gk7b7zc1x",
+					"dataType": 3,
+					"notes": "Class names assoicated with source",
+					"id": "_tf2cmm35p",
+					"parentId": "_36yppyyag",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "SourceIsSelected",
+					"siblingId": "_wntsak5uc",
+					"dataType": 1,
+					"notes": "Is input source routed",
+					"id": "_md2zm2hru",
+					"parentId": "_36yppyyag",
+					"attributeType": 0
+				}
+			],
+			"feedbacks": [
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_ae7ftmxzl",
+					"dataType": 3,
+					"notes": "",
+					"id": "_f4p6o5ebg",
+					"parentId": "_36yppyyag",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_tf2cmm35p",
+					"dataType": 3,
+					"notes": "",
+					"id": "_gk7b7zc1x",
+					"parentId": "_36yppyyag",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "SetSourceSelected",
+					"siblingId": "_md2zm2hru",
+					"dataType": 1,
+					"notes": "request change of source",
+					"id": "_wntsak5uc",
+					"parentId": "_36yppyyag",
+					"attributeType": 1
+				}
+			],
+			"specifications": []
+		},
+		{
+			"Errors": [],
+			"parentId": "_d0en9k3yt",
+			"id": "_dw9ldc5r4",
+			"name": "SourceList",
+			"commands": [
+				{
+					"Errors": [],
+					"name": "NumberOfSources",
+					"siblingId": "_vho81yl2t",
+					"dataType": 2,
+					"notes": "The number of active sources in a list",
+					"id": "_2cu02v8nd",
+					"parentId": "_dw9ldc5r4",
+					"attributeType": 0
+				}
+			],
+			"feedbacks": [
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_2cu02v8nd",
+					"dataType": 2,
+					"notes": "",
+					"id": "_vho81yl2t",
+					"parentId": "_dw9ldc5r4",
+					"attributeType": 1
+				}
+			],
+			"specifications": [
+				{
+					"Errors": [],
+					"parentId": "_d0en9k3yt",
+					"id": "_p3p4ezk04",
+					"componentId": "_36yppyyag",
+					"instanceName": "Sources",
+					"numberOfInstances": 8
+				}
+			]
+		}
+	],
+	"allComponentsForAllContracts": []
+}

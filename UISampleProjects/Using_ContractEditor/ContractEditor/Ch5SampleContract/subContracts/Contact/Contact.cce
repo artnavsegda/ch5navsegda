@@ -1,0 +1,498 @@
+{
+	"Errors": [],
+	"id": "_gz04avjgp",
+	"name": "Contact",
+	"description": " This contract represents the signature of the Lists page in the CH5 Demo ",
+	"company": " Crestron Electronics, Inc",
+	"client": " Developers",
+	"author": " Rene Colmenares",
+	"version": "1.0.0.0",
+	"schemaVersion": 1,
+	"subContractLinks": [],
+	"subContracts": [],
+	"specifications": [
+		{
+			"Errors": [],
+			"parentId": "_gz04avjgp",
+			"id": "_efu979mic",
+			"componentId": "_ch4zohi7v",
+			"instanceName": "ContactList",
+			"numberOfInstances": 1
+		}
+	],
+	"components": [
+		{
+			"Errors": [],
+			"parentId": "_gz04avjgp",
+			"id": "_u0noutu56",
+			"name": "Contact",
+			"description": "Information about an individual",
+			"commands": [
+				{
+					"Errors": [],
+					"name": "FullName",
+					"siblingId": "_8ofggmv69",
+					"dataType": 3,
+					"notes": "Name of the contact",
+					"id": "_yeoearsf1",
+					"parentId": "_u0noutu56",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "Company",
+					"siblingId": "_o42s6z6q0",
+					"dataType": 3,
+					"notes": "Name of contact's company",
+					"id": "_7nhtejwdh",
+					"parentId": "_u0noutu56",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "Title",
+					"siblingId": "_d1mzcvts4",
+					"dataType": 3,
+					"notes": "Title of the contact",
+					"id": "_e8tzt3nfw",
+					"parentId": "_u0noutu56",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "Email",
+					"siblingId": "_1ilvxkv8g",
+					"dataType": 3,
+					"notes": "Email address of the contact",
+					"id": "_zeqxkx87p",
+					"parentId": "_u0noutu56",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "WorkNumber",
+					"siblingId": "_xunf1s6ul",
+					"dataType": 3,
+					"notes": "Work phone number of the contact",
+					"id": "_6ynuq44qp",
+					"parentId": "_u0noutu56",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "WorkNumberExtension",
+					"siblingId": "_bt176na0z",
+					"dataType": 3,
+					"notes": "Extension of the work number",
+					"id": "_qsqa6a2lv",
+					"parentId": "_u0noutu56",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "MobileNumber",
+					"siblingId": "_cpbnkss8e",
+					"dataType": 3,
+					"notes": "Mobile number of contact",
+					"id": "_4x1znza5s",
+					"parentId": "_u0noutu56",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "HomeNumber",
+					"siblingId": "_7rum7mkyo",
+					"dataType": 3,
+					"notes": "Home number of the contact",
+					"id": "_tt95atxu8",
+					"parentId": "_u0noutu56",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "Image",
+					"siblingId": "_be916670c",
+					"dataType": 3,
+					"notes": "Image of contact",
+					"id": "_1jpx6bwun",
+					"parentId": "_u0noutu56",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "Nickname",
+					"siblingId": "_zs5lfr29u",
+					"dataType": 3,
+					"notes": "Display name of contact",
+					"id": "_th5n7iwi1",
+					"parentId": "_u0noutu56",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "ContactIsSelected",
+					"siblingId": "_aihjhkvb6",
+					"dataType": 1,
+					"notes": "Current contact",
+					"id": "_id3fh6faa",
+					"parentId": "_u0noutu56",
+					"attributeType": 0
+				}
+			],
+			"feedbacks": [
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_yeoearsf1",
+					"dataType": 3,
+					"notes": "",
+					"id": "_8ofggmv69",
+					"parentId": "_u0noutu56",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_7nhtejwdh",
+					"dataType": 3,
+					"notes": "",
+					"id": "_o42s6z6q0",
+					"parentId": "_u0noutu56",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_e8tzt3nfw",
+					"dataType": 3,
+					"notes": "",
+					"id": "_d1mzcvts4",
+					"parentId": "_u0noutu56",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_zeqxkx87p",
+					"dataType": 3,
+					"notes": "",
+					"id": "_1ilvxkv8g",
+					"parentId": "_u0noutu56",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_6ynuq44qp",
+					"dataType": 3,
+					"notes": "",
+					"id": "_xunf1s6ul",
+					"parentId": "_u0noutu56",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_qsqa6a2lv",
+					"dataType": 3,
+					"notes": "",
+					"id": "_bt176na0z",
+					"parentId": "_u0noutu56",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_4x1znza5s",
+					"dataType": 3,
+					"notes": "",
+					"id": "_cpbnkss8e",
+					"parentId": "_u0noutu56",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_tt95atxu8",
+					"dataType": 3,
+					"notes": "",
+					"id": "_7rum7mkyo",
+					"parentId": "_u0noutu56",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_1jpx6bwun",
+					"dataType": 3,
+					"notes": "",
+					"id": "_be916670c",
+					"parentId": "_u0noutu56",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_th5n7iwi1",
+					"dataType": 3,
+					"notes": "",
+					"id": "_zs5lfr29u",
+					"parentId": "_u0noutu56",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "SetContactSelected",
+					"siblingId": "_id3fh6faa",
+					"dataType": 1,
+					"notes": " Select this contact",
+					"id": "_aihjhkvb6",
+					"parentId": "_u0noutu56",
+					"attributeType": 1
+				}
+			],
+			"specifications": []
+		},
+		{
+			"Errors": [],
+			"parentId": "_gz04avjgp",
+			"id": "_ch4zohi7v",
+			"name": "ContactList",
+			"commands": [
+				{
+					"Errors": [],
+					"name": "NumberOfContacts",
+					"siblingId": "_8lo7jmtpd",
+					"dataType": 2,
+					"notes": "The number of active contacts",
+					"id": "_wo5ea5jps",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "SelectedName",
+					"siblingId": "_s7m3odr5v",
+					"dataType": 3,
+					"notes": "",
+					"id": "_vfhc54ft1",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "SelectedCompany",
+					"siblingId": "_dh5wkm1h7",
+					"dataType": 3,
+					"notes": "",
+					"id": "_og21pz6g8",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "SelectedTitle",
+					"siblingId": "_83u97t6fk",
+					"dataType": 3,
+					"notes": "",
+					"id": "_q80mvxex2",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "SelectedEmail",
+					"siblingId": "_yk45v7soi",
+					"dataType": 3,
+					"notes": "",
+					"id": "_89vysc4bg",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "SelectedWorkPhone",
+					"siblingId": "_r3s20c6vl",
+					"dataType": 3,
+					"notes": "",
+					"id": "_5g7kovfzx",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "SelectedExtension",
+					"siblingId": "_iul6y1nk5",
+					"dataType": 3,
+					"notes": "",
+					"id": "_kf3ntnlwu",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "SelectedMobilePhone",
+					"siblingId": "_x1r5grhqk",
+					"dataType": 3,
+					"notes": "",
+					"id": "_jwfr404tm",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "SelectedHomePhone",
+					"siblingId": "_23eum6j0v",
+					"dataType": 3,
+					"notes": "",
+					"id": "_328ndbhax",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "SelectedImage",
+					"siblingId": "_w288n09mm",
+					"dataType": 3,
+					"notes": "",
+					"id": "_pvafjlw9i",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 0
+				},
+				{
+					"Errors": [],
+					"name": "SelectedNickName",
+					"siblingId": "_ib8hly45i",
+					"dataType": 3,
+					"notes": "",
+					"id": "_pnpecezzk",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 0
+				}
+			],
+			"feedbacks": [
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_wo5ea5jps",
+					"dataType": 2,
+					"notes": "",
+					"id": "_8lo7jmtpd",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_vfhc54ft1",
+					"dataType": 3,
+					"notes": "",
+					"id": "_s7m3odr5v",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_og21pz6g8",
+					"dataType": 3,
+					"notes": "",
+					"id": "_dh5wkm1h7",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_q80mvxex2",
+					"dataType": 3,
+					"notes": "",
+					"id": "_83u97t6fk",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_89vysc4bg",
+					"dataType": 3,
+					"notes": "",
+					"id": "_yk45v7soi",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_5g7kovfzx",
+					"dataType": 3,
+					"notes": "",
+					"id": "_r3s20c6vl",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_kf3ntnlwu",
+					"dataType": 3,
+					"notes": "",
+					"id": "_iul6y1nk5",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_jwfr404tm",
+					"dataType": 3,
+					"notes": "",
+					"id": "_x1r5grhqk",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_328ndbhax",
+					"dataType": 3,
+					"notes": "",
+					"id": "_23eum6j0v",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_pvafjlw9i",
+					"dataType": 3,
+					"notes": "",
+					"id": "_w288n09mm",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 1
+				},
+				{
+					"Errors": [],
+					"name": "",
+					"siblingId": "_pnpecezzk",
+					"dataType": 3,
+					"notes": "",
+					"id": "_ib8hly45i",
+					"parentId": "_ch4zohi7v",
+					"attributeType": 1
+				}
+			],
+			"specifications": [
+				{
+					"Errors": [],
+					"parentId": "_gz04avjgp",
+					"id": "_83aou60xy",
+					"componentId": "_u0noutu56",
+					"instanceName": "Contact",
+					"numberOfInstances": 30
+				}
+			]
+		}
+	],
+	"allComponentsForAllContracts": []
+}

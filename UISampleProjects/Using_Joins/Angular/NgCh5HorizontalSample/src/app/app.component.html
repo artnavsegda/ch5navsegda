@@ -1,0 +1,35 @@
+<section class="main-section">
+  <app-header (valueChange)="getHeaderEvent($event)"></app-header>
+  <ch5-background receivestateurl="common_background_url" url="./assets/img/ch5-stone-light-bg.jpg"></ch5-background>
+  <ch5-triggerview class="main-swiper" [attr.activeView]="activeIndex" gestureable="true" endless="false">
+    <ch5-triggerview-child>
+      <app-buttons></app-buttons>
+    </ch5-triggerview-child>
+    <ch5-triggerview-child>
+      <app-lists [windowSize]="windowSize"></app-lists>
+    </ch5-triggerview-child>
+    <ch5-triggerview-child>
+      <app-source [langData]="langData"></app-source>
+    </ch5-triggerview-child>
+    <ch5-triggerview-child>
+      <app-lighting [langData]="langData"></app-lighting>
+    </ch5-triggerview-child>
+    <ch5-triggerview-child>
+      <app-video [langData]="langData"></app-video>
+    </ch5-triggerview-child>
+  </ch5-triggerview>
+  <ch5-list [ngClass]="{open: isCollapsed}" class="swiper-thumb" orientation="horizontal" maxHeight="auto"
+    indexId="idx" itemHeight="100%" receiveStateSize="nav.items.size">
+    <template ngNonBindable>
+      <div class="horizontal-list-item">
+        <ch5-button customClass="thumb-btn-{{idx}}" type="text" shape="rectangle"
+          receiveStateSelected="active_state_class_{{idx}}" receiveStateLabel="nav_label_{{idx}}"
+          iconUrl="./assets/img/navigation/nav_icon_{{idx}}.svg" iconPosition="bottom"></ch5-button>
+      </div>
+    </template>
+  </ch5-list>
+  <a class="thumb-action" (click)="isCollapsed = true; $event.stopPropagation()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 12 24">
+      <path d="M11.67 3.87L9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z" /></svg>
+  </a>
+</section>

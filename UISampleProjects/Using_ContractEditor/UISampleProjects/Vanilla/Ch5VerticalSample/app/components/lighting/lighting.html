@@ -1,0 +1,51 @@
+<nav class="navbar navbar-dark">
+  <div class="navbar-text">
+    <div class="room-info text-uppercase">
+      <span class="d-block" data-ch5-i18n="-+lighting.title+-">Lighting</span>
+      <h2 class="mb-0" data-ch5-textcontent="Room.NameOfRoom">Great Room</h2>
+    </div>
+  </div>
+  <div class="navbar-action">
+    <a class="btn-link text-uppercase" data-ch5-i18n="-+lighting.alllights+-">All Lights</a>
+    <button id="lightToggle" class="navbar-toggler d-md-none" type="button"
+      onclick="lightingModule.lightingSidebarToggle()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+<section class="examples-container">
+  <div class="row no-gutters">
+    <div class="col-md-9" id="lightingList">
+      <ch5-list class="ch5-custom-list" maxHeight="100%" itemWidth="100%" orientation="vertical" indexId="idx"
+        scrollbar="true" receiveStateSize="Room.NumberOfLights">
+        <template>
+          <div class="vertical-list-item">
+            <span class="label" data-ch5-textcontent="Room.DimmableLights[{{idx}}].NameOfLight">Label</span>
+            <div class="d-flex align-items-center">
+              <ch5-button class="lighting-button" shape="circle"
+                sendEventOnClick="Room.DimmableLights[{{idx}}].TurnLightOff"
+                iconurl="./assets/img/lighting/fa-icon-lightbulb.svg"></ch5-button>
+              <ch5-slider class="lighting-slider" stretch="width" handleShape="circle" toolTipShowType="auto"
+                sendEventOnChange="Room.DimmableLights[{{idx}}].SetLightLevel"
+                receiveStateValue="Room.DimmableLights[{{idx}}].LightIsAtLevel" orientation="horizontal"></ch5-slider>
+              <ch5-button class="lighting-button" shape="circle"
+                sendEventOnClick="Room.DimmableLights[{{idx}}].TurnLightOn" iconClass="fas fa-lightbulb">
+              </ch5-button>
+            </div>
+          </div>
+        </template>
+      </ch5-list>
+    </div>
+    <aside class="col-md-3 lighting-sidebar" id="lightingSidebar">
+      <ch5-select class="sidebar ch5-custom-select" class="sidebar ch5-custom-select" mode="panel" maxWidth="none"
+        indexId="idx" receiveStateSize="Room.NumberOfScenes" noneSelectedPrompt="-+lighting.sceneTitle+-"
+        receiveStateValue="NotDefinedOnPurpose" signalValueSyncTimeout="2500" panelScrollHeight="300">
+        <template>
+          <ch5-select-option sendEventOnClick="Room.Scenes[{{idx}}].TriggerSceneStart">
+            <span data-ch5-textContent="Room.Scenes[{{idx}}].NameOfScene"></span>
+          </ch5-select-option>
+        </template>
+      </ch5-select>
+    </aside>
+  </div>
+</section>

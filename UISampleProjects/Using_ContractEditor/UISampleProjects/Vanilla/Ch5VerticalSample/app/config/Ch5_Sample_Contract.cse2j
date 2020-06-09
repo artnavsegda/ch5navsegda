@@ -1,0 +1,1760 @@
+{
+	"name": "Ch5_Sample_Contract",
+	"timestamp": "2020-03-04 17:38:22.665",
+	"version": "1.0.0.0",
+	"schema_version": 1,
+	"extra_value": " An example of using compound CH5 contracts to produce one system contract",
+	"signals": {
+		"states": {
+			"numeric": {
+				"1": {
+					"1": "ContactList.NumberOfContacts"
+				},
+				"32": {
+					"1": "SourceList.NumberOfSources"
+				},
+				"41": {
+					"1": "Room.NumberOfLights",
+					"2": "Room.NumberOfScenes"
+				},
+				"42": {
+					"1": "Room.DimmableLights[0].LightIsAtLevel"
+				},
+				"43": {
+					"1": "Room.DimmableLights[1].LightIsAtLevel"
+				},
+				"44": {
+					"1": "Room.DimmableLights[2].LightIsAtLevel"
+				},
+				"45": {
+					"1": "Room.DimmableLights[3].LightIsAtLevel"
+				},
+				"46": {
+					"1": "Room.DimmableLights[4].LightIsAtLevel"
+				},
+				"47": {
+					"1": "Room.DimmableLights[5].LightIsAtLevel"
+				},
+				"48": {
+					"1": "Room.DimmableLights[6].LightIsAtLevel"
+				},
+				"49": {
+					"1": "Room.DimmableLights[7].LightIsAtLevel"
+				},
+				"50": {
+					"1": "Room.DimmableLights[8].LightIsAtLevel"
+				},
+				"51": {
+					"1": "Room.DimmableLights[9].LightIsAtLevel"
+				},
+				"52": {
+					"1": "Room.DimmableLights[10].LightIsAtLevel"
+				},
+				"53": {
+					"1": "Room.DimmableLights[11].LightIsAtLevel"
+				},
+				"54": {
+					"1": "Room.DimmableLights[12].LightIsAtLevel"
+				},
+				"55": {
+					"1": "Room.DimmableLights[13].LightIsAtLevel"
+				},
+				"56": {
+					"1": "Room.DimmableLights[14].LightIsAtLevel"
+				},
+				"57": {
+					"1": "Room.DimmableLights[15].LightIsAtLevel"
+				},
+				"58": {
+					"1": "Room.DimmableLights[16].LightIsAtLevel"
+				},
+				"59": {
+					"1": "Room.DimmableLights[17].LightIsAtLevel"
+				},
+				"60": {
+					"1": "Room.DimmableLights[18].LightIsAtLevel"
+				},
+				"61": {
+					"1": "Room.DimmableLights[19].LightIsAtLevel"
+				},
+				"62": {
+					"1": "Room.DimmableLights[20].LightIsAtLevel"
+				},
+				"63": {
+					"1": "Room.DimmableLights[21].LightIsAtLevel"
+				},
+				"64": {
+					"1": "Room.DimmableLights[22].LightIsAtLevel"
+				},
+				"65": {
+					"1": "Room.DimmableLights[23].LightIsAtLevel"
+				},
+				"66": {
+					"1": "Room.DimmableLights[24].LightIsAtLevel"
+				},
+				"67": {
+					"1": "Room.DimmableLights[25].LightIsAtLevel"
+				},
+				"68": {
+					"1": "Room.DimmableLights[26].LightIsAtLevel"
+				},
+				"69": {
+					"1": "Room.DimmableLights[27].LightIsAtLevel"
+				},
+				"70": {
+					"1": "Room.DimmableLights[28].LightIsAtLevel"
+				},
+				"71": {
+					"1": "Room.DimmableLights[29].LightIsAtLevel"
+				},
+				"82": {
+					"1": "CameraList.NumberOfCameras",
+					"2": "CameraList.IndexOfSelectedCamera"
+				},
+				"83": {
+					"1": "CameraList.Cameras[0].TimePeriodOfImage"
+				},
+				"84": {
+					"1": "CameraList.Cameras[1].TimePeriodOfImage"
+				},
+				"85": {
+					"1": "CameraList.Cameras[2].TimePeriodOfImage"
+				},
+				"86": {
+					"1": "CameraList.Cameras[3].TimePeriodOfImage"
+				},
+				"87": {
+					"1": "CameraList.Cameras[4].TimePeriodOfImage"
+				},
+				"88": {
+					"1": "CameraList.Cameras[5].TimePeriodOfImage"
+				},
+				"89": {
+					"1": "CameraList.Cameras[6].TimePeriodOfImage"
+				},
+				"90": {
+					"1": "CameraList.Cameras[7].TimePeriodOfImage"
+				},
+				"91": {
+					"1": "CameraList.Cameras[8].TimePeriodOfImage"
+				},
+				"92": {
+					"1": "CameraList.Cameras[9].TimePeriodOfImage"
+				},
+				"93": {
+					"1": "CameraList.Cameras[10].TimePeriodOfImage"
+				},
+				"94": {
+					"1": "CameraList.Cameras[11].TimePeriodOfImage"
+				},
+				"95": {
+					"1": "CameraList.Cameras[12].TimePeriodOfImage"
+				},
+				"96": {
+					"1": "CameraList.Cameras[13].TimePeriodOfImage"
+				},
+				"97": {
+					"1": "CameraList.Cameras[14].TimePeriodOfImage"
+				},
+				"98": {
+					"1": "CameraList.Cameras[15].TimePeriodOfImage"
+				},
+				"99": {
+					"1": "CameraList.Cameras[16].TimePeriodOfImage"
+				},
+				"100": {
+					"1": "CameraList.Cameras[17].TimePeriodOfImage"
+				},
+				"101": {
+					"1": "CameraList.Cameras[18].TimePeriodOfImage"
+				},
+				"102": {
+					"1": "CameraList.Cameras[19].TimePeriodOfImage"
+				},
+				"103": {
+					"1": "CameraList.Cameras[20].TimePeriodOfImage"
+				},
+				"104": {
+					"1": "CameraList.Cameras[21].TimePeriodOfImage"
+				},
+				"105": {
+					"1": "CameraList.Cameras[22].TimePeriodOfImage"
+				},
+				"106": {
+					"1": "CameraList.Cameras[23].TimePeriodOfImage"
+				},
+				"107": {
+					"1": "CameraList.Cameras[24].TimePeriodOfImage"
+				},
+				"108": {
+					"1": "CameraList.Cameras[25].TimePeriodOfImage"
+				},
+				"109": {
+					"1": "CameraList.Cameras[26].TimePeriodOfImage"
+				},
+				"110": {
+					"1": "CameraList.Cameras[27].TimePeriodOfImage"
+				},
+				"111": {
+					"1": "CameraList.Cameras[28].TimePeriodOfImage"
+				},
+				"112": {
+					"1": "CameraList.Cameras[29].TimePeriodOfImage"
+				}
+			},
+			"string": {
+				"1": {
+					"1": "ContactList.SelectedName",
+					"2": "ContactList.SelectedCompany",
+					"3": "ContactList.SelectedTitle",
+					"4": "ContactList.SelectedEmail",
+					"5": "ContactList.SelectedWorkPhone",
+					"6": "ContactList.SelectedExtension",
+					"7": "ContactList.SelectedMobilePhone",
+					"8": "ContactList.SelectedHomePhone",
+					"9": "ContactList.SelectedImage",
+					"10": "ContactList.SelectedNickName"
+				},
+				"2": {
+					"1": "ContactList.Contact[0].FullName",
+					"2": "ContactList.Contact[0].Company",
+					"3": "ContactList.Contact[0].Title",
+					"4": "ContactList.Contact[0].Email",
+					"5": "ContactList.Contact[0].WorkNumber",
+					"6": "ContactList.Contact[0].WorkNumberExtension",
+					"7": "ContactList.Contact[0].MobileNumber",
+					"8": "ContactList.Contact[0].HomeNumber",
+					"9": "ContactList.Contact[0].Image",
+					"10": "ContactList.Contact[0].Nickname"
+				},
+				"3": {
+					"1": "ContactList.Contact[1].FullName",
+					"2": "ContactList.Contact[1].Company",
+					"3": "ContactList.Contact[1].Title",
+					"4": "ContactList.Contact[1].Email",
+					"5": "ContactList.Contact[1].WorkNumber",
+					"6": "ContactList.Contact[1].WorkNumberExtension",
+					"7": "ContactList.Contact[1].MobileNumber",
+					"8": "ContactList.Contact[1].HomeNumber",
+					"9": "ContactList.Contact[1].Image",
+					"10": "ContactList.Contact[1].Nickname"
+				},
+				"4": {
+					"1": "ContactList.Contact[2].FullName",
+					"2": "ContactList.Contact[2].Company",
+					"3": "ContactList.Contact[2].Title",
+					"4": "ContactList.Contact[2].Email",
+					"5": "ContactList.Contact[2].WorkNumber",
+					"6": "ContactList.Contact[2].WorkNumberExtension",
+					"7": "ContactList.Contact[2].MobileNumber",
+					"8": "ContactList.Contact[2].HomeNumber",
+					"9": "ContactList.Contact[2].Image",
+					"10": "ContactList.Contact[2].Nickname"
+				},
+				"5": {
+					"1": "ContactList.Contact[3].FullName",
+					"2": "ContactList.Contact[3].Company",
+					"3": "ContactList.Contact[3].Title",
+					"4": "ContactList.Contact[3].Email",
+					"5": "ContactList.Contact[3].WorkNumber",
+					"6": "ContactList.Contact[3].WorkNumberExtension",
+					"7": "ContactList.Contact[3].MobileNumber",
+					"8": "ContactList.Contact[3].HomeNumber",
+					"9": "ContactList.Contact[3].Image",
+					"10": "ContactList.Contact[3].Nickname"
+				},
+				"6": {
+					"1": "ContactList.Contact[4].FullName",
+					"2": "ContactList.Contact[4].Company",
+					"3": "ContactList.Contact[4].Title",
+					"4": "ContactList.Contact[4].Email",
+					"5": "ContactList.Contact[4].WorkNumber",
+					"6": "ContactList.Contact[4].WorkNumberExtension",
+					"7": "ContactList.Contact[4].MobileNumber",
+					"8": "ContactList.Contact[4].HomeNumber",
+					"9": "ContactList.Contact[4].Image",
+					"10": "ContactList.Contact[4].Nickname"
+				},
+				"7": {
+					"1": "ContactList.Contact[5].FullName",
+					"2": "ContactList.Contact[5].Company",
+					"3": "ContactList.Contact[5].Title",
+					"4": "ContactList.Contact[5].Email",
+					"5": "ContactList.Contact[5].WorkNumber",
+					"6": "ContactList.Contact[5].WorkNumberExtension",
+					"7": "ContactList.Contact[5].MobileNumber",
+					"8": "ContactList.Contact[5].HomeNumber",
+					"9": "ContactList.Contact[5].Image",
+					"10": "ContactList.Contact[5].Nickname"
+				},
+				"8": {
+					"1": "ContactList.Contact[6].FullName",
+					"2": "ContactList.Contact[6].Company",
+					"3": "ContactList.Contact[6].Title",
+					"4": "ContactList.Contact[6].Email",
+					"5": "ContactList.Contact[6].WorkNumber",
+					"6": "ContactList.Contact[6].WorkNumberExtension",
+					"7": "ContactList.Contact[6].MobileNumber",
+					"8": "ContactList.Contact[6].HomeNumber",
+					"9": "ContactList.Contact[6].Image",
+					"10": "ContactList.Contact[6].Nickname"
+				},
+				"9": {
+					"1": "ContactList.Contact[7].FullName",
+					"2": "ContactList.Contact[7].Company",
+					"3": "ContactList.Contact[7].Title",
+					"4": "ContactList.Contact[7].Email",
+					"5": "ContactList.Contact[7].WorkNumber",
+					"6": "ContactList.Contact[7].WorkNumberExtension",
+					"7": "ContactList.Contact[7].MobileNumber",
+					"8": "ContactList.Contact[7].HomeNumber",
+					"9": "ContactList.Contact[7].Image",
+					"10": "ContactList.Contact[7].Nickname"
+				},
+				"10": {
+					"1": "ContactList.Contact[8].FullName",
+					"2": "ContactList.Contact[8].Company",
+					"3": "ContactList.Contact[8].Title",
+					"4": "ContactList.Contact[8].Email",
+					"5": "ContactList.Contact[8].WorkNumber",
+					"6": "ContactList.Contact[8].WorkNumberExtension",
+					"7": "ContactList.Contact[8].MobileNumber",
+					"8": "ContactList.Contact[8].HomeNumber",
+					"9": "ContactList.Contact[8].Image",
+					"10": "ContactList.Contact[8].Nickname"
+				},
+				"11": {
+					"1": "ContactList.Contact[9].FullName",
+					"2": "ContactList.Contact[9].Company",
+					"3": "ContactList.Contact[9].Title",
+					"4": "ContactList.Contact[9].Email",
+					"5": "ContactList.Contact[9].WorkNumber",
+					"6": "ContactList.Contact[9].WorkNumberExtension",
+					"7": "ContactList.Contact[9].MobileNumber",
+					"8": "ContactList.Contact[9].HomeNumber",
+					"9": "ContactList.Contact[9].Image",
+					"10": "ContactList.Contact[9].Nickname"
+				},
+				"12": {
+					"1": "ContactList.Contact[10].FullName",
+					"2": "ContactList.Contact[10].Company",
+					"3": "ContactList.Contact[10].Title",
+					"4": "ContactList.Contact[10].Email",
+					"5": "ContactList.Contact[10].WorkNumber",
+					"6": "ContactList.Contact[10].WorkNumberExtension",
+					"7": "ContactList.Contact[10].MobileNumber",
+					"8": "ContactList.Contact[10].HomeNumber",
+					"9": "ContactList.Contact[10].Image",
+					"10": "ContactList.Contact[10].Nickname"
+				},
+				"13": {
+					"1": "ContactList.Contact[11].FullName",
+					"2": "ContactList.Contact[11].Company",
+					"3": "ContactList.Contact[11].Title",
+					"4": "ContactList.Contact[11].Email",
+					"5": "ContactList.Contact[11].WorkNumber",
+					"6": "ContactList.Contact[11].WorkNumberExtension",
+					"7": "ContactList.Contact[11].MobileNumber",
+					"8": "ContactList.Contact[11].HomeNumber",
+					"9": "ContactList.Contact[11].Image",
+					"10": "ContactList.Contact[11].Nickname"
+				},
+				"14": {
+					"1": "ContactList.Contact[12].FullName",
+					"2": "ContactList.Contact[12].Company",
+					"3": "ContactList.Contact[12].Title",
+					"4": "ContactList.Contact[12].Email",
+					"5": "ContactList.Contact[12].WorkNumber",
+					"6": "ContactList.Contact[12].WorkNumberExtension",
+					"7": "ContactList.Contact[12].MobileNumber",
+					"8": "ContactList.Contact[12].HomeNumber",
+					"9": "ContactList.Contact[12].Image",
+					"10": "ContactList.Contact[12].Nickname"
+				},
+				"15": {
+					"1": "ContactList.Contact[13].FullName",
+					"2": "ContactList.Contact[13].Company",
+					"3": "ContactList.Contact[13].Title",
+					"4": "ContactList.Contact[13].Email",
+					"5": "ContactList.Contact[13].WorkNumber",
+					"6": "ContactList.Contact[13].WorkNumberExtension",
+					"7": "ContactList.Contact[13].MobileNumber",
+					"8": "ContactList.Contact[13].HomeNumber",
+					"9": "ContactList.Contact[13].Image",
+					"10": "ContactList.Contact[13].Nickname"
+				},
+				"16": {
+					"1": "ContactList.Contact[14].FullName",
+					"2": "ContactList.Contact[14].Company",
+					"3": "ContactList.Contact[14].Title",
+					"4": "ContactList.Contact[14].Email",
+					"5": "ContactList.Contact[14].WorkNumber",
+					"6": "ContactList.Contact[14].WorkNumberExtension",
+					"7": "ContactList.Contact[14].MobileNumber",
+					"8": "ContactList.Contact[14].HomeNumber",
+					"9": "ContactList.Contact[14].Image",
+					"10": "ContactList.Contact[14].Nickname"
+				},
+				"17": {
+					"1": "ContactList.Contact[15].FullName",
+					"2": "ContactList.Contact[15].Company",
+					"3": "ContactList.Contact[15].Title",
+					"4": "ContactList.Contact[15].Email",
+					"5": "ContactList.Contact[15].WorkNumber",
+					"6": "ContactList.Contact[15].WorkNumberExtension",
+					"7": "ContactList.Contact[15].MobileNumber",
+					"8": "ContactList.Contact[15].HomeNumber",
+					"9": "ContactList.Contact[15].Image",
+					"10": "ContactList.Contact[15].Nickname"
+				},
+				"18": {
+					"1": "ContactList.Contact[16].FullName",
+					"2": "ContactList.Contact[16].Company",
+					"3": "ContactList.Contact[16].Title",
+					"4": "ContactList.Contact[16].Email",
+					"5": "ContactList.Contact[16].WorkNumber",
+					"6": "ContactList.Contact[16].WorkNumberExtension",
+					"7": "ContactList.Contact[16].MobileNumber",
+					"8": "ContactList.Contact[16].HomeNumber",
+					"9": "ContactList.Contact[16].Image",
+					"10": "ContactList.Contact[16].Nickname"
+				},
+				"19": {
+					"1": "ContactList.Contact[17].FullName",
+					"2": "ContactList.Contact[17].Company",
+					"3": "ContactList.Contact[17].Title",
+					"4": "ContactList.Contact[17].Email",
+					"5": "ContactList.Contact[17].WorkNumber",
+					"6": "ContactList.Contact[17].WorkNumberExtension",
+					"7": "ContactList.Contact[17].MobileNumber",
+					"8": "ContactList.Contact[17].HomeNumber",
+					"9": "ContactList.Contact[17].Image",
+					"10": "ContactList.Contact[17].Nickname"
+				},
+				"20": {
+					"1": "ContactList.Contact[18].FullName",
+					"2": "ContactList.Contact[18].Company",
+					"3": "ContactList.Contact[18].Title",
+					"4": "ContactList.Contact[18].Email",
+					"5": "ContactList.Contact[18].WorkNumber",
+					"6": "ContactList.Contact[18].WorkNumberExtension",
+					"7": "ContactList.Contact[18].MobileNumber",
+					"8": "ContactList.Contact[18].HomeNumber",
+					"9": "ContactList.Contact[18].Image",
+					"10": "ContactList.Contact[18].Nickname"
+				},
+				"21": {
+					"1": "ContactList.Contact[19].FullName",
+					"2": "ContactList.Contact[19].Company",
+					"3": "ContactList.Contact[19].Title",
+					"4": "ContactList.Contact[19].Email",
+					"5": "ContactList.Contact[19].WorkNumber",
+					"6": "ContactList.Contact[19].WorkNumberExtension",
+					"7": "ContactList.Contact[19].MobileNumber",
+					"8": "ContactList.Contact[19].HomeNumber",
+					"9": "ContactList.Contact[19].Image",
+					"10": "ContactList.Contact[19].Nickname"
+				},
+				"22": {
+					"1": "ContactList.Contact[20].FullName",
+					"2": "ContactList.Contact[20].Company",
+					"3": "ContactList.Contact[20].Title",
+					"4": "ContactList.Contact[20].Email",
+					"5": "ContactList.Contact[20].WorkNumber",
+					"6": "ContactList.Contact[20].WorkNumberExtension",
+					"7": "ContactList.Contact[20].MobileNumber",
+					"8": "ContactList.Contact[20].HomeNumber",
+					"9": "ContactList.Contact[20].Image",
+					"10": "ContactList.Contact[20].Nickname"
+				},
+				"23": {
+					"1": "ContactList.Contact[21].FullName",
+					"2": "ContactList.Contact[21].Company",
+					"3": "ContactList.Contact[21].Title",
+					"4": "ContactList.Contact[21].Email",
+					"5": "ContactList.Contact[21].WorkNumber",
+					"6": "ContactList.Contact[21].WorkNumberExtension",
+					"7": "ContactList.Contact[21].MobileNumber",
+					"8": "ContactList.Contact[21].HomeNumber",
+					"9": "ContactList.Contact[21].Image",
+					"10": "ContactList.Contact[21].Nickname"
+				},
+				"24": {
+					"1": "ContactList.Contact[22].FullName",
+					"2": "ContactList.Contact[22].Company",
+					"3": "ContactList.Contact[22].Title",
+					"4": "ContactList.Contact[22].Email",
+					"5": "ContactList.Contact[22].WorkNumber",
+					"6": "ContactList.Contact[22].WorkNumberExtension",
+					"7": "ContactList.Contact[22].MobileNumber",
+					"8": "ContactList.Contact[22].HomeNumber",
+					"9": "ContactList.Contact[22].Image",
+					"10": "ContactList.Contact[22].Nickname"
+				},
+				"25": {
+					"1": "ContactList.Contact[23].FullName",
+					"2": "ContactList.Contact[23].Company",
+					"3": "ContactList.Contact[23].Title",
+					"4": "ContactList.Contact[23].Email",
+					"5": "ContactList.Contact[23].WorkNumber",
+					"6": "ContactList.Contact[23].WorkNumberExtension",
+					"7": "ContactList.Contact[23].MobileNumber",
+					"8": "ContactList.Contact[23].HomeNumber",
+					"9": "ContactList.Contact[23].Image",
+					"10": "ContactList.Contact[23].Nickname"
+				},
+				"26": {
+					"1": "ContactList.Contact[24].FullName",
+					"2": "ContactList.Contact[24].Company",
+					"3": "ContactList.Contact[24].Title",
+					"4": "ContactList.Contact[24].Email",
+					"5": "ContactList.Contact[24].WorkNumber",
+					"6": "ContactList.Contact[24].WorkNumberExtension",
+					"7": "ContactList.Contact[24].MobileNumber",
+					"8": "ContactList.Contact[24].HomeNumber",
+					"9": "ContactList.Contact[24].Image",
+					"10": "ContactList.Contact[24].Nickname"
+				},
+				"27": {
+					"1": "ContactList.Contact[25].FullName",
+					"2": "ContactList.Contact[25].Company",
+					"3": "ContactList.Contact[25].Title",
+					"4": "ContactList.Contact[25].Email",
+					"5": "ContactList.Contact[25].WorkNumber",
+					"6": "ContactList.Contact[25].WorkNumberExtension",
+					"7": "ContactList.Contact[25].MobileNumber",
+					"8": "ContactList.Contact[25].HomeNumber",
+					"9": "ContactList.Contact[25].Image",
+					"10": "ContactList.Contact[25].Nickname"
+				},
+				"28": {
+					"1": "ContactList.Contact[26].FullName",
+					"2": "ContactList.Contact[26].Company",
+					"3": "ContactList.Contact[26].Title",
+					"4": "ContactList.Contact[26].Email",
+					"5": "ContactList.Contact[26].WorkNumber",
+					"6": "ContactList.Contact[26].WorkNumberExtension",
+					"7": "ContactList.Contact[26].MobileNumber",
+					"8": "ContactList.Contact[26].HomeNumber",
+					"9": "ContactList.Contact[26].Image",
+					"10": "ContactList.Contact[26].Nickname"
+				},
+				"29": {
+					"1": "ContactList.Contact[27].FullName",
+					"2": "ContactList.Contact[27].Company",
+					"3": "ContactList.Contact[27].Title",
+					"4": "ContactList.Contact[27].Email",
+					"5": "ContactList.Contact[27].WorkNumber",
+					"6": "ContactList.Contact[27].WorkNumberExtension",
+					"7": "ContactList.Contact[27].MobileNumber",
+					"8": "ContactList.Contact[27].HomeNumber",
+					"9": "ContactList.Contact[27].Image",
+					"10": "ContactList.Contact[27].Nickname"
+				},
+				"30": {
+					"1": "ContactList.Contact[28].FullName",
+					"2": "ContactList.Contact[28].Company",
+					"3": "ContactList.Contact[28].Title",
+					"4": "ContactList.Contact[28].Email",
+					"5": "ContactList.Contact[28].WorkNumber",
+					"6": "ContactList.Contact[28].WorkNumberExtension",
+					"7": "ContactList.Contact[28].MobileNumber",
+					"8": "ContactList.Contact[28].HomeNumber",
+					"9": "ContactList.Contact[28].Image",
+					"10": "ContactList.Contact[28].Nickname"
+				},
+				"31": {
+					"1": "ContactList.Contact[29].FullName",
+					"2": "ContactList.Contact[29].Company",
+					"3": "ContactList.Contact[29].Title",
+					"4": "ContactList.Contact[29].Email",
+					"5": "ContactList.Contact[29].WorkNumber",
+					"6": "ContactList.Contact[29].WorkNumberExtension",
+					"7": "ContactList.Contact[29].MobileNumber",
+					"8": "ContactList.Contact[29].HomeNumber",
+					"9": "ContactList.Contact[29].Image",
+					"10": "ContactList.Contact[29].Nickname"
+				},
+				"33": {
+					"1": "SourceList.Sources[0].NameOfSource",
+					"2": "SourceList.Sources[0].IconClassOfSource"
+				},
+				"34": {
+					"1": "SourceList.Sources[1].NameOfSource",
+					"2": "SourceList.Sources[1].IconClassOfSource"
+				},
+				"35": {
+					"1": "SourceList.Sources[2].NameOfSource",
+					"2": "SourceList.Sources[2].IconClassOfSource"
+				},
+				"36": {
+					"1": "SourceList.Sources[3].NameOfSource",
+					"2": "SourceList.Sources[3].IconClassOfSource"
+				},
+				"37": {
+					"1": "SourceList.Sources[4].NameOfSource",
+					"2": "SourceList.Sources[4].IconClassOfSource"
+				},
+				"38": {
+					"1": "SourceList.Sources[5].NameOfSource",
+					"2": "SourceList.Sources[5].IconClassOfSource"
+				},
+				"39": {
+					"1": "SourceList.Sources[6].NameOfSource",
+					"2": "SourceList.Sources[6].IconClassOfSource"
+				},
+				"40": {
+					"1": "SourceList.Sources[7].NameOfSource",
+					"2": "SourceList.Sources[7].IconClassOfSource"
+				},
+				"41": {
+					"1": "Room.NameOfRoom"
+				},
+				"42": {
+					"1": "Room.DimmableLights[0].NameOfLight"
+				},
+				"43": {
+					"1": "Room.DimmableLights[1].NameOfLight"
+				},
+				"44": {
+					"1": "Room.DimmableLights[2].NameOfLight"
+				},
+				"45": {
+					"1": "Room.DimmableLights[3].NameOfLight"
+				},
+				"46": {
+					"1": "Room.DimmableLights[4].NameOfLight"
+				},
+				"47": {
+					"1": "Room.DimmableLights[5].NameOfLight"
+				},
+				"48": {
+					"1": "Room.DimmableLights[6].NameOfLight"
+				},
+				"49": {
+					"1": "Room.DimmableLights[7].NameOfLight"
+				},
+				"50": {
+					"1": "Room.DimmableLights[8].NameOfLight"
+				},
+				"51": {
+					"1": "Room.DimmableLights[9].NameOfLight"
+				},
+				"52": {
+					"1": "Room.DimmableLights[10].NameOfLight"
+				},
+				"53": {
+					"1": "Room.DimmableLights[11].NameOfLight"
+				},
+				"54": {
+					"1": "Room.DimmableLights[12].NameOfLight"
+				},
+				"55": {
+					"1": "Room.DimmableLights[13].NameOfLight"
+				},
+				"56": {
+					"1": "Room.DimmableLights[14].NameOfLight"
+				},
+				"57": {
+					"1": "Room.DimmableLights[15].NameOfLight"
+				},
+				"58": {
+					"1": "Room.DimmableLights[16].NameOfLight"
+				},
+				"59": {
+					"1": "Room.DimmableLights[17].NameOfLight"
+				},
+				"60": {
+					"1": "Room.DimmableLights[18].NameOfLight"
+				},
+				"61": {
+					"1": "Room.DimmableLights[19].NameOfLight"
+				},
+				"62": {
+					"1": "Room.DimmableLights[20].NameOfLight"
+				},
+				"63": {
+					"1": "Room.DimmableLights[21].NameOfLight"
+				},
+				"64": {
+					"1": "Room.DimmableLights[22].NameOfLight"
+				},
+				"65": {
+					"1": "Room.DimmableLights[23].NameOfLight"
+				},
+				"66": {
+					"1": "Room.DimmableLights[24].NameOfLight"
+				},
+				"67": {
+					"1": "Room.DimmableLights[25].NameOfLight"
+				},
+				"68": {
+					"1": "Room.DimmableLights[26].NameOfLight"
+				},
+				"69": {
+					"1": "Room.DimmableLights[27].NameOfLight"
+				},
+				"70": {
+					"1": "Room.DimmableLights[28].NameOfLight"
+				},
+				"71": {
+					"1": "Room.DimmableLights[29].NameOfLight"
+				},
+				"72": {
+					"1": "Room.Scenes[0].NameOfScene"
+				},
+				"73": {
+					"1": "Room.Scenes[1].NameOfScene"
+				},
+				"74": {
+					"1": "Room.Scenes[2].NameOfScene"
+				},
+				"75": {
+					"1": "Room.Scenes[3].NameOfScene"
+				},
+				"76": {
+					"1": "Room.Scenes[4].NameOfScene"
+				},
+				"77": {
+					"1": "Room.Scenes[5].NameOfScene"
+				},
+				"78": {
+					"1": "Room.Scenes[6].NameOfScene"
+				},
+				"79": {
+					"1": "Room.Scenes[7].NameOfScene"
+				},
+				"80": {
+					"1": "Room.Scenes[8].NameOfScene"
+				},
+				"81": {
+					"1": "Room.Scenes[9].NameOfScene"
+				},
+				"83": {
+					"1": "CameraList.Cameras[0].NameOfCamera",
+					"2": "CameraList.Cameras[0].VideoURLOfCamera",
+					"3": "CameraList.Cameras[0].ImageURLOfCamera",
+					"4": "CameraList.Cameras[0].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[0].UserIdOfVideo",
+					"6": "CameraList.Cameras[0].PasswordOfVideo",
+					"7": "CameraList.Cameras[0].UserIdOfImage",
+					"8": "CameraList.Cameras[0].PasswordOfImage"
+				},
+				"84": {
+					"1": "CameraList.Cameras[1].NameOfCamera",
+					"2": "CameraList.Cameras[1].VideoURLOfCamera",
+					"3": "CameraList.Cameras[1].ImageURLOfCamera",
+					"4": "CameraList.Cameras[1].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[1].UserIdOfVideo",
+					"6": "CameraList.Cameras[1].PasswordOfVideo",
+					"7": "CameraList.Cameras[1].UserIdOfImage",
+					"8": "CameraList.Cameras[1].PasswordOfImage"
+				},
+				"85": {
+					"1": "CameraList.Cameras[2].NameOfCamera",
+					"2": "CameraList.Cameras[2].VideoURLOfCamera",
+					"3": "CameraList.Cameras[2].ImageURLOfCamera",
+					"4": "CameraList.Cameras[2].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[2].UserIdOfVideo",
+					"6": "CameraList.Cameras[2].PasswordOfVideo",
+					"7": "CameraList.Cameras[2].UserIdOfImage",
+					"8": "CameraList.Cameras[2].PasswordOfImage"
+				},
+				"86": {
+					"1": "CameraList.Cameras[3].NameOfCamera",
+					"2": "CameraList.Cameras[3].VideoURLOfCamera",
+					"3": "CameraList.Cameras[3].ImageURLOfCamera",
+					"4": "CameraList.Cameras[3].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[3].UserIdOfVideo",
+					"6": "CameraList.Cameras[3].PasswordOfVideo",
+					"7": "CameraList.Cameras[3].UserIdOfImage",
+					"8": "CameraList.Cameras[3].PasswordOfImage"
+				},
+				"87": {
+					"1": "CameraList.Cameras[4].NameOfCamera",
+					"2": "CameraList.Cameras[4].VideoURLOfCamera",
+					"3": "CameraList.Cameras[4].ImageURLOfCamera",
+					"4": "CameraList.Cameras[4].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[4].UserIdOfVideo",
+					"6": "CameraList.Cameras[4].PasswordOfVideo",
+					"7": "CameraList.Cameras[4].UserIdOfImage",
+					"8": "CameraList.Cameras[4].PasswordOfImage"
+				},
+				"88": {
+					"1": "CameraList.Cameras[5].NameOfCamera",
+					"2": "CameraList.Cameras[5].VideoURLOfCamera",
+					"3": "CameraList.Cameras[5].ImageURLOfCamera",
+					"4": "CameraList.Cameras[5].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[5].UserIdOfVideo",
+					"6": "CameraList.Cameras[5].PasswordOfVideo",
+					"7": "CameraList.Cameras[5].UserIdOfImage",
+					"8": "CameraList.Cameras[5].PasswordOfImage"
+				},
+				"89": {
+					"1": "CameraList.Cameras[6].NameOfCamera",
+					"2": "CameraList.Cameras[6].VideoURLOfCamera",
+					"3": "CameraList.Cameras[6].ImageURLOfCamera",
+					"4": "CameraList.Cameras[6].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[6].UserIdOfVideo",
+					"6": "CameraList.Cameras[6].PasswordOfVideo",
+					"7": "CameraList.Cameras[6].UserIdOfImage",
+					"8": "CameraList.Cameras[6].PasswordOfImage"
+				},
+				"90": {
+					"1": "CameraList.Cameras[7].NameOfCamera",
+					"2": "CameraList.Cameras[7].VideoURLOfCamera",
+					"3": "CameraList.Cameras[7].ImageURLOfCamera",
+					"4": "CameraList.Cameras[7].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[7].UserIdOfVideo",
+					"6": "CameraList.Cameras[7].PasswordOfVideo",
+					"7": "CameraList.Cameras[7].UserIdOfImage",
+					"8": "CameraList.Cameras[7].PasswordOfImage"
+				},
+				"91": {
+					"1": "CameraList.Cameras[8].NameOfCamera",
+					"2": "CameraList.Cameras[8].VideoURLOfCamera",
+					"3": "CameraList.Cameras[8].ImageURLOfCamera",
+					"4": "CameraList.Cameras[8].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[8].UserIdOfVideo",
+					"6": "CameraList.Cameras[8].PasswordOfVideo",
+					"7": "CameraList.Cameras[8].UserIdOfImage",
+					"8": "CameraList.Cameras[8].PasswordOfImage"
+				},
+				"92": {
+					"1": "CameraList.Cameras[9].NameOfCamera",
+					"2": "CameraList.Cameras[9].VideoURLOfCamera",
+					"3": "CameraList.Cameras[9].ImageURLOfCamera",
+					"4": "CameraList.Cameras[9].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[9].UserIdOfVideo",
+					"6": "CameraList.Cameras[9].PasswordOfVideo",
+					"7": "CameraList.Cameras[9].UserIdOfImage",
+					"8": "CameraList.Cameras[9].PasswordOfImage"
+				},
+				"93": {
+					"1": "CameraList.Cameras[10].NameOfCamera",
+					"2": "CameraList.Cameras[10].VideoURLOfCamera",
+					"3": "CameraList.Cameras[10].ImageURLOfCamera",
+					"4": "CameraList.Cameras[10].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[10].UserIdOfVideo",
+					"6": "CameraList.Cameras[10].PasswordOfVideo",
+					"7": "CameraList.Cameras[10].UserIdOfImage",
+					"8": "CameraList.Cameras[10].PasswordOfImage"
+				},
+				"94": {
+					"1": "CameraList.Cameras[11].NameOfCamera",
+					"2": "CameraList.Cameras[11].VideoURLOfCamera",
+					"3": "CameraList.Cameras[11].ImageURLOfCamera",
+					"4": "CameraList.Cameras[11].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[11].UserIdOfVideo",
+					"6": "CameraList.Cameras[11].PasswordOfVideo",
+					"7": "CameraList.Cameras[11].UserIdOfImage",
+					"8": "CameraList.Cameras[11].PasswordOfImage"
+				},
+				"95": {
+					"1": "CameraList.Cameras[12].NameOfCamera",
+					"2": "CameraList.Cameras[12].VideoURLOfCamera",
+					"3": "CameraList.Cameras[12].ImageURLOfCamera",
+					"4": "CameraList.Cameras[12].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[12].UserIdOfVideo",
+					"6": "CameraList.Cameras[12].PasswordOfVideo",
+					"7": "CameraList.Cameras[12].UserIdOfImage",
+					"8": "CameraList.Cameras[12].PasswordOfImage"
+				},
+				"96": {
+					"1": "CameraList.Cameras[13].NameOfCamera",
+					"2": "CameraList.Cameras[13].VideoURLOfCamera",
+					"3": "CameraList.Cameras[13].ImageURLOfCamera",
+					"4": "CameraList.Cameras[13].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[13].UserIdOfVideo",
+					"6": "CameraList.Cameras[13].PasswordOfVideo",
+					"7": "CameraList.Cameras[13].UserIdOfImage",
+					"8": "CameraList.Cameras[13].PasswordOfImage"
+				},
+				"97": {
+					"1": "CameraList.Cameras[14].NameOfCamera",
+					"2": "CameraList.Cameras[14].VideoURLOfCamera",
+					"3": "CameraList.Cameras[14].ImageURLOfCamera",
+					"4": "CameraList.Cameras[14].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[14].UserIdOfVideo",
+					"6": "CameraList.Cameras[14].PasswordOfVideo",
+					"7": "CameraList.Cameras[14].UserIdOfImage",
+					"8": "CameraList.Cameras[14].PasswordOfImage"
+				},
+				"98": {
+					"1": "CameraList.Cameras[15].NameOfCamera",
+					"2": "CameraList.Cameras[15].VideoURLOfCamera",
+					"3": "CameraList.Cameras[15].ImageURLOfCamera",
+					"4": "CameraList.Cameras[15].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[15].UserIdOfVideo",
+					"6": "CameraList.Cameras[15].PasswordOfVideo",
+					"7": "CameraList.Cameras[15].UserIdOfImage",
+					"8": "CameraList.Cameras[15].PasswordOfImage"
+				},
+				"99": {
+					"1": "CameraList.Cameras[16].NameOfCamera",
+					"2": "CameraList.Cameras[16].VideoURLOfCamera",
+					"3": "CameraList.Cameras[16].ImageURLOfCamera",
+					"4": "CameraList.Cameras[16].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[16].UserIdOfVideo",
+					"6": "CameraList.Cameras[16].PasswordOfVideo",
+					"7": "CameraList.Cameras[16].UserIdOfImage",
+					"8": "CameraList.Cameras[16].PasswordOfImage"
+				},
+				"100": {
+					"1": "CameraList.Cameras[17].NameOfCamera",
+					"2": "CameraList.Cameras[17].VideoURLOfCamera",
+					"3": "CameraList.Cameras[17].ImageURLOfCamera",
+					"4": "CameraList.Cameras[17].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[17].UserIdOfVideo",
+					"6": "CameraList.Cameras[17].PasswordOfVideo",
+					"7": "CameraList.Cameras[17].UserIdOfImage",
+					"8": "CameraList.Cameras[17].PasswordOfImage"
+				},
+				"101": {
+					"1": "CameraList.Cameras[18].NameOfCamera",
+					"2": "CameraList.Cameras[18].VideoURLOfCamera",
+					"3": "CameraList.Cameras[18].ImageURLOfCamera",
+					"4": "CameraList.Cameras[18].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[18].UserIdOfVideo",
+					"6": "CameraList.Cameras[18].PasswordOfVideo",
+					"7": "CameraList.Cameras[18].UserIdOfImage",
+					"8": "CameraList.Cameras[18].PasswordOfImage"
+				},
+				"102": {
+					"1": "CameraList.Cameras[19].NameOfCamera",
+					"2": "CameraList.Cameras[19].VideoURLOfCamera",
+					"3": "CameraList.Cameras[19].ImageURLOfCamera",
+					"4": "CameraList.Cameras[19].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[19].UserIdOfVideo",
+					"6": "CameraList.Cameras[19].PasswordOfVideo",
+					"7": "CameraList.Cameras[19].UserIdOfImage",
+					"8": "CameraList.Cameras[19].PasswordOfImage"
+				},
+				"103": {
+					"1": "CameraList.Cameras[20].NameOfCamera",
+					"2": "CameraList.Cameras[20].VideoURLOfCamera",
+					"3": "CameraList.Cameras[20].ImageURLOfCamera",
+					"4": "CameraList.Cameras[20].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[20].UserIdOfVideo",
+					"6": "CameraList.Cameras[20].PasswordOfVideo",
+					"7": "CameraList.Cameras[20].UserIdOfImage",
+					"8": "CameraList.Cameras[20].PasswordOfImage"
+				},
+				"104": {
+					"1": "CameraList.Cameras[21].NameOfCamera",
+					"2": "CameraList.Cameras[21].VideoURLOfCamera",
+					"3": "CameraList.Cameras[21].ImageURLOfCamera",
+					"4": "CameraList.Cameras[21].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[21].UserIdOfVideo",
+					"6": "CameraList.Cameras[21].PasswordOfVideo",
+					"7": "CameraList.Cameras[21].UserIdOfImage",
+					"8": "CameraList.Cameras[21].PasswordOfImage"
+				},
+				"105": {
+					"1": "CameraList.Cameras[22].NameOfCamera",
+					"2": "CameraList.Cameras[22].VideoURLOfCamera",
+					"3": "CameraList.Cameras[22].ImageURLOfCamera",
+					"4": "CameraList.Cameras[22].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[22].UserIdOfVideo",
+					"6": "CameraList.Cameras[22].PasswordOfVideo",
+					"7": "CameraList.Cameras[22].UserIdOfImage",
+					"8": "CameraList.Cameras[22].PasswordOfImage"
+				},
+				"106": {
+					"1": "CameraList.Cameras[23].NameOfCamera",
+					"2": "CameraList.Cameras[23].VideoURLOfCamera",
+					"3": "CameraList.Cameras[23].ImageURLOfCamera",
+					"4": "CameraList.Cameras[23].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[23].UserIdOfVideo",
+					"6": "CameraList.Cameras[23].PasswordOfVideo",
+					"7": "CameraList.Cameras[23].UserIdOfImage",
+					"8": "CameraList.Cameras[23].PasswordOfImage"
+				},
+				"107": {
+					"1": "CameraList.Cameras[24].NameOfCamera",
+					"2": "CameraList.Cameras[24].VideoURLOfCamera",
+					"3": "CameraList.Cameras[24].ImageURLOfCamera",
+					"4": "CameraList.Cameras[24].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[24].UserIdOfVideo",
+					"6": "CameraList.Cameras[24].PasswordOfVideo",
+					"7": "CameraList.Cameras[24].UserIdOfImage",
+					"8": "CameraList.Cameras[24].PasswordOfImage"
+				},
+				"108": {
+					"1": "CameraList.Cameras[25].NameOfCamera",
+					"2": "CameraList.Cameras[25].VideoURLOfCamera",
+					"3": "CameraList.Cameras[25].ImageURLOfCamera",
+					"4": "CameraList.Cameras[25].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[25].UserIdOfVideo",
+					"6": "CameraList.Cameras[25].PasswordOfVideo",
+					"7": "CameraList.Cameras[25].UserIdOfImage",
+					"8": "CameraList.Cameras[25].PasswordOfImage"
+				},
+				"109": {
+					"1": "CameraList.Cameras[26].NameOfCamera",
+					"2": "CameraList.Cameras[26].VideoURLOfCamera",
+					"3": "CameraList.Cameras[26].ImageURLOfCamera",
+					"4": "CameraList.Cameras[26].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[26].UserIdOfVideo",
+					"6": "CameraList.Cameras[26].PasswordOfVideo",
+					"7": "CameraList.Cameras[26].UserIdOfImage",
+					"8": "CameraList.Cameras[26].PasswordOfImage"
+				},
+				"110": {
+					"1": "CameraList.Cameras[27].NameOfCamera",
+					"2": "CameraList.Cameras[27].VideoURLOfCamera",
+					"3": "CameraList.Cameras[27].ImageURLOfCamera",
+					"4": "CameraList.Cameras[27].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[27].UserIdOfVideo",
+					"6": "CameraList.Cameras[27].PasswordOfVideo",
+					"7": "CameraList.Cameras[27].UserIdOfImage",
+					"8": "CameraList.Cameras[27].PasswordOfImage"
+				},
+				"111": {
+					"1": "CameraList.Cameras[28].NameOfCamera",
+					"2": "CameraList.Cameras[28].VideoURLOfCamera",
+					"3": "CameraList.Cameras[28].ImageURLOfCamera",
+					"4": "CameraList.Cameras[28].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[28].UserIdOfVideo",
+					"6": "CameraList.Cameras[28].PasswordOfVideo",
+					"7": "CameraList.Cameras[28].UserIdOfImage",
+					"8": "CameraList.Cameras[28].PasswordOfImage"
+				},
+				"112": {
+					"1": "CameraList.Cameras[29].NameOfCamera",
+					"2": "CameraList.Cameras[29].VideoURLOfCamera",
+					"3": "CameraList.Cameras[29].ImageURLOfCamera",
+					"4": "CameraList.Cameras[29].SourceTypeOfCamera",
+					"5": "CameraList.Cameras[29].UserIdOfVideo",
+					"6": "CameraList.Cameras[29].PasswordOfVideo",
+					"7": "CameraList.Cameras[29].UserIdOfImage",
+					"8": "CameraList.Cameras[29].PasswordOfImage"
+				}
+			},
+			"boolean": {
+				"2": {
+					"1": "ContactList.Contact[0].ContactIsSelected"
+				},
+				"3": {
+					"1": "ContactList.Contact[1].ContactIsSelected"
+				},
+				"4": {
+					"1": "ContactList.Contact[2].ContactIsSelected"
+				},
+				"5": {
+					"1": "ContactList.Contact[3].ContactIsSelected"
+				},
+				"6": {
+					"1": "ContactList.Contact[4].ContactIsSelected"
+				},
+				"7": {
+					"1": "ContactList.Contact[5].ContactIsSelected"
+				},
+				"8": {
+					"1": "ContactList.Contact[6].ContactIsSelected"
+				},
+				"9": {
+					"1": "ContactList.Contact[7].ContactIsSelected"
+				},
+				"10": {
+					"1": "ContactList.Contact[8].ContactIsSelected"
+				},
+				"11": {
+					"1": "ContactList.Contact[9].ContactIsSelected"
+				},
+				"12": {
+					"1": "ContactList.Contact[10].ContactIsSelected"
+				},
+				"13": {
+					"1": "ContactList.Contact[11].ContactIsSelected"
+				},
+				"14": {
+					"1": "ContactList.Contact[12].ContactIsSelected"
+				},
+				"15": {
+					"1": "ContactList.Contact[13].ContactIsSelected"
+				},
+				"16": {
+					"1": "ContactList.Contact[14].ContactIsSelected"
+				},
+				"17": {
+					"1": "ContactList.Contact[15].ContactIsSelected"
+				},
+				"18": {
+					"1": "ContactList.Contact[16].ContactIsSelected"
+				},
+				"19": {
+					"1": "ContactList.Contact[17].ContactIsSelected"
+				},
+				"20": {
+					"1": "ContactList.Contact[18].ContactIsSelected"
+				},
+				"21": {
+					"1": "ContactList.Contact[19].ContactIsSelected"
+				},
+				"22": {
+					"1": "ContactList.Contact[20].ContactIsSelected"
+				},
+				"23": {
+					"1": "ContactList.Contact[21].ContactIsSelected"
+				},
+				"24": {
+					"1": "ContactList.Contact[22].ContactIsSelected"
+				},
+				"25": {
+					"1": "ContactList.Contact[23].ContactIsSelected"
+				},
+				"26": {
+					"1": "ContactList.Contact[24].ContactIsSelected"
+				},
+				"27": {
+					"1": "ContactList.Contact[25].ContactIsSelected"
+				},
+				"28": {
+					"1": "ContactList.Contact[26].ContactIsSelected"
+				},
+				"29": {
+					"1": "ContactList.Contact[27].ContactIsSelected"
+				},
+				"30": {
+					"1": "ContactList.Contact[28].ContactIsSelected"
+				},
+				"31": {
+					"1": "ContactList.Contact[29].ContactIsSelected"
+				},
+				"33": {
+					"1": "SourceList.Sources[0].SourceIsSelected"
+				},
+				"34": {
+					"1": "SourceList.Sources[1].SourceIsSelected"
+				},
+				"35": {
+					"1": "SourceList.Sources[2].SourceIsSelected"
+				},
+				"36": {
+					"1": "SourceList.Sources[3].SourceIsSelected"
+				},
+				"37": {
+					"1": "SourceList.Sources[4].SourceIsSelected"
+				},
+				"38": {
+					"1": "SourceList.Sources[5].SourceIsSelected"
+				},
+				"39": {
+					"1": "SourceList.Sources[6].SourceIsSelected"
+				},
+				"40": {
+					"1": "SourceList.Sources[7].SourceIsSelected"
+				}
+			}
+		},
+		"events": {
+			"boolean": {
+				"ContactList.Contact[0].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 2
+				},
+				"ContactList.Contact[1].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 3
+				},
+				"ContactList.Contact[2].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 4
+				},
+				"ContactList.Contact[3].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 5
+				},
+				"ContactList.Contact[4].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 6
+				},
+				"ContactList.Contact[5].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 7
+				},
+				"ContactList.Contact[6].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 8
+				},
+				"ContactList.Contact[7].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 9
+				},
+				"ContactList.Contact[8].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 10
+				},
+				"ContactList.Contact[9].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 11
+				},
+				"ContactList.Contact[10].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 12
+				},
+				"ContactList.Contact[11].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 13
+				},
+				"ContactList.Contact[12].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 14
+				},
+				"ContactList.Contact[13].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 15
+				},
+				"ContactList.Contact[14].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 16
+				},
+				"ContactList.Contact[15].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 17
+				},
+				"ContactList.Contact[16].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 18
+				},
+				"ContactList.Contact[17].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 19
+				},
+				"ContactList.Contact[18].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 20
+				},
+				"ContactList.Contact[19].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 21
+				},
+				"ContactList.Contact[20].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 22
+				},
+				"ContactList.Contact[21].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 23
+				},
+				"ContactList.Contact[22].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 24
+				},
+				"ContactList.Contact[23].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 25
+				},
+				"ContactList.Contact[24].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 26
+				},
+				"ContactList.Contact[25].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 27
+				},
+				"ContactList.Contact[26].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 28
+				},
+				"ContactList.Contact[27].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 29
+				},
+				"ContactList.Contact[28].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 30
+				},
+				"ContactList.Contact[29].SetContactSelected": {
+					"joinId": 1,
+					"smartObjectId": 31
+				},
+				"SourceList.Sources[0].SetSourceSelected": {
+					"joinId": 1,
+					"smartObjectId": 33
+				},
+				"SourceList.Sources[1].SetSourceSelected": {
+					"joinId": 1,
+					"smartObjectId": 34
+				},
+				"SourceList.Sources[2].SetSourceSelected": {
+					"joinId": 1,
+					"smartObjectId": 35
+				},
+				"SourceList.Sources[3].SetSourceSelected": {
+					"joinId": 1,
+					"smartObjectId": 36
+				},
+				"SourceList.Sources[4].SetSourceSelected": {
+					"joinId": 1,
+					"smartObjectId": 37
+				},
+				"SourceList.Sources[5].SetSourceSelected": {
+					"joinId": 1,
+					"smartObjectId": 38
+				},
+				"SourceList.Sources[6].SetSourceSelected": {
+					"joinId": 1,
+					"smartObjectId": 39
+				},
+				"SourceList.Sources[7].SetSourceSelected": {
+					"joinId": 1,
+					"smartObjectId": 40
+				},
+				"Room.DimmableLights[0].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 42
+				},
+				"Room.DimmableLights[0].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 42
+				},
+				"Room.DimmableLights[1].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 43
+				},
+				"Room.DimmableLights[1].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 43
+				},
+				"Room.DimmableLights[2].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 44
+				},
+				"Room.DimmableLights[2].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 44
+				},
+				"Room.DimmableLights[3].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 45
+				},
+				"Room.DimmableLights[3].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 45
+				},
+				"Room.DimmableLights[4].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 46
+				},
+				"Room.DimmableLights[4].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 46
+				},
+				"Room.DimmableLights[5].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 47
+				},
+				"Room.DimmableLights[5].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 47
+				},
+				"Room.DimmableLights[6].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 48
+				},
+				"Room.DimmableLights[6].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 48
+				},
+				"Room.DimmableLights[7].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 49
+				},
+				"Room.DimmableLights[7].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 49
+				},
+				"Room.DimmableLights[8].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 50
+				},
+				"Room.DimmableLights[8].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 50
+				},
+				"Room.DimmableLights[9].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 51
+				},
+				"Room.DimmableLights[9].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 51
+				},
+				"Room.DimmableLights[10].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 52
+				},
+				"Room.DimmableLights[10].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 52
+				},
+				"Room.DimmableLights[11].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 53
+				},
+				"Room.DimmableLights[11].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 53
+				},
+				"Room.DimmableLights[12].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 54
+				},
+				"Room.DimmableLights[12].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 54
+				},
+				"Room.DimmableLights[13].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 55
+				},
+				"Room.DimmableLights[13].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 55
+				},
+				"Room.DimmableLights[14].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 56
+				},
+				"Room.DimmableLights[14].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 56
+				},
+				"Room.DimmableLights[15].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 57
+				},
+				"Room.DimmableLights[15].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 57
+				},
+				"Room.DimmableLights[16].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 58
+				},
+				"Room.DimmableLights[16].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 58
+				},
+				"Room.DimmableLights[17].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 59
+				},
+				"Room.DimmableLights[17].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 59
+				},
+				"Room.DimmableLights[18].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 60
+				},
+				"Room.DimmableLights[18].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 60
+				},
+				"Room.DimmableLights[19].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 61
+				},
+				"Room.DimmableLights[19].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 61
+				},
+				"Room.DimmableLights[20].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 62
+				},
+				"Room.DimmableLights[20].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 62
+				},
+				"Room.DimmableLights[21].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 63
+				},
+				"Room.DimmableLights[21].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 63
+				},
+				"Room.DimmableLights[22].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 64
+				},
+				"Room.DimmableLights[22].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 64
+				},
+				"Room.DimmableLights[23].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 65
+				},
+				"Room.DimmableLights[23].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 65
+				},
+				"Room.DimmableLights[24].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 66
+				},
+				"Room.DimmableLights[24].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 66
+				},
+				"Room.DimmableLights[25].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 67
+				},
+				"Room.DimmableLights[25].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 67
+				},
+				"Room.DimmableLights[26].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 68
+				},
+				"Room.DimmableLights[26].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 68
+				},
+				"Room.DimmableLights[27].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 69
+				},
+				"Room.DimmableLights[27].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 69
+				},
+				"Room.DimmableLights[28].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 70
+				},
+				"Room.DimmableLights[28].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 70
+				},
+				"Room.DimmableLights[29].TurnLightOn": {
+					"joinId": 1,
+					"smartObjectId": 71
+				},
+				"Room.DimmableLights[29].TurnLightOff": {
+					"joinId": 2,
+					"smartObjectId": 71
+				},
+				"Room.Scenes[0].TriggerSceneStart": {
+					"joinId": 1,
+					"smartObjectId": 72
+				},
+				"Room.Scenes[1].TriggerSceneStart": {
+					"joinId": 1,
+					"smartObjectId": 73
+				},
+				"Room.Scenes[2].TriggerSceneStart": {
+					"joinId": 1,
+					"smartObjectId": 74
+				},
+				"Room.Scenes[3].TriggerSceneStart": {
+					"joinId": 1,
+					"smartObjectId": 75
+				},
+				"Room.Scenes[4].TriggerSceneStart": {
+					"joinId": 1,
+					"smartObjectId": 76
+				},
+				"Room.Scenes[5].TriggerSceneStart": {
+					"joinId": 1,
+					"smartObjectId": 77
+				},
+				"Room.Scenes[6].TriggerSceneStart": {
+					"joinId": 1,
+					"smartObjectId": 78
+				},
+				"Room.Scenes[7].TriggerSceneStart": {
+					"joinId": 1,
+					"smartObjectId": 79
+				},
+				"Room.Scenes[8].TriggerSceneStart": {
+					"joinId": 1,
+					"smartObjectId": 80
+				},
+				"Room.Scenes[9].TriggerSceneStart": {
+					"joinId": 1,
+					"smartObjectId": 81
+				}
+			},
+			"numeric": {
+				"Room.DimmableLights[0].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 42
+				},
+				"Room.DimmableLights[1].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 43
+				},
+				"Room.DimmableLights[2].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 44
+				},
+				"Room.DimmableLights[3].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 45
+				},
+				"Room.DimmableLights[4].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 46
+				},
+				"Room.DimmableLights[5].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 47
+				},
+				"Room.DimmableLights[6].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 48
+				},
+				"Room.DimmableLights[7].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 49
+				},
+				"Room.DimmableLights[8].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 50
+				},
+				"Room.DimmableLights[9].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 51
+				},
+				"Room.DimmableLights[10].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 52
+				},
+				"Room.DimmableLights[11].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 53
+				},
+				"Room.DimmableLights[12].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 54
+				},
+				"Room.DimmableLights[13].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 55
+				},
+				"Room.DimmableLights[14].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 56
+				},
+				"Room.DimmableLights[15].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 57
+				},
+				"Room.DimmableLights[16].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 58
+				},
+				"Room.DimmableLights[17].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 59
+				},
+				"Room.DimmableLights[18].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 60
+				},
+				"Room.DimmableLights[19].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 61
+				},
+				"Room.DimmableLights[20].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 62
+				},
+				"Room.DimmableLights[21].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 63
+				},
+				"Room.DimmableLights[22].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 64
+				},
+				"Room.DimmableLights[23].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 65
+				},
+				"Room.DimmableLights[24].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 66
+				},
+				"Room.DimmableLights[25].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 67
+				},
+				"Room.DimmableLights[26].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 68
+				},
+				"Room.DimmableLights[27].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 69
+				},
+				"Room.DimmableLights[28].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 70
+				},
+				"Room.DimmableLights[29].SetLightLevel": {
+					"joinId": 1,
+					"smartObjectId": 71
+				},
+				"CameraList.SetSelectedCameraIndex": {
+					"joinId": 2,
+					"smartObjectId": 82
+				},
+				"CameraList.StateOfSelectedCamera": {
+					"joinId": 3,
+					"smartObjectId": 82
+				},
+				"CameraList.ErrorCodeOfSelectedCamera": {
+					"joinId": 4,
+					"smartObjectId": 82
+				},
+				"CameraList.RetryCountOfSelectedCamera": {
+					"joinId": 5,
+					"smartObjectId": 82
+				},
+				"CameraList.StatusOfSelectedCameraImage": {
+					"joinId": 6,
+					"smartObjectId": 82
+				}
+			},
+			"string": {
+				"CameraList.ErrorMessageOfSelectedCamera": {
+					"joinId": 1,
+					"smartObjectId": 82
+				},
+				"CameraList.ResolutionOfSelectedCamera": {
+					"joinId": 2,
+					"smartObjectId": 82
+				},
+				"CameraList.LastUpdateTimeOfSelectedCameraImage": {
+					"joinId": 3,
+					"smartObjectId": 82
+				},
+				"CameraList.URLOfVideo": {
+					"joinId": 4,
+					"smartObjectId": 82
+				},
+				"CameraList.SourceTypeOfSelectedCamara": {
+					"joinId": 5,
+					"smartObjectId": 82
+				},
+				"CameraList.ImageURLOfSelectedCamera": {
+					"joinId": 6,
+					"smartObjectId": 82
+				},
+				"CameraList.VideoURLOfSelectedCamera": {
+					"joinId": 7,
+					"smartObjectId": 82
+				}
+			}
+		}
+	}
+}

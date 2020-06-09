@@ -1,0 +1,36 @@
+<section class="main-section">
+  <app-header (valueChange)="getHeaderEvent($event)"></app-header>
+  <div class="row no-gutters">
+    <div class="nav-panel col-auto">
+      <ch5-list class="swiper-thumb" orientation="vertical" maxHeight="auto" indexId="idx" itemWidth="100%"
+        itemHeight="50px" [ngClass]="{open: isSidebarOpen}" receiveStateSize="nav.items.size">
+        <template ngNonBindable>
+          <div class="vertical-list-item">
+            <ch5-button customClass="thumb-btn-{{idx}}" type="text" shape="rectangle"
+              receiveStateSelected="active_state_class_{{idx}}" receiveStateLabel="nav_label_{{idx}}"
+              iconUrl="./assets/img/navigation/nav_icon_{{idx}}.svg"></ch5-button>
+          </div>
+        </template>
+      </ch5-list>
+    </div>
+    <ch5-background receivestateurl="common_background_url" url="./assets/img/ch5-stone-light-bg.jpg"></ch5-background>
+    <ch5-triggerview class="main-swiper col" [attr.activeView]="activeIndex" id="MainSlider" gestureable="true"
+      endless="false">
+      <ch5-triggerview-child>
+        <app-buttons></app-buttons>
+      </ch5-triggerview-child>
+      <ch5-triggerview-child>
+        <app-lists [windowSize]="windowSize"></app-lists>
+      </ch5-triggerview-child>
+      <ch5-triggerview-child>
+        <app-source [langData]="langData"></app-source>
+      </ch5-triggerview-child>
+      <ch5-triggerview-child>
+        <app-lighting [langData]="langData"></app-lighting>
+      </ch5-triggerview-child>
+      <ch5-triggerview-child>
+        <app-video [langData]="langData"></app-video>
+      </ch5-triggerview-child>
+    </ch5-triggerview>
+  </div>
+</section>

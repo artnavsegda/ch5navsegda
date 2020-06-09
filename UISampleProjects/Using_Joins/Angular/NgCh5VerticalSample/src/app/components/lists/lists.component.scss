@@ -1,0 +1,87 @@
+@import 'src/assets/scss/functions';
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.details-container {
+  .rounded-circle {
+    overflow: hidden;
+  }
+
+  .contact-detail {
+    padding: 0.5rem;
+    border-radius: 0;
+    height: 100%;
+
+    .primary-detail {
+      .figure {
+        overflow: hidden;
+        width: 120px;
+        margin-bottom: 0;
+      }
+
+      @include media-breakpoint-down(sm) {
+        .figure {
+          width: 80px;
+        }
+      }
+    }
+
+    .list-group>li {
+      align-items: center;
+
+      .text-muted {
+        margin-right: 1rem;
+
+        &:after {
+          content: ":";
+        }
+      }
+
+      &+li {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    .order-sm-first {
+      margin-top: 1rem;
+    }
+
+    .contact-detail {
+      position: relative;
+
+      .secondary-detail {
+        overflow: hidden;
+        max-height: 0;
+        position: relative;
+        transition: max-height 0.3s ease-out;
+      }
+    }
+
+    .toggle-detail {
+      position: absolute;
+      right: $mobile-gutter-space;
+      bottom: $mobile-gutter-space;
+      line-height: 1;
+      font-size: 1.3rem;
+      transition: transform 0.3s linear;
+    }
+
+    .open {
+      .secondary-detail {
+        max-height: 20rem;
+      }
+
+      .toggle-detail {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width : 370px) and (max-device-width : 375px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .iphone6-list {
+    max-height: 330px !important;
+  }
+}

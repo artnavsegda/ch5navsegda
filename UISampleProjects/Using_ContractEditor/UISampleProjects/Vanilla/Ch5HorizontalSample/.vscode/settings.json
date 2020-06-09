@@ -1,0 +1,5 @@
+{
+    "npm.packageManager": "yarn",
+    "npm.enableScriptExplorer": true,
+    "workbench.colorCustomizations": {}
+}

@@ -1,0 +1,51 @@
+<nav class="navbar navbar-dark navbar-default fixed-top">
+  <form class="form-inline">
+    <a class="btn-link" [ngClass]="{active: themeBtnActive === 'light-theme'}" (click)="setTheme('light-theme')"><i
+        class="fas fa-sun"></i></a>
+    <a class="btn-link" [ngClass]="{active: themeBtnActive === 'dark-theme'}" (click)="setTheme('dark-theme')"><i
+        class="far fa-moon"></i></a>
+  </form>
+  <a class="navbar-brand">
+    <img class="d-block img-fluid"
+      src="{{themeBtnActive === 'light-theme' ? './assets/img/ch5-logo-light.png' : './assets/img/ch5-logo-dark.png'}}"
+      alt="thumbnail">
+  </a>
+  <div class="navbar-action-right">
+    <div class="dropdown">
+      <a class="btn-link d-md-none" (click)="menuShow = true; $event.stopPropagation()"
+        [ngClass]="{open: menuShow}">{{selectedLang | uppercase}}</a>
+      <ul class="navbar-nav d-none d-md-flex">
+        <li class="nav-item" *ngFor="let lang of languages; let idx = index"
+          [ngClass]="{'active': idx === languages.indexOf(selectedLang)}">
+          <a class="nav-link" (click)="changeLanguage(lang)">{{lang | uppercase}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="version-info">
+      <ch5-button type="primary" shape="circle" customStyle="border:1px solid #808080;background-color:#808080;"
+        class="shadow-pulse-button" iconClass="fas fa-info" sendEventOnClick="infoBtn.clicked"></ch5-button>
+      <ch5-modal-dialog receiveStateShowPulse="infoBtn.clicked" closable closeIcon="fa fa-window-close"
+        hideOkButton="true" hideCancelButton="true">
+        <h4 data-ch5-i18n="-+app.ch5modal.name+-">CH5 Version</h4>
+        <p *ngIf="hasVersionInfo;then versionContent else versionErrorMessage">
+        </p>
+        <ng-template #versionContent>
+          <p class="version-content">Crestron Component Library version {{crComLibVersion}} build date
+            {{crComBuildDate}}
+          </p>
+        </ng-template>
+        <ng-template #versionErrorMessage>
+          <p class="version-error">Error: While fetching crestron component library version.</p>
+        </ng-template>
+        <p *ngIf="hasAppVersion;then appVersionContent else appVersionErrorMessage">
+        </p>
+        <ng-template #appVersionContent>
+          <p class="version-content">{{ngAppName}} version {{ngAppVersion}}</p>
+        </ng-template>
+        <ng-template #appVersionErrorMessage>
+          <p class="version-error">Error: While fetching sample app version.</p>
+        </ng-template>
+      </ch5-modal-dialog>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,66 @@
+<template id="Ch5 Sample Contract.CameraList.CameraList">
+	<div id="CameraList.CameraList">
+	 	<ch5-slider receiveStateValue="CameraList.NumberOfCameras" nohandle>
+        </ch5-slider>
+	 	<!-- 
+ 	 State: the selected camera to be displayed on touchscreen 
+ 	 Event: request IndexOfSelectedCamera to change 
+-->
+<ch5-slider sendEventOnChange="CameraList.SetSelectedCameraIndex" receiveStateValue="CameraList.IndexOfSelectedCamera">
+        </ch5-slider>
+	 	<!-- 
+ 	 Event: 0-no src, 1 - stopped, 2 - playing, 3 - stop req, 4/5/6 – play req, 7 - error 
+-->
+<ch5-slider sendEventOnChange="CameraList.StateOfSelectedCamera">
+        </ch5-slider>
+	 	<!-- 
+ 	 Event: 0 - no error, transient issues > 0, setup and system issues < 0 
+-->
+<ch5-slider sendEventOnChange="CameraList.ErrorCodeOfSelectedCamera">
+        </ch5-slider>
+	 	<!-- 
+ 	 Event: number of times video engin has tried to render video 
+-->
+<ch5-slider sendEventOnChange="CameraList.RetryCountOfSelectedCamera">
+        </ch5-slider>
+	 	<!-- 
+ 	 Event: diagnostic information on errors, not intended for end user to see 
+-->
+<ch5-textinput sendEventOnChange="CameraList.ErrorMessageOfSelectedCamera"> </ch5-textinput>
+	 	<!-- 
+ 	 Event: Video stream resolution 
+-->
+<ch5-textinput sendEventOnChange="CameraList.ResolutionOfSelectedCamera"> </ch5-textinput>
+	 	<!-- 
+ 	 Event: 0 not shown, 1 - currently shown, 2- in error 
+-->
+<ch5-slider sendEventOnChange="CameraList.StatusOfSelectedCameraImage">
+        </ch5-slider>
+	 	<!-- 
+ 	 Event: time in RFC 3339 format 
+-->
+<ch5-textinput sendEventOnChange="CameraList.LastUpdateTimeOfSelectedCameraImage"> </ch5-textinput>
+	 	<ch5-textinput sendEventOnChange="CameraList.URLOfVideo"> </ch5-textinput>
+	 	<ch5-textinput sendEventOnChange="CameraList.SourceTypeOfSelectedCamara"> </ch5-textinput>
+	 	<ch5-textinput sendEventOnChange="CameraList.ImageURLOfSelectedCamera"> </ch5-textinput>
+	 	<ch5-textinput sendEventOnChange="CameraList.VideoURLOfSelectedCamera"> </ch5-textinput>
+	 </div>
+	<ch5-list id="CameraList.Camera.Cameras" receiveStateSize="30">
+ 	 <template>
+	 	<span data-ch5-textcontent="CameraList.Cameras[{{idx}}].NameOfCamera">Label</span>
+	 	<span data-ch5-textcontent="CameraList.Cameras[{{idx}}].VideoURLOfCamera">Label</span>
+	 	<span data-ch5-textcontent="CameraList.Cameras[{{idx}}].ImageURLOfCamera">Label</span>
+	 	<!--
+ 	State: the source type of video URL (e.g. "Network") 
+-->
+<span data-ch5-textcontent="CameraList.Cameras[{{idx}}].SourceTypeOfCamera">Label</span>
+	 	<ch5-slider receiveStateValue="CameraList.Cameras[{{idx}}].TimePeriodOfImage" nohandle>
+        </ch5-slider>
+	 	<span data-ch5-textcontent="CameraList.Cameras[{{idx}}].UserIdOfVideo">Label</span>
+	 	<span data-ch5-textcontent="CameraList.Cameras[{{idx}}].PasswordOfVideo">Label</span>
+	 	<span data-ch5-textcontent="CameraList.Cameras[{{idx}}].UserIdOfImage">Label</span>
+	 	<span data-ch5-textcontent="CameraList.Cameras[{{idx}}].PasswordOfImage">Label</span>
+		</template>
+ 	</ch5-list>
+
+</template>

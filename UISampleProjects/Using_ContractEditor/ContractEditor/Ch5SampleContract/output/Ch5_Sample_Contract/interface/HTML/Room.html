@@ -1,0 +1,57 @@
+<template id="Ch5 Sample Contract.Room.Room">
+	<div id="Room.Room">
+	 	<!--
+ 	State: number of active dimmers 
+-->
+<ch5-slider receiveStateValue="Room.NumberOfLights" nohandle>
+        </ch5-slider>
+	 	<!--
+ 	State: number of scenes available in this room 
+-->
+<ch5-slider receiveStateValue="Room.NumberOfScenes" nohandle>
+        </ch5-slider>
+	 	<!--
+ 	State: the name of this room as seen by user 
+-->
+<span data-ch5-textcontent="Room.NameOfRoom">Label</span>
+	 </div>
+	<ch5-list id="Room.DimmableLight.DimmableLights" receiveStateSize="30">
+ 	 <template>
+	 	<!--
+ 	State: Lighting load name 
+-->
+<span data-ch5-textcontent="Room.DimmableLights[{{idx}}].NameOfLight">Label</span>
+	 	<!-- 
+ 	 State: light level 
+ 	 Event: request change to new level 
+-->
+<ch5-slider sendEventOnChange="Room.DimmableLights[{{idx}}].SetLightLevel" receiveStateValue="Room.DimmableLights[{{idx}}].LightIsAtLevel">
+        </ch5-slider>
+	 	<!-- 
+ 	 Event: Light On 
+-->
+	<ch5-button sendEventOnClick="Room.DimmableLights[{{idx}}].TurnLightOn">
+        	</ch5-button>
+	 	<!-- 
+ 	 Event: Light Off 
+-->
+	<ch5-button sendEventOnClick="Room.DimmableLights[{{idx}}].TurnLightOff">
+        	</ch5-button>
+		</template>
+ 	</ch5-list>
+
+	<ch5-list id="Room.Scene.Scenes" receiveStateSize="10">
+ 	 <template>
+	 	<!--
+ 	State: how the scene will displayed to user 
+-->
+<span data-ch5-textcontent="Room.Scenes[{{idx}}].NameOfScene">Label</span>
+	 	<!-- 
+ 	 Event: Request scene be started 
+-->
+	<ch5-button sendEventOnClick="Room.Scenes[{{idx}}].TriggerSceneStart">
+        	</ch5-button>
+		</template>
+ 	</ch5-list>
+
+</template>

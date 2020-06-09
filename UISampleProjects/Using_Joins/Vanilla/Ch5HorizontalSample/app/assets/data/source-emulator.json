@@ -1,0 +1,85 @@
+{
+  "cues": [ 
+    {
+    "type" : "b",
+    "event" : "SourceList.Sources[0].SetSourceSelected",
+    "trigger" : true,
+    "actions" : [
+      {"type":"b", "state": "SourceList.Sources[1].SourceIsSelected", "logic": "set", "value": false},
+      {"type":"b", "state": "SourceList.Sources[2].SourceIsSelected", "logic": "set", "value": false},
+      {"type":"b", "state": "SourceList.Sources[3].SourceIsSelected", "logic": "set", "value": false},
+      {"type":"b", "state": "SourceList.Sources[0].SourceIsSelected", "logic": "set", "value": true}
+    ]},
+    {
+      "type" : "b",
+      "event" : "SourceList.Sources[1].SetSourceSelected",
+      "trigger" : true,
+      "actions" : [
+        {"type":"b", "state": "SourceList.Sources[0].SourceIsSelected", "logic": "set", "value": false},
+        {"type":"b", "state": "SourceList.Sources[2].SourceIsSelected", "logic": "set", "value": false},
+        {"type":"b", "state": "SourceList.Sources[3].SourceIsSelected", "logic": "set", "value": false},
+        {"type":"b", "state": "SourceList.Sources[1].SourceIsSelected", "logic": "set", "value": true}
+    ]},
+    {
+      "type" : "b",
+      "event" : "SourceList.Sources[2].SetSourceSelected",
+      "trigger" : true,
+      "actions" : [
+        {"type":"b", "state": "SourceList.Sources[0].SourceIsSelected", "logic": "set", "value": false},
+        {"type":"b", "state": "SourceList.Sources[1].SourceIsSelected", "logic": "set", "value": false},
+        {"type":"b", "state": "SourceList.Sources[3].SourceIsSelected", "logic": "set", "value": false},
+        {"type":"b", "state": "SourceList.Sources[2].SourceIsSelected", "logic": "set", "value": true}
+    ]},
+    {
+      "type" : "b",
+      "event" : "SourceList.Sources[3].SetSourceSelected",
+      "trigger" : true,
+      "actions" : [
+        {"type":"b", "state": "SourceList.Sources[0].SourceIsSelected", "logic": "set", "value": false},
+        {"type":"b", "state": "SourceList.Sources[1].SourceIsSelected", "logic": "set", "value": false},
+        {"type":"b", "state": "SourceList.Sources[2].SourceIsSelected", "logic": "set", "value": false},
+        {"type":"b", "state": "SourceList.Sources[3].SourceIsSelected", "logic": "set", "value": true}
+    ]}                  
+  ],
+  "onStart": [{
+      "state": "SourceList.NumberOfSources",
+      "type": "n",
+      "logic": "set",
+      "value": 4
+    },
+    {
+      "state": "SourceList.Sources[0].NameOfSource",
+      "type": "s",
+      "value": "HDMI"
+    }, {
+      "state": "SourceList.Sources[1].NameOfSource",
+      "type": "s",
+      "value": "Airboard"
+    }, {
+      "state": "SourceList.Sources[2].NameOfSource",
+      "type": "s",
+      "value": "Laptop"
+    }, {
+      "state": "SourceList.Sources[3].NameOfSource",
+      "type": "s",
+      "value": "AirMedia"
+    },
+    {
+      "state": "SourceList.Sources[0].IconClassOfSource",
+      "type": "s",
+      "value": "fas fa-tv"
+    }, {
+      "state": "SourceList.Sources[1].IconClassOfSource",
+      "type": "s",
+      "value": "fas fa-chalkboard"
+    }, {
+      "state": "SourceList.Sources[2].IconClassOfSource",
+      "type": "s",
+      "value": "fas fa-laptop"
+    }, {
+      "state": "SourceList.Sources[3].IconClassOfSource",
+      "type": "s",
+      "value": "fas fa-wifi"
+    }
+  ]
+}

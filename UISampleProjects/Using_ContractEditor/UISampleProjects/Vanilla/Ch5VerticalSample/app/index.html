@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Crestron CH5 || HTML 5 UI Development Showcase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="./assets/css/external.css">
+    <link rel="stylesheet" href="./assets/css/light-theme.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <!-- endinject -->
+</head>
+
+<body>
+    <div id="loader" class="loader"></div>
+    <section class="main-section">
+        <!-- Header start -->
+        <nav class="navbar navbar-dark navbar-default fixed-top">
+            <form class="form-inline" id="changeTheme">
+                <a class="btn-link toggler" id="sidebarToggle" onclick="appModule.toggleSidebar()"><i
+                        class="toggle-icon"></i></a>
+                <a class="btn-link" onclick="appModule.changeTheme('LIGHT')"><i class="fas fa-sun"></i></a>
+                <a class="btn-link" onclick="appModule.changeTheme('DARK')"><i class="far fa-moon"></i></a>
+            </form>
+            <a class="navbar-brand">
+                <ch5-image class="d-block img-fluid" alt="ch5 logo" receiveStateUrl="ch5_brand"></ch5-image>
+            </a>
+            <div class="navbar-action-right">
+                <div class="dropdown">
+                    <a class="btn-link d-md-none text-uppercase" onclick="appModule.openLngMenu(this)"
+                        id="currentLng">EN</a>
+                    <ul class="navbar-nav d-none d-md-flex" id="changeLang">
+                        <li class="nav-item active" onclick="translateModule.changeLang('en', this)"><a
+                                class="nav-link">EN</a></li>
+                        <li class="nav-item" onclick="translateModule.changeLang('fr', this)"><a class="nav-link">FR</a>
+                        </li>
+                        <li class="nav-item" onclick="translateModule.changeLang('de', this)"><a class="nav-link">DE</a>
+                        </li>
+                        <li class="nav-item" onclick="translateModule.changeLang('nl', this)"><a class="nav-link">NL</a>
+                        </li>
+                        <li class="nav-item" onclick="translateModule.changeLang('es', this)"><a class="nav-link">ES</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="version-info">
+                    <ch5-button type="primary" shape="circle"
+                        customStyle="border:1px solid #808080;background-color:#808080;" class="shadow-pulse-button"
+                        iconClass="fas fa-info" sendEventOnClick="infoBtn.clicked"></ch5-button>
+                    <ch5-modal-dialog receiveStateShowPulse="infoBtn.clicked" closable closeIcon="fa fa-window-close"
+                        hideOkButton="true" hideCancelButton="true">
+                        <h4 data-ch5-i18n="-+app.ch5modal.name+-">CH5 Version</h4>
+                        <p id="versionDescription"></p>
+                        <p id="appVersion"></p>
+                    </ch5-modal-dialog>
+                </div>
+            </div>
+        </nav>
+        <!-- Header end -->
+        <div class="row no-gutters">
+            <div class="nav-panel col-auto">
+                <ch5-list class="swiper-thumb" orientation="vertical" maxHeight="auto" indexId="idx" itemWidth="100%"
+                    itemHeight="50px" receiveStateSize="nav.items.size">
+                    <template>
+                        <div class="vertical-list-item">
+                            <ch5-button customClass="thumb-btn-{{idx}}" type="text" shape="rectangle"
+                                receiveStateSelected="active_state_class_{{idx}}" receiveStateLabel="nav_label_{{idx}}"
+                                iconurl="./assets/img/navigation/nav_icon_{{idx}}.svg"></ch5-button>
+                        </div>
+                    </template>
+                </ch5-list>
+            </div>
+            <ch5-background receivestateurl="common_background_url" url="./assets/img/ch5-stone-light-bg.jpg">
+            </ch5-background>
+            <ch5-triggerview class="triggerview col" activeView="activeIndex" gestureable="true" endless="false">
+                <!-- Buttons start -->
+                <ch5-triggerview-child>
+                    <ch5-import-htmlsnippet class="buttons-page" url="./components/buttons/buttons.html">
+                    </ch5-import-htmlsnippet>
+                </ch5-triggerview-child>
+                <!-- Buttons end -->
+                <!-- List start -->
+                <ch5-triggerview-child>
+                    <ch5-import-htmlsnippet class="lists-page" url="./components/lists/lists.html">
+                    </ch5-import-htmlsnippet>
+                </ch5-triggerview-child>
+                <!-- List end -->
+                <!-- Climate start -->
+                <ch5-triggerview-child>
+                    <ch5-import-htmlsnippet class="source-page" url="./components/source/source.html">
+                    </ch5-import-htmlsnippet>
+                </ch5-triggerview-child>
+                <!-- Climate end -->
+                <!-- Lighting start -->
+                <ch5-triggerview-child>
+                    <ch5-import-htmlsnippet class="lighting-page" url="./components/lighting/lighting.html">
+                    </ch5-import-htmlsnippet>
+                </ch5-triggerview-child>
+                <!-- Lighting end -->
+                <!-- Video start -->
+                <ch5-triggerview-child>
+                    <ch5-import-htmlsnippet class="video-page" url="./components/video/video.html">
+                    </ch5-import-htmlsnippet>
+                </ch5-triggerview-child>
+                <!-- Video end -->
+            </ch5-triggerview>
+        </div>
+    </section>
+
+    <!-- inject:js -->
+
+    <script src="./assets/vendor/cr-com-lib.js"></script>
+    <script src="./assets/vendor/component.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>

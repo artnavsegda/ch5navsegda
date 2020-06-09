@@ -1,0 +1,30 @@
+C:\Users\grivera\Documents\Visual Studio 2008\Projects\CH5SampleSSP\CH5SampleSSP\bin\Debug\CH5SampleSSP.dll
+C:\Users\grivera\Documents\Visual Studio 2008\Projects\CH5SampleSSP\CH5SampleSSP\bin\Debug\CH5SampleSSP.pdb
+C:\Users\grivera\Documents\Visual Studio 2008\Projects\CH5SampleSSP\CH5SampleSSP\bin\Debug\Crestron.SimplSharpPro.DeviceSupport.dll
+C:\Users\grivera\Documents\Visual Studio 2008\Projects\CH5SampleSSP\CH5SampleSSP\bin\Debug\Crestron.SimplSharpPro.UI.dll
+C:\Users\grivera\Documents\Visual Studio 2008\Projects\CH5SampleSSP\CH5SampleSSP\bin\Debug\SimplSharpCustomAttributesInterface.dll
+C:\Users\grivera\Documents\Visual Studio 2008\Projects\CH5SampleSSP\CH5SampleSSP\bin\Debug\SimplSharpHelperInterface.dll
+C:\Users\grivera\Documents\Visual Studio 2008\Projects\CH5SampleSSP\CH5SampleSSP\bin\Debug\SimplSharpPro.exe
+C:\Users\grivera\Documents\Visual Studio 2008\Projects\CH5SampleSSP\CH5SampleSSP\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\grivera\Documents\Visual Studio 2008\Projects\CH5SampleSSP\CH5SampleSSP\obj\Debug\CH5SampleSSP.dll
+C:\Users\grivera\Documents\Visual Studio 2008\Projects\CH5SampleSSP\CH5SampleSSP\obj\Debug\CH5SampleSSP.pdb
+C:\x\Gustavo\CH5SampleSSP\CH5SampleSSP\obj\Debug\ResolveAssemblyReference.cache
+C:\x\Gustavo\CH5SampleSSP\CH5SampleSSP\obj\Debug\CH5SampleSSP.dll
+C:\x\Gustavo\CH5SampleSSP\CH5SampleSSP\bin\Debug\CH5SampleSSP.dll
+C:\x\Gustavo\CH5SampleSSP\CH5SampleSSP\bin\Debug\CH5SampleSSP.pdb
+C:\x\Gustavo\CH5SampleSSP\CH5SampleSSP\bin\Debug\Crestron.SimplSharpPro.DeviceSupport.dll
+C:\x\Gustavo\CH5SampleSSP\CH5SampleSSP\bin\Debug\Crestron.SimplSharpPro.UI.dll
+C:\x\Gustavo\CH5SampleSSP\CH5SampleSSP\bin\Debug\SimplSharpCustomAttributesInterface.dll
+C:\x\Gustavo\CH5SampleSSP\CH5SampleSSP\bin\Debug\SimplSharpHelperInterface.dll
+C:\x\Gustavo\CH5SampleSSP\CH5SampleSSP\bin\Debug\SimplSharpPro.exe
+C:\x\Gustavo\CH5SampleSSP\CH5SampleSSP\obj\Debug\CH5SampleSSP.pdb
+C:\Users\grivera\Documents\CH5SampleSSP\CH5SampleSSP\bin\Debug\CH5SampleSSP.dll
+C:\Users\grivera\Documents\CH5SampleSSP\CH5SampleSSP\bin\Debug\CH5SampleSSP.pdb
+C:\Users\grivera\Documents\CH5SampleSSP\CH5SampleSSP\bin\Debug\Crestron.SimplSharpPro.DeviceSupport.dll
+C:\Users\grivera\Documents\CH5SampleSSP\CH5SampleSSP\bin\Debug\Crestron.SimplSharpPro.UI.dll
+C:\Users\grivera\Documents\CH5SampleSSP\CH5SampleSSP\bin\Debug\SimplSharpCustomAttributesInterface.dll
+C:\Users\grivera\Documents\CH5SampleSSP\CH5SampleSSP\bin\Debug\SimplSharpHelperInterface.dll
+C:\Users\grivera\Documents\CH5SampleSSP\CH5SampleSSP\bin\Debug\SimplSharpPro.exe
+C:\Users\grivera\Documents\CH5SampleSSP\CH5SampleSSP\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\grivera\Documents\CH5SampleSSP\CH5SampleSSP\obj\Debug\CH5SampleSSP.dll
+C:\Users\grivera\Documents\CH5SampleSSP\CH5SampleSSP\obj\Debug\CH5SampleSSP.pdb

@@ -1,0 +1,28 @@
+<template id="Ch5 Sample Contract.SourceList.SourceList">
+	<div id="SourceList.SourceList">
+	 	<!--
+ 	State: The number of active sources in a list 
+-->
+<ch5-slider receiveStateValue="SourceList.NumberOfSources" nohandle>
+        </ch5-slider>
+	 </div>
+	<ch5-list id="SourceList.Source.Sources" receiveStateSize="8">
+ 	 <template>
+	 	<!--
+ 	State: Name of the source 
+-->
+<span data-ch5-textcontent="SourceList.Sources[{{idx}}].NameOfSource">Label</span>
+	 	<!--
+ 	State: Class names assoicated with source 
+-->
+<span data-ch5-textcontent="SourceList.Sources[{{idx}}].IconClassOfSource">Label</span>
+	 	<!-- 
+ 	 State: Is input source routed 
+ 	 Event: request change of source 
+-->
+	<ch5-button sendEventOnClick="SourceList.Sources[{{idx}}].SetSourceSelected" receiveStateSelected="SourceList.Sources[{{idx}}].SourceIsSelected">
+        	</ch5-button>
+		</template>
+ 	</ch5-list>
+
+</template>

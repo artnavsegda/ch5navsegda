@@ -1,0 +1,130 @@
+{
+  "app":{
+    "title": "Crestron CH5 || HTML 5 UI Ontwikkelingsshowcase",
+    "ch5modal": {
+      "name":"CH5-versie"
+    }
+  },
+  "buttons": {
+    "title": "KNOPPEN",
+    "descripton": "Volledig aanpasbare knoppen met Crestron CH5. Raak een knop aan om de animaties van knoppen te bekijken.",
+    "icon": {
+      "title": "ICON-KNOPPEN"
+    },
+    "standard": {
+      "title": "STANDAARDKNOPPEN",
+      "btn": {
+        "primary": "PRIMAIR",
+        "default": "STANDAARDWAARDE",
+        "secondary": "SECUNDAIR",
+        "succes": "GESLAAGD",
+        "info": "INFORMATIE",
+        "warning": "WAARSCHUWING",
+        "danger": "GEVAAR"
+      }
+    },
+    "gradient": {
+      "title": "KLEURVERLOOPKNOPPEN",
+      "btn": {
+        "peach": "PERZIK",
+        "purple": "PAARS",
+        "blue": "BLAUW",
+        "aqua": "AQUA"
+      }
+    },
+    "outlined": {
+      "title": "OMLIJNDE KNOPPEN",
+      "btn": {
+        "primary": "PRIMAIR",
+        "default": "STANDAARDWAARDE",
+        "secondary": "SECUNDAIR",
+        "succes": "GESLAAGD",
+        "info": "INFORMATIE",
+        "warning": "WAARSCHUWING",
+        "danger": "GEVAAR"
+      }
+    },
+    "orientation": {
+      "title": "ORIËNTATIEKNOPPEN",
+      "btn": {
+        "horizontal": "Horizontaal label",
+        "vertical": "Verticaal label"
+      }
+    }
+  },
+  "lists": {
+    "title": "LIJSTEN",
+    "description": "Gebruik Crestron CH5 om soepel scrollende lijsten van elk formaat met elke vorm van inhoud op te bouwen.",
+    "header": "Contactlijst",
+    "labels": {
+      "nickname": "Bijnaam",
+      "organization": "Organisatie",
+      "title": "Titel",
+      "email": "E-mail",
+      "work": "Werk",
+      "extension": "Extensie",
+      "mobile": "Mobiel",
+      "home": "Startpagina"
+    }
+  },
+  "source": {
+    "title": "Selecteer een bron om te presenteren",
+    "description": "Selecteer een bron om verbinding te maken.",
+    "sources": [
+      { "title": "HDMI", "icon": "fas fa-tv" },
+      { "title": "Airboard", "icon": "fas fa-chalkboard" },
+      { "title": "Laptop", "icon": "fas fa-laptop" },
+      { "title": "AirMedia", "icon": "fas fa-wifi" }
+    ]
+  },
+  "lighting": {
+    "title": "VERLICHTING",
+    "heading": "GROTE RUIMTE",
+    "alllights": "ALLE LAMPEN",
+    "lightName": [
+      "Lamp",
+      "Wandverlichting",
+      "Imbouwspots",
+      "Mediawand",
+      "Banen",
+      "Hangers"
+    ],
+    "sceneTitle": "Plannen",
+    "scenes": [
+      { "name": "ALLES AAN" },
+      { "name": "ALLES UIT" },
+      { "name": "HOOG" },
+      { "name": "MEDIUM" },
+      { "name": "LAAG" }
+    ]
+  },
+  "video": {
+    "title": "Video",
+    "description": "Streamingvideo weergeven",
+    "camera": [
+      { "name": "Camera 1" },
+      { "name": "Camera 2" },
+      { "name": "Camera 3" },
+      { "name": "Camera 4" }
+    ]
+  },
+  "swiperSlides": [
+    {
+      "thumbTitle": "Knoppen"
+    },
+    {
+      "thumbTitle": "Lijsten"
+    },
+    {
+      "thumbTitle": "Bron"
+    },
+    {
+      "thumbTitle": "Verlichting"
+    },
+    {
+      "thumbTitle": "Video"
+    }
+  ],
+
+  "lang": "Nederlands"
+}

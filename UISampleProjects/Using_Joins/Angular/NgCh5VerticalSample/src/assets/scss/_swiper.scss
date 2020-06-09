@@ -1,0 +1,119 @@
+  // main swiper
+  .main-swiper {
+    display: block;
+    overflow: hidden;
+    height: calc(100vh - 64px);
+
+    @include media-breakpoint-down(sm) {
+      height: calc(100vh - 48px);
+    }
+
+    .swiper-wrapper {
+      height: 100%;
+    }
+
+    .ch5-viewchild {
+      display: block;
+      overflow: hidden;
+      overflow-y: auto;
+      margin: 0;
+      max-height: 100%;
+      transform: translate3d(0px, 0px, 0px);
+    }
+  }
+
+  // thumbnail swiper
+  .nav-panel {
+    position: relative;
+
+    @include media-breakpoint-up(md) {
+      width: 60px;
+    }
+  }
+
+  .swiper-thumb {
+    @include list-unstyled();
+    margin: 0;
+    text-align: center;
+    border: 5px solid transparent;
+    transition: all 0.3s linear;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    max-width: none !important;
+
+    .list-item {
+
+      &+.list-item {
+        margin-top: 5px;
+      }
+
+      ch5-button {
+        display: block;
+
+        .ch5-button {
+          opacity: 0.35;
+          border: 0;
+          border-radius: 0;
+          color: $white;
+          @include size(100%, 50px);
+
+          .cb-btn {
+            padding: 5px;
+            text-align: left;
+            justify-content: flex-start;
+            @include size(100%);
+          }
+
+          &.ch5-button--selected {
+            opacity: 1;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      .ch5-button--label {
+        display: block;
+        font-size: rem-calc(24px);
+        text-transform: uppercase;
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: 1px;
+        margin: 0 0 0 10px;
+        @include text-truncate;
+      }
+
+      .ch5-button--img {
+        display: block;
+        fill: $white;
+        text-shadow: 1px 1px 1px #777;
+        margin: 0;
+        min-width: 40px;
+        min-height: 40px;
+        @include size(40px);
+      }
+    }
+
+    &.open {
+      width: 256px !important;
+      left: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      left: -10px;
+
+      .list-item .svgImg {
+        @include size(36px);
+      }
+
+      &.open {
+        width: 200px !important;
+      }
+    }
+  }

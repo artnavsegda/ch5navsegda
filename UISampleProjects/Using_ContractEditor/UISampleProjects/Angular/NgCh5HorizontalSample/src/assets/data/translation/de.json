@@ -1,0 +1,130 @@
+{
+  "app":{
+    "title": "Crestron CH5 || HTML 5 UI Entwicklungsdemonstration",
+    "ch5modal": {
+      "name":"CH5 Version"
+    }
+  },
+  "buttons": {
+    "title": "SCHALTFLÄCHEN",
+    "descripton": "Vollständig anpassbare Schaltflächen mit Crestron CH5. Berühren Sie eine Schaltfläche, um Tastenanimationen anzuzeigen.",
+    "icon": {
+      "title": "SYMBOLSCHALTFLÄCHEN"
+    },
+    "standard": {
+      "title": "STANDARD-SCHALTFLÄCHEN",
+      "btn": {
+        "primary": "PRIMÄR",
+        "default": "STANDARD",
+        "secondary": "SEKUNDÄR",
+        "succes": "ERFOLG",
+        "info": "INFO",
+        "warning": "WARNUNG",
+        "danger": "GEFAHR"
+      }
+    },
+    "gradient": {
+      "title": "GRADIENTENSCHALTFLÄCHEN",
+      "btn": {
+        "peach": "PFIRSICH",
+        "purple": "LILA",
+        "blue": "BLAU",
+        "aqua": "AQUA"
+      }
+    },
+    "outlined": {
+      "title": "UMRANDETE SCHALTFLÄCHEN",
+      "btn": {
+        "primary": "PRIMÄR",
+        "default": "STANDARD",
+        "secondary": "SEKUNDÄR",
+        "succes": "ERFOLG",
+        "info": "INFO",
+        "warning": "WARNUNG",
+        "danger": "GEFAHR"
+      }
+    },
+    "orientation": {
+      "title": "AUSRICHTUNGSSCHALTFLÄCHEN",
+      "btn": {
+        "horizontal": "Horizontale Kennzeichnung",
+        "vertical": "Vertikale Kennzeichnung"
+      }
+    }
+  },
+  "lists": {
+    "title": "LISTEN",
+    "description": "Mit Crestron CH5 können Sie beliebig große Listen mit beliebigem Inhalt erstellen.",
+    "header": "Kontaktliste",
+    "labels": {
+      "nickname": "Nickname",
+      "organization": "Organisation",
+      "title": "Titel",
+      "email": "E-Mail",
+      "work": "Arbeit",
+      "extension": "Nebenstelle",
+      "mobile": "Mobil",
+      "home": "Home"
+    }
+  },
+  "source": {
+    "title": "Bitte Zuspieler auswählen",
+    "description": "Eine Quelle zum Verbinden auswählen.",
+    "sources": [
+      { "title": "HDMI", "icon": "fas fa-tv" },
+      { "title": "Airboard", "icon": "fas fa-chalkboard" },
+      { "title": "Laptop", "icon": "fas fa-laptop" },
+      { "title": "AirMedia", "icon": "fas fa-wifi" }
+    ]
+  },
+  "lighting": {
+    "title": "BELEUCHTUNG",
+    "heading": "GROSSE RÄUME",
+    "alllights": "ALLE LICHTER",
+    "lightName": [
+      "Lampe",
+      "Wandleuchten",
+      "Einbauleuchten",
+      "Medienwand",
+      "Tracks",
+      "Anhänger"
+    ],
+    "sceneTitle": "Szenen",
+    "scenes": [
+      { "name": "ALLE EIN" },
+      { "name": "ALLE AUS" },
+      { "name": "HOCH" },
+      { "name": "MITTEL" },
+      { "name": "NIEDRIG" }
+    ]
+  },
+  "video": {
+    "title": "Video",
+    "description": "Streaming-Video anzeigen",
+    "camera": [
+      { "name": "Kamera 1" },
+      { "name": "Kamera 2" },
+      { "name": "Kamera 3" },
+      { "name": "Kamera 4" }
+    ]
+  },
+  "swiperSlides": [
+    {
+      "thumbTitle": "Schaltflächen"
+    },
+    {
+      "thumbTitle": "Listen"
+    },
+    {
+      "thumbTitle": "Quelle"
+    },
+    {
+      "thumbTitle": "Beleuchtung"
+    },
+    {
+      "thumbTitle": "Video"
+    }
+  ],
+
+  "lang": "German"
+}

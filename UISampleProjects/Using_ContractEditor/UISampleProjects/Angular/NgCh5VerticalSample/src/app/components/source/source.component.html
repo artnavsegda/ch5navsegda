@@ -1,0 +1,17 @@
+<section class="details-container">
+  <h1 id="sourceView" class="text-uppercase" data-ch5-i18n="-+source.title+-"></h1>
+  <p class="lead desc-title" data-ch5-i18n="-+source.description+-"></p>
+  <hr />
+  <ch5-list class="source-list" indexId="idx" size="4" maxWidth="1000px" receiveStateSize="SourceList.NumberOfSources"
+    orientation="horizontal">
+    <template ngNonBindable>
+      <div class="horizontal-list-item">
+        <ch5-button customClass="source-btn-{{idx}}" class="d-block" type="text" shape="rectangle"
+        receivestatelabel="SourceList.Sources[{{idx}}].NameOfSource"
+        receivestateiconclass="SourceList.Sources[{{idx}}].IconClassOfSource" iconPosition="top"
+        receiveStateSelected="SourceList.Sources[{{idx}}].SourceIsSelected"
+        sendEventOnClick="SourceList.Sources[{{idx}}].SetSourceSelected"></ch5-button>
+      </div>
+    </template>
+  </ch5-list>
+</section>

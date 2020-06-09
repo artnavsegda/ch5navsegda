@@ -1,0 +1,44 @@
+{
+  "name": "ch5-horizontal-sample",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "scripts": {
+    "clean": "rimraf dist",
+    "cleanjs": "rimraf dist/Ch5HorizontalSample/*.js",
+    "start": "yarn clean && webpack --config webpack.dev.js",
+    "build:prod": "yarn clean && webpack --config webpack.prod.js && yarn cleanjs",
+    "build:archive": "ch5-cli archive -p ch5-sample-project -P samplesource=Vanilla/Ch5HorizontalSample -c ./app/config/Ch5_Sample_Contract.cse2j -d dist/Ch5HorizontalSample -o dist",
+    "build:deploy": "ch5-cli deploy -H hostname -t touchscreen dist/ch5-sample-project.ch5z",
+    "build:onestep": "yarn build:prod && yarn build:archive && yarn build:deploy"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.0.0",
+    "file-loader": "^4.0.0",
+    "glob": "^7.1.4",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "img-loader": "^3.0.1",
+    "mini-css-extract-plugin": "^0.7.0",
+    "node-sass": "^4.12.0",
+    "path": "^0.12.7",
+    "rimraf": "^2.6.3",
+    "sass-loader": "^7.1.0",
+    "scss-loader": "^0.0.1",
+    "style-loader": "^0.23.1",
+    "url-loader": "^2.0.0",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.4",
+    "webpack-concat-plugin": "^3.0.0",
+    "webpack-merge": "^4.2.1",
+    "write-json-webpack-plugin": "^1.1.0"
+  },
+  "dependencies": {
+    "@crestron/ch5-crcomlib": "^1.0.0",
+    "@crestron/ch5-theme": "^1.0.0",
+    "@fortawesome/fontawesome-free": "^5.9.0"
+  }
+}

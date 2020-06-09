@@ -1,0 +1,79 @@
+{
+  "cues": [
+    {
+      "type": "n",
+      "event": "CameraList.SetSelectedCameraIndex",
+      "trigger": 0,
+      "actions": [
+        {"state": "CameraList.IndexOfSelectedCamera","type":"n","logic":"set","value":0}
+      ]
+    },
+    {
+      "type": "n",
+      "event": "CameraList.SetSelectedCameraIndex",
+      "trigger": 1,
+      "actions": [
+        {"state": "CameraList.IndexOfSelectedCamera","type":"n","logic":"set","value":1}
+      ]
+    },
+    {
+      "type": "n",
+      "event": "CameraList.SetSelectedCameraIndex",
+      "trigger": 2,
+      "actions": [
+        {"state": "CameraList.IndexOfSelectedCamera","type":"n","logic":"set","value":2}
+      ]
+    },
+    {
+      "type": "n",
+      "event": "CameraList.SetSelectedCameraIndex",
+      "trigger": 3,
+      "actions": [
+        {"state": "CameraList.IndexOfSelectedCamera","type":"n","logic":"set","value":3}
+      ]
+    }
+  ],
+  "onStart": [
+    {"state": "CameraList.NumberOfCameras", "type":"n", "logic": "set", "value": 4},
+    {"state": "CameraList.SetSelectedCameraIndex","type":"n","logic":"set","value": 0},
+    {"state": "CameraList.Cameras[0].NameOfCamera", "type": "s", "value": "Camera 1" },
+    {"state": "CameraList.Cameras[0].VideoURLOfCamera","type":"s","logic":"set","value":"rtsp://admin:Welcome2C$@10.88.17.10"},
+    {"state": "CameraList.Cameras[0].SourceTypeOfCamera","type":"s","logic":"set","value":"Network"},
+    {"state": "CameraList.Cameras[0].UserIdOfVideo","type":"s","logic":"set","value":"admin"},
+    {"state": "CameraList.Cameras[0].PasswordOfVideo","type":"s","logic":"set","value":"Welcome2C$"},
+    {"state": "CameraList.Cameras[0].ImageURLOfCamera","type":"s","logic":"set","value":"http://10.88.17.10/cgi-bin/snapshot.cgi"},
+    {"state": "CameraList.Cameras[0].TimePeriodOfImage","type":"n","logic":"set","value":10},        
+    {"state": "CameraList.Cameras[0].UserIdOfImage","type":"s","logic":"set","value":"admin"},
+    {"state": "CameraList.Cameras[0].PasswordOfImage","type":"s","logic":"set","value":"Welcome2C$"},
+
+    {"state": "CameraList.Cameras[1].NameOfCamera", "type": "s", "value": "Camera 2" },
+    {"state": "CameraList.Cameras[1].VideoURLOfCamera","type":"s","logic":"set","value":"rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov"},
+    {"state": "CameraList.Cameras[1].SourceTypeOfCamera","type":"s","logic":"set","value":"Network"},
+    {"state": "CameraList.Cameras[1].UserIdOfVideo","type":"s","logic":"set","value":""},
+    {"state": "CameraList.Cameras[1].PasswordOfVideo","type":"s","logic":"set","value":""},        
+    {"state": "CameraList.Cameras[1].ImageURLOfCamera","type":"s","logic":"set","value":"https://picsum.photos/512/2088/?random"},
+    {"state": "CameraList.Cameras[1].TimePeriodOfImage","type":"n","logic":"set","value":10},
+    {"state": "CameraList.Cameras[1].UserIdOfImage","type":"s","logic":"set","value":""},
+    {"state": "CameraList.Cameras[1].PasswordOfImage","type":"s","logic":"set","value":""},
+
+    {"state": "CameraList.Cameras[2].NameOfCamera", "type": "s", "value": "Camera 3" },
+    {"state": "CameraList.Cameras[2].VideoURLOfCamera","type":"s","logic":"set","value":"rtsp://admin:Welcome2C$@10.88.24.235"},
+    {"state": "CameraList.Cameras[2].SourceTypeOfCamera","type":"s","logic":"set","value":"Network"},
+    {"state": "CameraList.Cameras[2].UserIdOfVideo","type":"s","logic":"set","value":"admin"},
+    {"state": "CameraList.Cameras[2].PasswordOfVideo","type":"s","logic":"set","value":"Welcome2C$"},
+    {"state": "CameraList.Cameras[2].ImageURLOfCamera","type":"s","logic":"set","value":"http://10.88.24.235/cgi-bin/snapshot.cgi?channel=1&subtype=1"},
+    {"state": "CameraList.Cameras[2].TimePeriodOfImage","type":"n","logic":"set","value":10},
+    {"state": "CameraList.Cameras[2].UserIdOfImage","type":"s","logic":"set","value":"admin"},
+    {"state": "CameraList.Cameras[2].PasswordOfImage","type":"s","logic":"set","value":"Welcome2C$"},
+
+    {"state": "CameraList.Cameras[3].NameOfCamera", "type": "s", "value": "Camera 4" },
+    {"state": "CameraList.Cameras[3].VideoURLOfCamera","type":"s","logic":"set","value":"rtsp://admin:Welcome2C$@10.88.17.12"},
+    {"state": "CameraList.Cameras[3].SourceTypeOfCamera","type":"s","logic":"set","value":"Network"},
+    {"state": "CameraList.Cameras[3].UserIdOfVideo","type":"s","logic":"set","value":"admin"},
+    {"state": "CameraList.Cameras[3].PasswordOfVideo","type":"s","logic":"set","value":"Welcome2C$"},                
+    {"state": "CameraList.Cameras[3].ImageURLOfCamera","type":"s","logic":"set","value":"http://10.88.17.12/Streaming/channels/1/picture"},
+    {"state": "CameraList.Cameras[3].TimePeriodOfImage","type":"n","logic":"set","value":10},
+    {"state": "CameraList.Cameras[3].UserIdOfImage","type":"s","logic":"set","value":"admin"},
+    {"state": "CameraList.Cameras[3].PasswordOfImage","type":"s","logic":"set","value":"Welcome2C$"}
+  ]
+}

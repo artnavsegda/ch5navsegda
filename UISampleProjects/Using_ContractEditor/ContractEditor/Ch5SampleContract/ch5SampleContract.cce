@@ -1,0 +1,74 @@
+{
+	"Errors": [],
+	"id": "_ru42k0wo3",
+	"name": "Ch5 Sample Contract",
+	"description": " An example of using compound CH5 contracts to produce one system contract",
+	"company": " Crestron Electronics, Inc.",
+	"client": "UI Developers",
+	"author": " Rene Colmenares",
+	"version": "1.0.0.0",
+	"schemaVersion": 1,
+	"subContractLinks": [
+		{
+			"uri": "Contact.cce",
+			"parentContractId": "_gz04avjgp",
+			"id": "_qufpk8y2f",
+			"date": "2019-10-9"
+		},
+		{
+			"uri": "Selector.cce",
+			"parentContractId": "_d0en9k3yt",
+			"id": "_m2omrd2r4",
+			"date": "2019-10-9"
+		},
+		{
+			"uri": "Lighting.cce",
+			"parentContractId": "_ommry3hpx",
+			"id": "_ewwb986d7",
+			"date": "2019-10-9"
+		},
+		{
+			"uri": "Video.cce",
+			"parentContractId": "_kt5f536xk",
+			"id": "_d4hmqm4a6",
+			"date": "2020-3-4"
+		}
+	],
+	"subContracts": [],
+	"specifications": [
+		{
+			"Errors": [],
+			"parentId": "_gz04avjgp",
+			"id": "_vi26xz4ue",
+			"componentId": "_ch4zohi7v",
+			"instanceName": "ContactList",
+			"numberOfInstances": 1
+		},
+		{
+			"Errors": [],
+			"parentId": "_d0en9k3yt",
+			"id": "_qlykr9uci",
+			"componentId": "_dw9ldc5r4",
+			"instanceName": "SourceList",
+			"numberOfInstances": 1
+		},
+		{
+			"Errors": [],
+			"parentId": "_ommry3hpx",
+			"id": "_cuh7pl2pz",
+			"componentId": "_apus0wqfu",
+			"instanceName": "Room",
+			"numberOfInstances": 1
+		},
+		{
+			"Errors": [],
+			"parentId": "_kt5f536xk",
+			"id": "_y263t6fjm",
+			"componentId": "_nqmq4mnn3",
+			"instanceName": "CameraList",
+			"numberOfInstances": 1
+		}
+	],
+	"components": [],
+	"allComponentsForAllContracts": []
+}

@@ -1,0 +1,52 @@
+.ngx-gauge-meter {
+  color: $white;
+  user-select: none;
+
+  .reading-block {
+    line-height: 330px !important;
+  }
+
+  .reading-affix {
+    position: absolute;
+    line-height: 1;
+    padding: 0;
+    font-size: 2rem;
+
+    &:first-child {
+      left: 50%;
+      top: auto;
+      bottom: 30px;
+      color: $white;
+      transform: translateX(-50%);
+      opacity: 1;
+
+      &>ngx-gauge-prepend {
+        .fan-spinner {
+          margin-top: 10px;
+
+          &.fan-on {
+            opacity: 0.92;
+            animation: spin 2s linear;
+          }
+
+          &.fan-off {
+            opacity: 0.5;
+          }
+        }
+      }
+
+      .fa {
+        font-size: 1.8rem;
+
+        &.fa-magic {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    &:last-child {
+      left: 0;
+      top: 0;
+    }
+  }
+}
