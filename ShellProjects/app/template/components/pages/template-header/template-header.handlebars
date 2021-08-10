@@ -1,0 +1,34 @@
+{{#if header.display}}
+<section id="header-page">
+    <nav role="navigation" class="navbar navbar-dark navbar-default fixed-top">
+        <div id="pageStatusIdentifier" class="hide"></div>
+        {{#if (isdefined header.$component)}}
+        	<ch5-import-htmlsnippet id="template-header" url="{{customPage content/pages header.$component}}"></ch5-import-htmlsnippet>
+        {{else}}
+            <div class="change-theme form-inline">
+                {{#ifEquals menuOrientation "vertical"}}
+                <a class="btn-link toggler" id="sidebarToggle" onclick="templateContentModule.toggleSidebar()">
+                    <i class="toggle-icon"></i>
+                </a>
+                {{/ifEquals}}
+                <a class="navbar-brand">
+                    <ch5-image {{#brandLogo selectedTheme themes}}{{#if this}}{{this}}{{/if}}{{/brandLogo}}
+                        class="d-block img-fluid" id="brandLogo"
+                        onclick="templateRemoteLoggerSettingsModule.showLoggerPopUp();"></ch5-image>
+                </a>
+                <!-- Remote Logger Settings -->
+                <ch5-import-htmlsnippet id="template-remote-logger-settings-import-page"
+                    url="./app/template/components/widgets/template-remote-logger-settings/template-remote-logger-settings.html">
+                </ch5-import-htmlsnippet>
+            </div>
+            {{#if header.displayInfo}}
+            <div class="navbar-action-right">
+                <ch5-import-htmlsnippet id="template-version-info-import-page"
+                    url="./app/template/components/widgets/template-version-info/template-version-info.html">
+                </ch5-import-htmlsnippet>
+            </div>
+            {{/if}}            
+        {{/if}}
+    </nav>
+</section>
+{{/if}}

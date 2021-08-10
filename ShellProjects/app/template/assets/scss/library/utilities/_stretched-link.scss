@@ -1,0 +1,26 @@
+ /* Copyright (C) 2020 to the present, Crestron Electronics, Inc.
+  * All rights reserved.
+  * No part of this software may be reproduced in any form, machine
+  * or natural, without the express written consent of Crestron Electronics.
+  * Use of this source code is subject to the terms of the Crestron Software License Agreement 
+  * under which you licensed this source code.
+ */
+//
+// Stretched link
+//
+
+.stretched-link {
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    // Just in case `pointer-events: none` is set on a parent
+    pointer-events: auto;
+    content: "";
+    // IE10 bugfix, see https://stackoverflow.com/questions/16947967/ie10-hover-pseudo-class-doesnt-work-without-background-color
+    background-color: rgba(0, 0, 0, 0);
+  }
+}

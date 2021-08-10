@@ -1,0 +1,17 @@
+ /* Copyright (C) 2020 to the present, Crestron Electronics, Inc.
+  * All rights reserved.
+  * No part of this software may be reproduced in any form, machine
+  * or natural, without the express written consent of Crestron Electronics.
+  * Use of this source code is subject to the terms of the Crestron Software License Agreement 
+  * under which you licensed this source code.
+ */
+// Deprecate mixin
+//
+// This mixin can be used to deprecate mixins or functions.
+// `$enable-deprecation-messages` is a global variable, `$ignore-warning` is a variable that can be passed to
+// some deprecated mixins to suppress the warning (for example if the mixin is still be used in the current version of Bootstrap)
+@mixin deprecate($name, $deprecate-version, $remove-version, $ignore-warning: false) {
+  @if ($enable-deprecation-messages != false and $ignore-warning != true) {
+    // @warn "#{$name} has been deprecated as of #{$deprecate-version}. It will be removed entirely in #{$remove-version}.";
+  }
+}

@@ -1,0 +1,18 @@
+ /* Copyright (C) 2020 to the present, Crestron Electronics, Inc.
+  * All rights reserved.
+  * No part of this software may be reproduced in any form, machine
+  * or natural, without the express written consent of Crestron Electronics.
+  * Use of this source code is subject to the terms of the Crestron Software License Agreement 
+  * under which you licensed this source code.
+  */
+// Horizontal dividers
+//
+// Dividers (basically an hr) within dropdowns and nav lists
+
+@mixin nav-divider($color: $nav-divider-color, $margin-y: $nav-divider-margin-y, $ignore-warning: false) {
+  height: 0;
+  margin: $margin-y 0;
+  overflow: hidden;
+  border-top: 1px solid $color;
+  @include deprecate("The `nav-divider()` mixin", "v4.4.0", "v5", $ignore-warning);
+}

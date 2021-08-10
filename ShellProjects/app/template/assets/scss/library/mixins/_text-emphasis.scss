@@ -1,0 +1,24 @@
+ /* Copyright (C) 2020 to the present, Crestron Electronics, Inc.
+  * All rights reserved.
+  * No part of this software may be reproduced in any form, machine
+  * or natural, without the express written consent of Crestron Electronics.
+  * Use of this source code is subject to the terms of the Crestron Software License Agreement 
+  * under which you licensed this source code.
+  */
+// stylelint-disable declaration-no-important
+
+// Typography
+
+@mixin text-emphasis-variant($parent, $color, $ignore-warning: false) {
+  #{$parent} {
+    color: $color !important;
+  }
+  @if $emphasized-link-hover-darken-percentage != 0 {
+    a#{$parent} {
+      @include hover-focus() {
+        color: darken($color, $emphasized-link-hover-darken-percentage) !important;
+      }
+    }
+  }
+  @include deprecate("`text-emphasis-variant()`", "v4.4.0", "v5", $ignore-warning);
+}
