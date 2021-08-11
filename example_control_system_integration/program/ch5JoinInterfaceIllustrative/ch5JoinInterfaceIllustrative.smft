@@ -1,0 +1,7 @@
+<Device Model="CP3">
+   <Network Type="Cresnet" Id="01"/>
+   <Network Type="Ethernet" Id="02">
+      <Device Model="TSW-770" DeviceId="99"/>
+      <Device Model="XPanel 3.0 Crestron HTML5" DeviceId="9A"/>
+   </Network>
+</Device>

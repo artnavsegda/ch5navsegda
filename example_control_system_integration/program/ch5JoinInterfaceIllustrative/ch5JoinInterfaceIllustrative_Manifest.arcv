@@ -1,0 +1,37 @@
+[BEGIN]
+  ObjTp=FSgntr
+  Sgntr=ArchiveManifest
+  RelVrs=4.14.21
+  IsProgram=1
+  TopLevelProgram=ch5JoinInterfaceIllustrative.smw
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=ch5JoinInterfaceIllustrative.smw
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=ch5JoinInterfaceIllustrative.sig
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=ch5JoinInterfaceIllustrative.lpz
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=ch5JoinInterfaceIllustrative.smft
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=ch5JoinInterfaceIllustrative.lpz.hash
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=example_contract.chd_
+  Scope=1
+[END]
