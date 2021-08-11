@@ -1,0 +1,13 @@
+{
+  "cues": [
+    {"type": "b", "event": "Page1.JoinToggle.ToggleValue", "trigger": true, "actions": [{"type": "b","state": "Page1.JoinToggle.Value","logic": "toggle"}]},
+    {"type": "n", "event": "Page1.AnalogValueControl.SetValue", "trigger": "&change", "actions": [{"type": "n", "state": "Page1.AnalogValueControl.Value", "logic": "link"}]},
+    {"type": "b", "event": "Page1.AnalogValueControl.SetValuePresetValue1", "trigger": true, "actions": [{"type": "o", "state": "Page1.AnalogValueControl.Value", "logic": "set", "value": {"rcb": {"value": 16384, "time": 2000}}}]}, 
+    {"type": "s", "event": "Page1.TextInputValue.SetValue", "trigger": "&change", "actions": [{"type": "s", "state": "Page1.TextInputValue.Value", "logic": "link"}]},
+    {"type": "b", "event": "Page1.AnalogValueControl.RampUpValue", "trigger": true, "actions": [{"type": "o", "state": "Page1.AnalogValueControl.Value", "logic": "set", "value": {"rcb": {"value": 65535, "time": 2000}}}]}, 
+    {"type": "b", "event": "Page1.AnalogValueControl.RampUpValue", "trigger": false, "actions": [{"type": "n", "state": "Page1.AnalogValueControl.Value", "logic": "set", "value": 65535}]},
+    {"type": "b", "event": "Page1.AnalogValueControl.RampDownValue", "trigger": true, "actions": [{"type": "o", "state": "Page1.AnalogValueControl.Value", "logic": "set", "value": {"rcb": {"value": 0, "time": 2000}}}]}, 
+    {"type": "b", "event": "Page1.AnalogValueControl.RampDownValue", "trigger": false, "actions": [{"type": "n", "state": "Page1.AnalogValueControl.Value", "logic": "set", "value": 0}]}
+  ],
+  "onStart": []
+}

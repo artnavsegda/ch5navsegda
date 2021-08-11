@@ -1,0 +1,73 @@
+<!--
+    Copyright (C) 2020 to the present, Crestron Electronics, Inc.
+    All rights reserved.
+    No part of this software may be reproduced in any form, machine
+    or natural, without the express written consent of Crestron Electronics.
+    Use of this source code is subject to the terms of the Crestron Software License Agreement 
+    under which you licensed this source code.  
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title data-ch5-i18n="-+app.title+-"></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    {{{favicon faviconPath}}}
+    <!-- inject:css -->
+    <link rel="stylesheet" href="./assets/css/external.css">
+    <link rel="stylesheet" href="./assets/css/light-theme.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/templatecomponents.css">
+    <link rel="stylesheet" href="./assets/css/projectcomponents.css">
+    <!-- endinject -->
+</head>
+
+<body>
+    <div id="wrapper">
+        {{#if header.display}}
+        <div id="header-index-page">
+            <!-- Header Component -->
+            <ch5-import-htmlsnippet id="template-header-import-page"
+                url="./app/template/components/pages/header/header.html">
+            </ch5-import-htmlsnippet>
+        </div>
+        {{/if}}
+        <div id="content-index-page">
+            <!-- Page Component -->
+            <ch5-import-htmlsnippet id="template-content-import-page"
+                url="./app/template/components/pages/content/content.html">
+            </ch5-import-htmlsnippet>
+        </div>
+        {{#if footer.display}}
+        <div id="footer-index-page">
+            <!-- Footer Component -->
+           <ch5-import-htmlsnippet id="template-footer-import-page"
+                url="./app/template/components/pages/footer/footer.html">
+            </ch5-import-htmlsnippet>
+        </div>
+        {{/if}}
+    </div>
+
+    <!-- Loader -->
+    <div id="loader" class="loader"></div>
+
+    <!-- project-config.json Widgets -->
+    {{#each content/widgets}}
+    <ch5-import-htmlsnippet id="{{widgetName}}-import-widget" url="{{fullPath}}{{fileName}}" show="false">
+    </ch5-import-htmlsnippet>
+    {{/each}}
+
+    <!-- project-config.json Non-Navigation Stand Alone View Pages -->
+    {{#standAloneViewPages content/pages}}
+    <ch5-import-htmlsnippet id="{{pageName}}-import-page" url="{{fullPath}}{{fileName}}" show="false">
+    </ch5-import-htmlsnippet>
+    {{/standAloneViewPages}}
+
+    <!-- inject:js -->
+    <script src="./libraries/cr-com-lib.js"></script>
+    <script src="./libraries/component.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>

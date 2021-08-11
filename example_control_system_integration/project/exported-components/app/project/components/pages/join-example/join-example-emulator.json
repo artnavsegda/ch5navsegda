@@ -1,0 +1,13 @@
+{
+  "cues": [
+    {"type": "b", "event": "11", "trigger": true, "actions": [{"type": "b","state": "11","logic": "toggle"}]},
+    {"type": "n", "event": "20", "trigger": "&change", "actions": [{"type": "n", "state": "20", "logic": "link"}]},
+    {"type": "b", "event": "20", "trigger": true, "actions": [{"type": "o", "state": "20", "logic": "set", "value": {"rcb": {"value": 16384, "time": 2000}}}]}, 
+    {"type": "s", "event": "13", "trigger": "&change", "actions": [{"type": "s", "state": "13", "logic": "link"}]},
+    {"type": "b", "event": "21", "trigger": true, "actions": [{"type": "o", "state": "20", "logic": "set", "value": {"rcb": {"value": 65535, "time": 2000}}}]}, 
+    {"type": "b", "event": "21", "trigger": false, "actions": [{"type": "n", "state": "20", "logic": "set", "value": 65535}]},  
+    {"type": "b", "event": "22", "trigger": true, "actions": [{"type": "o", "state": "20", "logic": "set", "value": {"rcb": {"value": 0, "time": 2000}}}]}, 
+    {"type": "b", "event": "22", "trigger": false, "actions": [{"type": "n", "state": "20", "logic": "set", "value": 0}]}
+  ],
+  "onStart": []
+}

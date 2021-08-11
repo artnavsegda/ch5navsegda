@@ -1,0 +1,17 @@
+ /* Copyright (C) 2020 to the present, Crestron Electronics, Inc.
+  * All rights reserved.
+  * No part of this software may be reproduced in any form, machine
+  * or natural, without the express written consent of Crestron Electronics.
+  * Use of this source code is subject to the terms of the Crestron Software License Agreement 
+  * under which you licensed this source code.
+  */
+// stylelint-disable declaration-no-important
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .float#{$infix}-left  { float: left !important; }
+    .float#{$infix}-right { float: right !important; }
+    .float#{$infix}-none  { float: none !important; }
+  }
+}

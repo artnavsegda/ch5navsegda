@@ -1,0 +1,9 @@
+{{#if footer.display}}
+  {{#if (isdefined footer.$component)}}
+  <ch5-import-htmlsnippet id="template-footer" url="{{customPage content/pages footer.$component}}"></ch5-import-htmlsnippet>
+  {{else}}
+  <section id="footer-page">
+   Copyright (C) 2020 to the present, Crestron Electronics, Inc.
+  </section>
+  {{/if}}
+{{/if}}

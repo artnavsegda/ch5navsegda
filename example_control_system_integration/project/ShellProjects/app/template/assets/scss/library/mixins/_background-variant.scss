@@ -1,0 +1,30 @@
+ /* Copyright (C) 2020 to the present, Crestron Electronics, Inc.
+  * All rights reserved.
+  * No part of this software may be reproduced in any form, machine
+  * or natural, without the express written consent of Crestron Electronics.
+  * Use of this source code is subject to the terms of the Crestron Software License Agreement 
+  * under which you licensed this source code.
+  */
+// stylelint-disable declaration-no-important
+
+// Contextual backgrounds
+
+@mixin bg-variant($parent, $color, $ignore-warning: false) {
+  #{$parent} {
+    background-color: $color !important;
+  }
+  a#{$parent},
+  button#{$parent} {
+    @include hover-focus() {
+      background-color: darken($color, 10%) !important;
+    }
+  }
+  @include deprecate("The `bg-variant` mixin", "v4.4.0", "v5", $ignore-warning);
+}
+
+@mixin bg-gradient-variant($parent, $color, $ignore-warning: false) {
+  #{$parent} {
+    background: $color linear-gradient(180deg, mix($body-bg, $color, 15%), $color) repeat-x !important;
+  }
+  @include deprecate("The `bg-gradient-variant` mixin", "v4.5.0", "v5", $ignore-warning);
+}

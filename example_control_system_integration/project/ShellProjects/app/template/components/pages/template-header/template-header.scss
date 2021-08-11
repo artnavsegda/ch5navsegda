@@ -1,0 +1,78 @@
+div#pageStatusIdentifier {
+    background-color: #ffcc00;
+    display: -webkit-flex;
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    height: 4px;
+    width: 100%;
+    margin: 0;
+
+    &:before {
+        height: 4px;
+        width: 100%;
+        margin: 0;
+        content: "";
+    }
+
+    &.loading:before {
+        background-color: #ff7f00;
+        -webkit-animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    &.success:before {
+        background-color: #01c851;
+    }
+
+    &.error:before {
+        background-color: #ff3548;
+    }
+
+    &.warning:before {
+        background-color: #ff8800;
+    }
+
+    &.hide {
+        display: none;
+        &::before {
+            content: none !important;
+        }
+    }
+}
+
+@-webkit-keyframes running-progress {
+    0% {
+        margin-left: 0;
+        margin-right: 100%;
+    }
+
+    50% {
+        margin-left: 25%;
+        margin-right: 0;
+    }
+
+    100% {
+        margin-left: 100%;
+        margin-right: 0;
+    }
+}
+
+@keyframes running-progress {
+    0% {
+        margin-left: 0;
+        margin-right: 100%;
+    }
+
+    50% {
+        margin-left: 25%;
+        margin-right: 0;
+    }
+
+    100% {
+        margin-left: 100%;
+        margin-right: 0;
+    }
+}
